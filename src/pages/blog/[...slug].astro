@@ -1,11 +1,12 @@
 ---
 import { useStoryblokApi } from '@storyblok/astro';
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
+import Header from '../../components/Header';
 
 export async function getStaticPaths() {
 	const sbApi = useStoryblokApi();
 
-	const { data } = await sbApi.get('cdn/stories', {
+	const { data } = await sbApi.get('cdn/stories/', {
 		content_type: 'blogPost',
 		version: import.meta.env.DEV ? 'draft' : 'published',
 	});
@@ -33,6 +34,7 @@ const story = data.story;
 		<title>Storyblok & Astro</title>
 	</head>
 	<body>
+		<Header />
 		<StoryblokComponent blok={story.content} />
 	</body>
 </html>

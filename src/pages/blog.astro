@@ -2,6 +2,8 @@
 import { useStoryblokApi } from '@storyblok/astro';
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import '../styles/global.css';
 
 const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get('cdn/stories/home', {
@@ -15,6 +17,7 @@ const content = data.story.content;
 		<title>Storyblok & Astro</title>
 	</head>
 	<body>
+		<Header />
 		<StoryblokComponent blok={content} />
 	</body>
 </html>
