@@ -35,7 +35,7 @@ const { blok } = Astro.props;
 		posts.map((post) => (
 			<li>
 				<p class='text-sm font-light'>{post.date}</p>
-				<a href={post.slug} class='underline font-bold'>
+				<a href=`https://rfportfolioastro.netlify.app/{post.slug}` class='underline font-bold'>
 					{post.title}
 				</a>
 				<p>{post.description}</p>
