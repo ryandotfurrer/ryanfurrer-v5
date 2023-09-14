@@ -22,7 +22,7 @@ export async function getStaticPaths() {
 
 const sbApi = useStoryblokApi();
 const { slug } = Astro.params;
-const { data } = await sbApi.get(`cdn/stories/blog/${slug}`, {
+const { data } = await sbApi.get(`cdn/stories/${slug}`, {
 	version: import.meta.env.DEV ? 'draft' : 'published',
 });
 
