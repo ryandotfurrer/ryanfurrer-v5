@@ -4,7 +4,7 @@ const { blok } = Astro.props;
 const content = renderRichText(blok.content);
 ---
 
-<article {...storyblokEditable(blok)}>
+<article {...storyblokEditable(blok)} class='prose prose-zinc'>
 	<h1>{blok.title}</h1>
 	<p>{blok.description}</p>
 	<Fragment set:html={content} />

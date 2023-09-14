@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import storyblok from '@storyblok/astro';
+import basicSsl from '@vitejs/plugin-basic-ssl'
 // import { loadEnv } from 'vite';
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
@@ -8,6 +9,12 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    plugins: [basicSsl()],
+    server: {
+      https: true,
+    }
+  },
   integrations: 
   [
     react(), 
