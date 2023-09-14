@@ -2,9 +2,13 @@
 import { storyblokEditable, renderRichText } from '@storyblok/astro';
 const { blok } = Astro.props;
 const content = renderRichText(blok.content);
+import '../styles/global.css';
 ---
 
-<article {...storyblokEditable(blok)} class='prose prose-zinc'>
+<article
+	{...storyblokEditable(blok)}
+	class='prose prose-zinc dark:prose-invert'
+>
 	<h1>{blok.title}</h1>
 	<p>{blok.description}</p>
 	<Fragment set:html={content} />

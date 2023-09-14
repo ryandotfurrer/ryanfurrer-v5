@@ -1,6 +1,7 @@
 ---
 import { storyblokEditable } from '@storyblok/astro';
 import { useStoryblokApi } from '@storyblok/astro';
+import '../styles/global.css';
 
 const storyblokApi = useStoryblokApi();
 
@@ -33,8 +34,10 @@ const { blok } = Astro.props;
 	{
 		posts.map((post) => (
 			<li>
-				<p>{post.date}</p>
-				<a href={post.slug}>{post.title}</a>
+				<p class='text-sm font-light'>{post.date}</p>
+				<a href={post.slug} class='underline font-bold'>
+					{post.title}
+				</a>
 				<p>{post.description}</p>
 			</li>
 		))
