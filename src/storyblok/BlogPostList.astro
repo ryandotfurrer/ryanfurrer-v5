@@ -9,28 +9,41 @@ const { data } = await storyblokApi.get('cdn/stories/', {
 	content_type: 'blogPost',
 });
 
-const posts = data.stories.map((story) => {
-	return {
-		title: story.content.title,
-		date: new Date(story.published_at).toLocaleDateString('en-US', {
-			dateStyle: 'full',
-		}),
-		description: story.content.description,
-		slug: story.full_slug,
-	};
-});
+const posts = data.stories.map(
+	(story: {
+		content: { title: any; description: any };
+		published_at: string | number | Date;
+		full_slug: any;
+	}) => {
+		return {
+			title: story.content.title,
+			date: new Date(story.published_at).toLocaleDateString('en-US', {
+				dateStyle: 'full',
+			}),
+			description: story.content.description,
+			slug: story.full_slug,
+		};
+	}
+);
 
 const { blok } = Astro.props;
 ---
 
 <ul {...storyblokEditable(blok)}>
 	{
-		posts.map((post) => (
-			<li>
-				<p>{post.date}</p>
-				<a href={post.slug}>{post.title}</a>
-				<p>{post.description}</p>
-			</li>
-		))
+		posts.map(
+			(post: {
+				date: unknown;
+				slug: string | URL | null | undefined;
+				title: unknown;
+				description: unknown;
+			}) => (
+				<li>
+					<p>{post.date}</p>
+					<a href={post.slug}>{post.title}</a>
+					<p>{post.description}</p>
+				</li>
+			)
+		)
 	}
 </ul>
