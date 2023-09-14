@@ -18,7 +18,11 @@ export default defineConfig({
   integrations: 
   [
     react(), 
-    tailwind(),
+    tailwind(
+      {
+        applyBaseStyles: false,
+      }
+    ),
     storyblok({
       accessToken: "OvG6RltzzmQpZ8WXKtSeEwtt",
       apiOptions: {      

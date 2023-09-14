@@ -10,11 +10,12 @@ const { data } = await storyblokApi.get('cdn/stories/blog', {
 	version: import.meta.env.DEV ? 'draft' : 'published',
 });
 const content = data.story.content;
+const pageTitle = 'Blog';
 ---
 
 <html lang='en'>
 	<head>
-		<title>Blog | Ryan Furrer</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<Header />

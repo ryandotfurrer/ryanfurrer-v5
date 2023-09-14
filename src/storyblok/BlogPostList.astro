@@ -30,13 +30,13 @@ const posts = data.stories.map(
 const { blok } = Astro.props;
 ---
 
-<ul {...storyblokEditable(blok)}>
+<ul {...storyblokEditable(blok)} class='flex flex-col gap-[3em]'>
 	{
 		posts.map((post) => (
 			<li>
 				<p class='text-sm font-light'>{post.date}</p>
-				<a href={post.slug} class='underline font-bold'>
-					{post.title}
+				<a href={post.slug} class='underline'>
+					<h3>{post.title}</h3>
 				</a>
 				<p>{post.description}</p>
 			</li>

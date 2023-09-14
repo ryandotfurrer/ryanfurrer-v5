@@ -5,10 +5,12 @@ const { blok } = Astro.props;
 import '../styles/global.css';
 ---
 
-<main {...storyblokEditable(blok)}>
-	{
-		blok.body?.map((blok) => {
-			return <StoryblokComponent blok={blok} />;
-		})
-	}
+<main {...storyblokEditable(blok)} class='container mx-auto py-8'>
+	<section class='mx-auto space-y-[1em] px-4'>
+		{
+			blok.body?.map((blok) => {
+				return <StoryblokComponent blok={blok} />;
+			})
+		}
+	</section>
 </main>

@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header';
 import '../styles/global.css';
+const pageTitle = 'About';
 ---
 
 <html lang='en'>
@@ -9,10 +10,9 @@ import '../styles/global.css';
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<meta name='viewport' content='width=device-width' />
 		<meta name='generator' content={Astro.generator} />
-		<title>About | Ryan Furrer</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<Header />
-		<h1>About</h1>
 	</body>
 </html>

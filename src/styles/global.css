@@ -3,5 +3,58 @@
 @tailwind utilities;
 
 body {
-	@apply bg-zinc-50 text-zinc-950 dark:bg-zinc-900 dark:text-zinc-50;
+	/* Global Layout */
+	@apply py-8;
+
+	/* Global Styles */
+	text-wrap: pretty;
+	@apply font-serif;
+	@apply font-sans;
+
+	/* Global Light Theme */
+	@apply bg-zinc-50 text-zinc-950;
+
+	/* Global Light Theme */
+	@apply dark:bg-zinc-900 dark:text-zinc-50;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+	@apply font-bold;
+	@apply tracking-tight;
+}
+
+h1,
+h2,
+h3 {
+	@apply leading-none;
+}
+
+h1 {
+	@apply text-5xl;
+}
+
+h2 {
+	@apply text-4xl;
+}
+
+h3 {
+	@apply text-3xl;
+}
+
+h4 {
+	@apply text-2xl;
+}
+
+h5 {
+	@apply text-xl;
+}
+
+h6 {
+	@apply text-lg;
 }
