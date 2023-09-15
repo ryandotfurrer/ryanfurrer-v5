@@ -5,11 +5,21 @@ const content = renderRichText(blok.content);
 import '../styles/global.css';
 ---
 
-<article
-	{...storyblokEditable(blok)}
-	class='container mx-auto space-y-[1em] px-4 py-8'
->
-	<h1>{blok.title}</h1>
-	<p>{blok.description}</p>
-	<Fragment set:html={content} />
-</article>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<meta name='viewport' content='width=device-width' />
+		<meta name='generator' content={Astro.generator} />
+	</head>
+	<body>
+		<article
+			{...storyblokEditable(blok)}
+			class='container mx-auto space-y-[1em] px-4 py-8'
+		>
+			<h2>{blok.title}</h2>
+			<p>{blok.description}</p>
+			<Fragment set:html={content} />
+		</article>
+	</body>
+</html>

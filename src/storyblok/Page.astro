@@ -5,12 +5,22 @@ const { blok } = Astro.props;
 import '../styles/global.css';
 ---
 
-<main {...storyblokEditable(blok)} class='container mx-auto py-8'>
-	<section class='mx-auto space-y-[1em] px-4'>
-		{
-			blok.body?.map((blok) => {
-				return <StoryblokComponent blok={blok} />;
-			})
-		}
-	</section>
-</main>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<meta name='viewport' content='width=device-width' />
+		<meta name='generator' content={Astro.generator} />
+	</head>
+	<body>
+		<main {...storyblokEditable(blok)} class='container mx-auto py-8'>
+			<section class='mx-auto space-y-[1em] px-4'>
+				{
+					blok.body?.map((blok) => {
+						return <StoryblokComponent blok={blok} />;
+					})
+				}
+			</section>
+		</main>
+	</body>
+</html>
