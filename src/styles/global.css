@@ -9,61 +9,61 @@ h3,
 h4,
 h5,
 h6 {
-	text-wrap: balance;
-	@apply font-bold;
-	@apply tracking-tight;
+  text-wrap: balance;
+  @apply font-bold;
+  @apply tracking-tight;
 }
 
 h1,
 h2,
 h3 {
-	@apply leading-none;
+  @apply leading-none;
 }
 
 h1 {
-	@apply text-5xl;
+  @apply text-5xl;
 }
 
 h2 {
-	@apply text-4xl;
+  @apply text-4xl;
 }
 
 h3 {
-	@apply text-3xl;
+  @apply text-3xl;
 }
 
 h4 {
-	@apply text-2xl;
+  @apply text-2xl;
 }
 
 h5 {
-	@apply text-xl;
+  @apply text-xl;
 }
 
 h6 {
-	@apply text-lg;
+  @apply text-lg;
 }
 
 body {
-	/* Global Layout */
-	@apply py-8;
-	/* Ensures the footer stays at bottom no matter how much content is on the page. */
-	min-height: 100dvh;
-	display: grid;
-	grid-template-rows: auto 1fr auto;
+  /* Global Layout */
+  @apply py-8;
+  /* Ensures the footer stays at bottom no matter how much content is on the page. */
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 
-	/* Global Styles */
-	text-wrap: pretty;
-	@apply font-serif;
-	@apply font-sans;
+  /* Global Styles */
+  text-wrap: pretty;
+  @apply font-serif;
+  @apply font-sans;
 
-	/* Global Light Theme */
-	@apply bg-zinc-50 text-zinc-950;
+  /* Global Light Theme */
+  @apply bg-zinc-50 text-zinc-950;
 
-	/* Global Light Theme */
-	@apply dark:bg-zinc-900 dark:text-zinc-50;
+  /* Global Light Theme */
+  @apply dark:bg-zinc-900 dark:text-zinc-50;
 }
 
 header {
-	@apply min-h-[65dvh];
+  @apply min-h-[65dvh];
 }

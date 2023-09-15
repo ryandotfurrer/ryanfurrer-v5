@@ -1,5 +1,5 @@
 /** @type {import("prettier").Config} */
-export default {
+const config = {
   plugins: 
   [
     'prettier-plugin-astro',
@@ -7,3 +7,5 @@ export default {
   ],
   tailwindFunctions: ['tw'],
 };
+
+module.exports = config;
