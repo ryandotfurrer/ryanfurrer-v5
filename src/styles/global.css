@@ -5,7 +5,7 @@
 /* Base Body Styles */
 body {
   /* Global Layout */
-  @apply py-8;
+  /* @apply pt-8; */
   /* Ensures the footer stays at bottom no matter how much content is on the page. */
   min-height: 100dvh;
   display: grid;
@@ -17,10 +17,10 @@ body {
   @apply font-sans;
 
   /* Global Light Theme */
-  @apply bg-zinc-50 text-zinc-950;
+  @apply bg-gray-50 text-gray-950;
 
   /* Global Light Theme */
-  @apply dark:bg-zinc-900 dark:text-zinc-50;
+  @apply dark:bg-gray-900 dark:text-gray-50;
 }
 
 /* Typography Styles */
@@ -42,27 +42,27 @@ h3 {
 }
 
 h1 {
-  @apply text-5xl;
+  @apply text-5xl lg:text-7xl;
 }
 
 h2 {
-  @apply text-4xl;
+  @apply text-4xl lg:text-6xl;
 }
 
 h3 {
-  @apply text-3xl;
+  @apply text-3xl lg:text-5xl;
 }
 
 h4 {
-  @apply text-2xl;
+  @apply text-2xl lg:text-4xl;
 }
 
 h5 {
-  @apply text-xl;
+  @apply text-xl lg:text-3xl;
 }
 
 h6 {
-  @apply text-lg;
+  @apply text-lg lg:text-2xl;
 }
 
 a {
@@ -86,5 +86,15 @@ header {
 }
 
 main {
-  @apply container mx-auto space-y-[1em] px-4 py-8;
+  @apply container mx-auto space-y-[1em] py-8;
+}
+section {
+  @apply mx-auto space-y-[1em] px-8;
+}
+
+img,
+image,
+picture {
+  @apply w-full;
+  @apply h-full;
 }

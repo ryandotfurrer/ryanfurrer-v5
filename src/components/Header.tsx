@@ -1,12 +1,12 @@
-import '../styles/global.css'
-import HeaderNavBar from './HeaderNavBar'
-import Hero from './Hero'
+import "../styles/global.css";
+import HeaderNavBar from "./HeaderNavBar";
+import Hero from "./Hero";
 
 export default function Header() {
-    return(
-        <header>
-            <HeaderNavBar />
-            <Hero />
-        </header>
-    )
+  return (
+    <header className="min-h-[100dvh]">
+      <HeaderNavBar />
+      <Hero />
+    </header>
+  );
 }

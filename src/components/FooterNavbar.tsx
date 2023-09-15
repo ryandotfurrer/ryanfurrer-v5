@@ -2,8 +2,8 @@ import "../styles/global.css";
 
 export default function FooterNavBar() {
   return (
-    <nav className="container mx-auto flex justify-center px-4">
-      <ul className="flex gap-4">
+    <nav className="container mx-auto">
+      <ul className="grid">
         <li>
           <a href="/">Home</a>
         </li>
