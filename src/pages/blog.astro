@@ -1,33 +1,33 @@
 ---
-import { useStoryblokApi } from '@storyblok/astro';
-import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import '../styles/global.css';
+import { useStoryblokApi } from "@storyblok/astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import "../styles/global.css";
 
 const storyblokApi = useStoryblokApi();
-const { data } = await storyblokApi.get('cdn/stories/blog', {
-	version: import.meta.env.DEV ? 'draft' : 'published',
+const { data } = await storyblokApi.get("cdn/stories/blog", {
+  version: import.meta.env.DEV ? "draft" : "published",
 });
 const content = data.story.content;
-const pageTitle = 'Blog';
+const pageTitle = "Blog";
 ---
 
-<html lang='en'>
-	<head>
-		<meta charset='UTF-8' />
-		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-		<meta name='generator' content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Header />
-		<main class='container mx-auto py-8'>
-			<section class='mx-auto px-4 space-y-[1em]'>
-				<StoryblokComponent blok={content} />
-			</section>
-		</main>
-		<Footer />
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Header />
+    <main class="container mx-auto py-8">
+      <section class="mx-auto space-y-[1em] px-4">
+        <StoryblokComponent blok={content} />
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>

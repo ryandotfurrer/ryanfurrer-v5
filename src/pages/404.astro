@@ -1,23 +1,23 @@
 ---
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import '../styles/global.css';
-const pageTitle = '404: Page Not Found';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import "../styles/global.css";
+const pageTitle = "404: Page Not Found";
 ---
 
-<html lang='en'>
-	<head>
-		<meta charset='UTF-8' />
-		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-		<meta name='generator' content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Header />
-		<main class='container mx-auto'>
-			<p>Sorry, this page does not exist.</p>
-		</main>
-		<Footer />
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Header />
+    <main class="container mx-auto">
+      <p>Sorry, this page does not exist.</p>
+    </main>
+    <Footer />
+  </body>
 </html>

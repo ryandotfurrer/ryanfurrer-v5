@@ -1,49 +1,49 @@
 ---
-import { useStoryblokApi } from '@storyblok/astro';
-import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
-import Navbar from '../../components/HeaderNavBar';
-import Footer from '../../components/Footer';
+import { useStoryblokApi } from "@storyblok/astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import Navbar from "../../components/HeaderNavBar";
+import Footer from "../../components/Footer";
 
 export async function getStaticPaths() {
-	const sbApi = useStoryblokApi();
+  const sbApi = useStoryblokApi();
 
-	const { data } = await sbApi.get('cdn/stories', {
-		content_type: 'blogPost',
-		version: import.meta.env.DEV ? 'draft' : 'published',
-	});
+  const { data } = await sbApi.get("cdn/stories", {
+    content_type: "blogPost",
+    version: import.meta.env.DEV ? "draft" : "published",
+  });
 
-	const stories = Object.values(data.stories);
+  const stories = Object.values(data.stories);
 
-	return stories.map((story) => {
-		return {
-			params: { slug: story.slug },
-		};
-	});
+  return stories.map((story) => {
+    return {
+      params: { slug: story.slug },
+    };
+  });
 }
 
 const sbApi = useStoryblokApi();
 const { slug } = Astro.params;
 const { data } = await sbApi.get(`cdn/stories/${slug}`, {
-	version: import.meta.env.DEV ? 'draft' : 'published',
+  version: import.meta.env.DEV ? "draft" : "published",
 });
 
 const story = data.story;
 ---
 
-<html lang='en'>
-	<head>
-		<meta charset='UTF-8' />
-		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-		<meta name='generator' content={Astro.generator} />
-		<title>{story.name}</title>
-	</head>
-	<body>
-		<Navbar />
-		<main class='container mx-auto space-y-[1em] px-4 py-8'>
-			<StoryblokComponent blok={story.content} />
-		</main>
-		<Footer />
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{story.name}</title>
+  </head>
+  <body>
+    <Navbar />
+    <main class="container mx-auto space-y-[1em] px-4 py-8">
+      <StoryblokComponent blok={story.content} />
+    </main>
+    <Footer />
+  </body>
 </html>
  ../../components/HeaderNavBar

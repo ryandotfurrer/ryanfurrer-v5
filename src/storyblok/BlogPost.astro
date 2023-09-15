@@ -1,18 +1,18 @@
 ---
-import { storyblokEditable, renderRichText } from '@storyblok/astro';
+import { storyblokEditable, renderRichText } from "@storyblok/astro";
 const { blok } = Astro.props;
 const content = renderRichText(blok.content);
-import '../styles/global.css';
+import "../styles/global.css";
 ---
 
 <section>
-	<article
-		{...storyblokEditable(blok)}
-		class='max-w-prose mx-auto space-y-[1em]'
-	>
-		<img src={blok.featuredImage.filename} alt={blok.featuredImage.alt} />
-		<h2>{blok.title}</h2>
-		<p>{blok.description}</p>
-		<Fragment set:html={content} />
-	</article>
+  <article
+    {...storyblokEditable(blok)}
+    class="mx-auto max-w-prose space-y-[1em]"
+  >
+    <img src={blok.featuredImage.filename} alt={blok.featuredImage.alt} />
+    <h2>{blok.title}</h2>
+    <p>{blok.description}</p>
+    <Fragment set:html={content} />
+  </article>
 </section>

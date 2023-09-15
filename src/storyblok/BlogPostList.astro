@@ -1,46 +1,46 @@
 ---
-import { storyblokEditable } from '@storyblok/astro';
-import { useStoryblokApi } from '@storyblok/astro';
-import '../styles/global.css';
+import { storyblokEditable } from "@storyblok/astro";
+import { useStoryblokApi } from "@storyblok/astro";
+import "../styles/global.css";
 
 const storyblokApi = useStoryblokApi();
 
-const { data } = await storyblokApi.get('cdn/stories', {
-	version: import.meta.env.DEV ? 'draft' : 'published',
-	content_type: 'blogPost',
-	sort_by: 'published_at:desc',
+const { data } = await storyblokApi.get("cdn/stories", {
+  version: import.meta.env.DEV ? "draft" : "published",
+  content_type: "blogPost",
+  sort_by: "published_at:desc",
 });
 
 const posts = data.stories.map(
-	(story: {
-		content: { title: any; description: any };
-		published_at: string | number | Date;
-		full_slug: any;
-	}) => {
-		return {
-			title: story.content.title,
-			date: new Date(story.published_at).toLocaleDateString('en-US', {
-				dateStyle: 'full',
-			}),
-			description: story.content.description,
-			slug: story.full_slug,
-		};
-	}
+  (story: {
+    content: { title: any; description: any };
+    published_at: string | number | Date;
+    full_slug: any;
+  }) => {
+    return {
+      title: story.content.title,
+      date: new Date(story.published_at).toLocaleDateString("en-US", {
+        dateStyle: "full",
+      }),
+      description: story.content.description,
+      slug: story.full_slug,
+    };
+  },
 );
 
 const { blok } = Astro.props;
 ---
 
-<ul {...storyblokEditable(blok)} class='flex flex-col gap-[3em]'>
-	{
-		posts.map((post) => (
-			<li>
-				<p class='text-sm font-light'>{post.date}</p>
-				<a href={post.slug} class='underline'>
-					<h3>{post.title}</h3>
-				</a>
-				<p>{post.description}</p>
-			</li>
-		))
-	}
+<ul {...storyblokEditable(blok)} class="flex flex-col gap-[3em]">
+  {
+    posts.map((post) => (
+      <li>
+        <p class="text-sm font-light">{post.date}</p>
+        <a href={post.slug} class="underline">
+          <h3>{post.title}</h3>
+        </a>
+        <p>{post.description}</p>
+      </li>
+    ))
+  }
 </ul>
