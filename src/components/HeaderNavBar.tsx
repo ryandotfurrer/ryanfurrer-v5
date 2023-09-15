@@ -1,6 +1,6 @@
 import '../styles/global.css'
 
-export default function Navbar() {
+export default function HeaderNavBar() {
     return(
         <nav className='container flex px-4 pb-8 mx-auto'>
             <a href="/" className='text-2xl font-bold mr-auto'>Ryan Furrer</a>

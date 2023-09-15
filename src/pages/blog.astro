@@ -2,6 +2,7 @@
 import { useStoryblokApi } from '@storyblok/astro';
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import '../styles/global.css';
 
 const storyblokApi = useStoryblokApi();
@@ -27,5 +28,6 @@ const pageTitle = 'Blog';
 				<StoryblokComponent blok={content} />
 			</section>
 		</main>
+		<Footer />
 	</body>
 </html>

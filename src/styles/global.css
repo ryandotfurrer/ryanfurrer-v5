@@ -2,22 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-	/* Global Layout */
-	@apply py-8;
-
-	/* Global Styles */
-	text-wrap: pretty;
-	@apply font-serif;
-	@apply font-sans;
-
-	/* Global Light Theme */
-	@apply bg-zinc-50 text-zinc-950;
-
-	/* Global Light Theme */
-	@apply dark:bg-zinc-900 dark:text-zinc-50;
-}
-
+/* Typography Styles */
 h1,
 h2,
 h3,
@@ -57,4 +42,28 @@ h5 {
 
 h6 {
 	@apply text-lg;
+}
+
+body {
+	/* Global Layout */
+	@apply py-8;
+	/* Ensures the footer stays at bottom no matter how much content is on the page. */
+	min-height: 100dvh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+
+	/* Global Styles */
+	text-wrap: pretty;
+	@apply font-serif;
+	@apply font-sans;
+
+	/* Global Light Theme */
+	@apply bg-zinc-50 text-zinc-950;
+
+	/* Global Light Theme */
+	@apply dark:bg-zinc-900 dark:text-zinc-50;
+}
+
+header {
+	@apply min-h-[65dvh];
 }

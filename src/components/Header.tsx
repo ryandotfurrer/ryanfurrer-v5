@@ -1,11 +1,11 @@
 import '../styles/global.css'
-import Navbar from './Navbar'
+import HeaderNavBar from './HeaderNavBar'
 import Hero from './Hero'
 
 export default function Header() {
     return(
-        <header className='min-h-[50dvh]'>
-            <Navbar />
+        <header>
+            <HeaderNavBar />
             <Hero />
         </header>
     )
