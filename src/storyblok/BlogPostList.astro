@@ -8,6 +8,7 @@ const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get('cdn/stories', {
 	version: import.meta.env.DEV ? 'draft' : 'published',
 	content_type: 'blogPost',
+	sort_by: 'published_at:desc',
 });
 
 const posts = data.stories.map(

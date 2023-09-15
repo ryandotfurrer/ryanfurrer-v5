@@ -1,7 +1,8 @@
 ---
 import { useStoryblokApi } from '@storyblok/astro';
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
-import Header from '../../components/Header';
+// import Header from '../../components/Header';
+import Navbar from '../../components/Navbar';
 
 export async function getStaticPaths() {
 	const sbApi = useStoryblokApi();
@@ -38,7 +39,9 @@ const story = data.story;
 		<title>{story.name}</title>
 	</head>
 	<body>
-		<Header />
-		<StoryblokComponent blok={story.content} />
+		<Navbar />
+		<main class='container mx-auto space-y-[1em] px-4 py-8'>
+			<StoryblokComponent blok={story.content} />
+		</main>
 	</body>
 </html>
