@@ -1,7 +1,6 @@
 ---
 import { useStoryblokApi } from '@storyblok/astro';
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
-// import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header';
 import '../styles/global.css';
 
@@ -15,10 +14,18 @@ const pageTitle = 'Blog';
 
 <html lang='en'>
 	<head>
+		<meta charset='UTF-8' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<meta name='generator' content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<Header />
-		<StoryblokComponent blok={content} />
+		<main class='container mx-auto py-8'>
+			<section class='mx-auto px-4 space-y-[1em]'>
+				<StoryblokComponent blok={content} />
+			</section>
+		</main>
 	</body>
 </html>
