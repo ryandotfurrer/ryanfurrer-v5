@@ -35,8 +35,8 @@ const { blok } = Astro.props;
   {
     posts.map((post) => (
       <li>
-        <p class="text-sm font-light">{post.date}</p>
-        <a href={post.slug} class="underline">
+        <p class="text-sm font-light opacity-75">{post.date}</p>
+        <a href={post.slug} class="opacity-100 hover:text-emerald-300">
           <h3>{post.title}</h3>
         </a>
         <p>{post.description}</p>

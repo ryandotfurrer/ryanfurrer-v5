@@ -3,12 +3,17 @@ import "../styles/global.css";
 export default function HeaderNavBar() {
   return (
     <nav className="container mx-auto flex px-4 pb-8">
-      <a href="/" className="mr-auto text-2xl font-bold">
+      <a
+        href="/"
+        className="mr-auto text-2xl font-bold opacity-100 hover:text-emerald-300"
+      >
         Ryan Furrer
       </a>
       <ul className="flex gap-4">
         <li>
-          <a href="/">Home</a>
+          <a href="/" className="text-current/50">
+            Home
+          </a>
         </li>
         <li>
           <a href="/blog">Blog</a>
