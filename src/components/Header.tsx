@@ -4,7 +4,7 @@ import Hero from './Hero'
 
 export default function Header() {
     return(
-        <header className='min-h-[75dvh]'>
+        <header className='min-h-[50dvh]'>
             <Navbar />
             <Hero />
         </header>
