@@ -14,11 +14,9 @@ body {
   text-wrap: pretty;
   @apply font-sans font-medium leading-relaxed;
 
-  /* Global Light Theme */
-  @apply bg-gray-100 text-gray-950;
-
-  /* Global Light Theme */
-  @apply dark:bg-gray-900 dark:text-gray-50;
+  /* Global Light & Dark Theme */
+  @apply bg-zinc-100 text-zinc-950;
+  @apply dark:bg-zinc-900 dark:text-zinc-50;
 }
 
 /* Typography Styles */
@@ -86,7 +84,7 @@ a:hover {
 
 /* Apply styles to inline code elements that are not part of a codeblock */
 code {
-  @apply rounded bg-emerald-500 px-2 py-1 dark:bg-emerald-300 dark:text-gray-950;
+  @apply rounded bg-emerald-600 px-2 py-1 dark:bg-emerald-400 dark:text-gray-950;
 }
 
 /* Applies border to codeblock */

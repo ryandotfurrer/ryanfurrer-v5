@@ -37,11 +37,11 @@ const { blok } = Astro.props;
 >
   {
     posts.map((post) => (
-      <li class="rounded border-2 border-gray-300 bg-gray-200 p-8 dark:border-gray-700 dark:bg-gray-800">
+      <li class="rounded border-2 border-zinc-300 bg-zinc-200 p-8 dark:border-zinc-700 dark:bg-zinc-800">
         <p class="text-sm opacity-50">{post.date}</p>
         <a
           href={post.slug}
-          class="opacity-100 hover:text-emerald-500 hover:underline dark:hover:text-emerald-300"
+          class="opacity-100 hover:text-emerald-600 hover:underline dark:hover:text-emerald-400"
         >
           <h3>{post.title}</h3>
         </a>
