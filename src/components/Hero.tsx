@@ -14,7 +14,7 @@ export default function Hero() {
       </div>
       <div
         id="hero-text-container"
-        className="align-end container self-end text-center lg:self-auto"
+        className="align-end container self-end text-center lg:self-auto lg:text-left"
       >
         <h2>These are some words</h2>
         <h3 className="opacity-75">
