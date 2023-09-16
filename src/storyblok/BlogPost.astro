@@ -7,13 +7,10 @@ import "../styles/prism.css";
 ---
 
 <section>
-  <article
-    {...storyblokEditable(blok)}
-    class="mx-auto max-w-prose space-y-[1em]"
-  >
-    <img src={blok.featuredImage.filename} alt={blok.featuredImage.alt} />
+  <article {...storyblokEditable(blok)} class="blog-post">
     <h2>{blok.title}</h2>
     <p>{blok.description}</p>
+    <img src={blok.featuredImage.filename} alt={blok.featuredImage.alt} />
     <Fragment set:html={content} />
   </article>
 </section>

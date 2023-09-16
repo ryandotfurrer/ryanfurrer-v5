@@ -8,7 +8,7 @@ const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get("cdn/stories", {
   version: import.meta.env.DEV ? "draft" : "published",
   content_type: "blogPost",
-  sort_by: "published_at:desc",
+  sort_by: "first_published_at:desc",
 });
 
 const posts = data.stories.map(
@@ -31,15 +31,18 @@ const posts = data.stories.map(
 const { blok } = Astro.props;
 ---
 
-<ul {...storyblokEditable(blok)} class="flex flex-col gap-[3em]">
+<ul {...storyblokEditable(blok)} class="grid md:grid-cols-2 xl:grid-cols-3 gap-[3em]">
   {
     posts.map((post) => (
-      <li>
+      <li class="p-8 bg-gray-200 dark:bg-gray-800 rounded border-2 border-gray-300 dark:border-gray-700">
         <p class="text-sm font-light opacity-75">{post.date}</p>
-        <a href={post.slug} class="opacity-100 hover:text-emerald-300">
+        <a
+          href={post.slug}
+          class="opacity-100 hover:text-emerald-500 hover:underline dark:hover:text-emerald-300"
+        >
           <h3>{post.title}</h3>
         </a>
-        <p>{post.description}</p>
+        <p class="font-normal">{post.description}</p>
       </li>
     ))
   }
