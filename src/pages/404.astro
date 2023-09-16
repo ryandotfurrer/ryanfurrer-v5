@@ -4,7 +4,8 @@ import Hero from "../layouts/Hero.astro";
 import Footer from "../components/Footer";
 import "../styles/global.css";
 const pageTitle = "404: Page Not Found";
-const description = "Crap! You're not supposed to see this";
+const heroTitle = "Uh oh, a 404 Error?!";
+const description = "Shoot, you're not supposed to see this";
 ---
 
 <html lang="en">
@@ -18,7 +19,7 @@ const description = "Crap! You're not supposed to see this";
   <body>
     <header>
       <HeaderNavBar />
-      <Hero pageTitle={pageTitle} description={description} />
+      <Hero heroTitle={heroTitle} description={description} />
     </header>
     <main>
       <section>

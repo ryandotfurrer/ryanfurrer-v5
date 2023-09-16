@@ -4,7 +4,9 @@ import Hero from "../layouts/Hero.astro";
 import Footer from "../components/Footer";
 import "../styles/global.css";
 const pageTitle = "Ryan Furrer";
-const description = "My corner of the internet";
+const heroTitle = "Ryan Furrer";
+const description =
+  "Helping people make the world a better place through quality software.";
 ---
 
 <html lang="en">
@@ -18,7 +20,7 @@ const description = "My corner of the internet";
   <body>
     <header>
       <HeaderNavBar />
-      <Hero pageTitle={pageTitle} description={description} />
+      <Hero heroTitle={heroTitle} description={description} />
     </header>
     <main>
       <section>

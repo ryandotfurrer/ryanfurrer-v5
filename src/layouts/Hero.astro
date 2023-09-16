@@ -2,11 +2,11 @@
 import "../styles/global.css";
 
 export interface Props {
-  pageTitle: string;
+  heroTitle: string;
   description: string;
 }
 
-const { description, pageTitle }: Props = Astro.props;
+const { description, heroTitle }: Props = Astro.props;
 ---
 
 <section
@@ -18,9 +18,9 @@ const { description, pageTitle }: Props = Astro.props;
   </div>
   <div
     id="hero-text-container"
-    class="align-end container self-end text-center lg:self-auto lg:text-left"
+    class="align-end container grid gap-[1em] self-end lg:self-auto"
   >
-    <h2>{pageTitle}</h2>
+    <h2>{heroTitle}</h2>
     <h3 class="opacity-75">
       {description}
     </h3>

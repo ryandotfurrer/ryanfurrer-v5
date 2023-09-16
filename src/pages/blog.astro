@@ -12,6 +12,7 @@ const { data } = await storyblokApi.get("cdn/stories/blog", {
 });
 const content = data.story.content;
 const pageTitle = "Blog";
+const heroTitle = "Learn development with great articles.";
 const description = "Sometimes I write things about things";
 ---
 
@@ -26,7 +27,7 @@ const description = "Sometimes I write things about things";
   <body>
     <header>
       <HeaderNavBar />
-      <Hero pageTitle={pageTitle} description={description} />
+      <Hero heroTitle={heroTitle} description={description} />
     </header>
     <main>
       <section>
