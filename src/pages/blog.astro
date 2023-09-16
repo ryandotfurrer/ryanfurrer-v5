@@ -1,7 +1,8 @@
 ---
 import { useStoryblokApi } from "@storyblok/astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
-import Header from "../components/Header";
+import HeaderNavBar from "../layouts/HeaderNavBar.astro";
+import Hero from "../layouts/Hero.astro";
 import Footer from "../components/Footer";
 import "../styles/global.css";
 
@@ -11,6 +12,7 @@ const { data } = await storyblokApi.get("cdn/stories/blog", {
 });
 const content = data.story.content;
 const pageTitle = "Blog";
+const description = "Sometimes I write things about things";
 ---
 
 <html lang="en">
@@ -22,7 +24,10 @@ const pageTitle = "Blog";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Header />
+    <header>
+      <HeaderNavBar />
+      <Hero pageTitle={pageTitle} description={description} />
+    </header>
     <main>
       <section>
         <StoryblokComponent blok={content} />

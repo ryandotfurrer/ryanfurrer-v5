@@ -1,8 +1,10 @@
 ---
-import Header from "../components/Header";
+import HeaderNavBar from "../layouts/HeaderNavBar.astro";
+import Hero from "../layouts/Hero.astro";
 import Footer from "../components/Footer";
 import "../styles/global.css";
 const pageTitle = "404: Page Not Found";
+const description = "Crap! You're not supposed to see this";
 ---
 
 <html lang="en">
@@ -14,11 +16,18 @@ const pageTitle = "404: Page Not Found";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Header />
+    <header>
+      <HeaderNavBar />
+      <Hero pageTitle={pageTitle} description={description} />
+    </header>
     <main>
       <section>
         <article>
-          <p>Sorry, this page does not exist.</p>
+          <p>
+            It seems like you found a page that doesn't exist <i>or</i> a broken
+            link. <br />No worries! Feel free to go back or click any other link
+            in the navigation bar.
+          </p>
         </article>
       </section>
     </main>

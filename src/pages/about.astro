@@ -1,8 +1,10 @@
 ---
-import Header from "../components/Header";
+import HeaderNavBar from "../layouts/HeaderNavBar.astro";
+import Hero from "../layouts/Hero.astro";
 import Footer from "../components/Footer";
 import "../styles/global.css";
-const pageTitle = "About";
+const pageTitle = "About Me";
+const description = "So you wanna get to know me?";
 ---
 
 <html lang="en">
@@ -14,7 +16,10 @@ const pageTitle = "About";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Header />
+    <header>
+      <HeaderNavBar />
+      <Hero pageTitle={pageTitle} description={description} />
+    </header>
     <main>
       <section>
         <article>

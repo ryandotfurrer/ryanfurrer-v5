@@ -1,7 +1,7 @@
 ---
 import { useStoryblokApi } from "@storyblok/astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
-import Navbar from "../../components/HeaderNavBar";
+import HeaderNavBar from "../../layouts/HeaderNavBar.astro";
 import Footer from "../../components/Footer";
 import "../../styles/global.css";
 
@@ -40,7 +40,7 @@ const story = data.story;
     <title>{story.name}</title>
   </head>
   <body>
-    <Navbar />
+    <HeaderNavBar />
 
     <main>
       <StoryblokComponent blok={story.content} />
