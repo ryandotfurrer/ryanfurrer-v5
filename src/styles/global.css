@@ -101,6 +101,10 @@ header {
   @apply min-h-[100dvh];
 }
 
+nav:is(#header-nav) {
+  @apply container mx-auto flex items-center px-8 py-12 text-lg md:text-xl;
+}
+
 /* Constrains elements inside the main element to a certain width (container class), centers them, and adds padding to the top and bottom of the main element. */
 main {
   @apply container mx-auto py-[4em];
