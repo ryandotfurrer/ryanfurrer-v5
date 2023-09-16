@@ -31,18 +31,21 @@ const posts = data.stories.map(
 const { blok } = Astro.props;
 ---
 
-<ul {...storyblokEditable(blok)} class="grid md:grid-cols-2 xl:grid-cols-3 gap-[3em]">
+<ul
+  {...storyblokEditable(blok)}
+  class="grid gap-[3em] md:grid-cols-2 xl:grid-cols-3"
+>
   {
     posts.map((post) => (
-      <li class="p-8 bg-gray-200 dark:bg-gray-800 rounded border-2 border-gray-300 dark:border-gray-700">
-        <p class="text-sm font-light opacity-75">{post.date}</p>
+      <li class="rounded border-2 border-gray-300 bg-gray-200 p-8 dark:border-gray-700 dark:bg-gray-800">
+        <p class="text-sm opacity-50">{post.date}</p>
         <a
           href={post.slug}
           class="opacity-100 hover:text-emerald-500 hover:underline dark:hover:text-emerald-300"
         >
           <h3>{post.title}</h3>
         </a>
-        <p class="font-normal">{post.description}</p>
+        <p class="font-normal opacity-75">{post.description}</p>
       </li>
     ))
   }
