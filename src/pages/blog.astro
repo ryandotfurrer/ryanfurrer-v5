@@ -14,6 +14,7 @@ const content = data.story.content;
 const pageTitle = "Blog";
 const heroHeader = "Learn what I'm up to with articles.";
 const heroDescription = "Sometimes I write things about things.";
+const heroImage = "/public/developer_code-thinking.svg";
 ---
 
 <html lang="en">
@@ -31,7 +32,11 @@ const heroDescription = "Sometimes I write things about things.";
   <body>
     <header>
       <HeaderNavBar />
-      <Hero heroHeader={heroHeader} heroDescription={heroDescription} />
+      <Hero
+        heroHeader={heroHeader}
+        heroDescription={heroDescription}
+        heroImage={heroImage}
+      />
     </header>
     <main>
       <section>
