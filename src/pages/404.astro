@@ -4,10 +4,10 @@ import Hero from "../layouts/Hero.astro";
 import Footer from "../components/Footer";
 import "../styles/global.css";
 const pageTitle = "404: Page Not Found";
-const heroHeader = "Uh oh, a 404 Errors?!";
+const heroHeader = "Uh oh, a 404 Error?!";
 const heroDescription = "Shoot, you're not supposed to see this.";
 const heroParagraph =
-  "This is awkward...sorry about that! It seems the page you tried visiting does not exist, or you've found a broken link.";
+  "This is awkward...sorry about that! It seems the page you tried visiting does not exist, or you've found a broken link. But while you're here 👇🏻👇🏻👇🏻";
 ---
 
 <html lang="en">
@@ -16,6 +16,10 @@ const heroParagraph =
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    <script
+      is:inline
+      src="https://kit.fontawesome.com/dec2579292.js"
+      crossorigin="anonymous"></script>
     <title>{pageTitle}</title>
   </head>
   <body>
@@ -28,7 +32,36 @@ const heroParagraph =
       />
     </header>
     <main>
-      <Footer />
+      <section>
+        <article>
+          <div id="read-more-blogs">
+            <p>Can I interest you in some of my blog posts?"</p>
+            <p><a href="/blog">Read More</a></p>
+          </div>
+          <div id="social-icons">
+            <p>Or maybe you'd like to follow me elsewhere?</p>
+            <div id="icon-container" class="flex gap-6 text-4xl">
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><i class="fa-brands fa-x-twitter opacity-75 hover:opacity-100"
+                ></i></a
+              >
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><i class="fa-brands fa-github opacity-75 hover:opacity-100"
+                ></i></a
+              >
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><i class="fa-brands fa-linkedin opacity-75 hover:opacity-100"
+                ></i></a
+              >
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><i class="fa-brands fa-threads opacity-75 hover:opacity-100"
+                ></i></a
+              >
+            </div>
+          </div>
+        </article>
+      </section>
     </main>
+    <Footer />
   </body>
 </html>
