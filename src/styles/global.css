@@ -93,8 +93,13 @@ code {
 
 /* Applies border to codeblock */
 pre {
-  @apply rounded;
+  /* @apply max-w-full overflow-x-scroll whitespace-pre rounded !important; */
+  @apply grid grid-cols-1;
 }
+
+/* pre > code {
+  @apply inline-block w-full overflow-x-scroll !important;
+} */
 
 /* Semantic HTML Styles */
 
@@ -109,12 +114,12 @@ nav:is(#header-nav) {
 
 /* Constrains elements inside the main element to a certain width (container class), centers them, and adds padding to the top and bottom of the main element. */
 main {
-  @apply container mx-auto py-[4em];
+  @apply container mx-auto max-w-full py-[4em];
 }
 
 /* Centers element on the page. Adds "flow" to elements nested inside the section element using the space-y-[] rule. Also adds horizontal padding so elements are not butting up on the extreme edges of the window on smaller screen sizes. */
 section {
-  @apply mx-auto space-y-[1em] px-8;
+  @apply mx-auto max-w-full space-y-[1em] px-8;
 }
 
 /* Centers element on the page. Adds "flow" to elements nested inside the section element using the space-y-[] rule. */
