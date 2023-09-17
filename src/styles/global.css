@@ -83,7 +83,7 @@ a > i:hover {
 /* Bottom border is replacing the underline, purely for design */
 :is(main, section, article) p > a:hover,
 :is(main, section, article) li > a:hover {
-  @apply border-b-2;
+  @apply border-b-2 border-current;
 }
 
 /* Apply styles to inline code elements that are not part of a codeblock */
