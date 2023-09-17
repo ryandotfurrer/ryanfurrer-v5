@@ -1,0 +1,25 @@
+---
+import "../styles/global.css";
+import FooterNavBar from "./FooterNavBar.astro";
+import SocialLinks from "./SocialLinks.astro";
+---
+
+<footer
+  class="h-min-full mx-auto w-full border-t-2 border-zinc-200 border-opacity-100 pb-8 pt-20 dark:border-zinc-800"
+>
+  <div id="footer-inside-container" class="container mx-auto grid gap-4 px-8">
+    <FooterNavBar />
+    <SocialLinks />
+    <div id="copyright" class="text-sm opacity-75">
+      <p>
+        &copy; 2023 <a
+          href="https://ryanfurrer.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-emerald-600 opacity-100 hover:underline dark:text-emerald-400"
+          >Ryan Furrer</a
+        >
+      </p>
+    </div>
+  </div>
+</footer>

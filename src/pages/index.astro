@@ -1,7 +1,7 @@
 ---
 import HeaderNavBar from "../layouts/HeaderNavBar.astro";
 import Hero from "../layouts/Hero.astro";
-import Footer from "../components/Footer";
+import Footer from "../layouts/Footer.astro";
 import "../styles/global.css";
 const pageTitle = "Ryan Furrer";
 const heroHeader = "Ryan Furrer";
@@ -15,6 +15,10 @@ const heroDescription =
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    <script
+      is:inline
+      src="https://kit.fontawesome.com/dec2579292.js"
+      crossorigin="anonymous"></script>
     <title>{pageTitle}</title>
   </head>
   <body>
