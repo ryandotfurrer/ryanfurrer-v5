@@ -4,8 +4,10 @@ import Hero from "../layouts/Hero.astro";
 import Footer from "../components/Footer";
 import "../styles/global.css";
 const pageTitle = "404: Page Not Found";
-const heroTitle = "Uh oh, a 404 Error?!";
-const description = "Shoot, you're not supposed to see this";
+const heroHeader = "Uh oh, a 404 Errors?!";
+const heroDescription = "Shoot, you're not supposed to see this.";
+const heroParagraph =
+  "This is awkward...sorry about that! It seems the page you tried visiting does not exist, or you've found a broken link.";
 ---
 
 <html lang="en">
@@ -19,19 +21,14 @@ const description = "Shoot, you're not supposed to see this";
   <body>
     <header>
       <HeaderNavBar />
-      <Hero heroTitle={heroTitle} description={description} />
+      <Hero
+        heroHeader={heroHeader}
+        heroDescription={heroDescription}
+        heroParagraph={heroParagraph}
+      />
     </header>
     <main>
-      <section>
-        <article>
-          <p>
-            It seems like you found a page that doesn't exist <i>or</i> a broken
-            link. <br />No worries! Feel free to go back or click any other link
-            in the navigation bar.
-          </p>
-        </article>
-      </section>
+      <Footer />
     </main>
-    <Footer />
   </body>
 </html>

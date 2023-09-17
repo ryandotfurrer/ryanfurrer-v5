@@ -12,18 +12,21 @@ body {
 
   /* Text and Font */
   text-wrap: pretty;
-  @apply font-sans font-medium leading-relaxed;
+  @apply font-sans text-lg leading-relaxed;
 
   /* Global Light & Dark Theme */
-  @apply bg-zinc-100 text-zinc-950;
-  @apply dark:bg-zinc-900 dark:text-zinc-50;
+  @apply bg-zinc-100 text-zinc-950 dark:bg-zinc-900 dark:text-zinc-50;
 }
 
 /* Typography Styles */
 :is(h1, h2, h3, h4, h5, h6) {
   text-wrap: balance;
-  @apply font-bold;
-  @apply tracking-tight;
+  @apply font-bold tracking-tight;
+}
+
+:is(#hero) p {
+  text-wrap: balance;
+  @apply font-bold tracking-tight;
 }
 
 :is(h1, h2, h3, h4, h5, h6) > span::after {
@@ -36,27 +39,27 @@ body {
 }
 
 h1 {
-  @apply text-5xl lg:text-7xl;
+  @apply text-4xl md:text-5xl;
 }
 
 h2 {
-  @apply text-4xl lg:text-6xl;
+  @apply text-3xl md:text-4xl;
 }
 
 h3 {
-  @apply text-3xl lg:text-5xl;
+  @apply text-2xl md:text-5xl;
 }
 
 h4 {
-  @apply text-2xl lg:text-4xl;
+  @apply text-2xl md:text-4xl;
 }
 
 h5 {
-  @apply text-xl lg:text-3xl;
+  @apply text-xl md:text-3xl;
 }
 
 h6 {
-  @apply text-lg lg:text-2xl;
+  @apply text-lg md:text-2xl;
 }
 
 /* Make links "stand out" by decreasing their opacity */
@@ -84,7 +87,7 @@ a:hover {
 
 /* Apply styles to inline code elements that are not part of a codeblock */
 code {
-  @apply rounded bg-emerald-600 px-2 py-1 dark:bg-emerald-400 dark:text-gray-950;
+  @apply rounded bg-emerald-600 px-2 py-1 text-zinc-50 dark:bg-emerald-400 dark:text-zinc-950;
 }
 
 /* Applies border to codeblock */

@@ -2,11 +2,12 @@
 import "../styles/global.css";
 
 export interface Props {
-  heroTitle: string;
-  description: string;
+  heroHeader: string;
+  heroDescription: string;
+  heroParagraph?: string;
 }
 
-const { description, heroTitle }: Props = Astro.props;
+const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
 ---
 
 <section
@@ -20,9 +21,10 @@ const { description, heroTitle }: Props = Astro.props;
     id="hero-text-container"
     class="align-end container grid gap-[1em] self-end lg:self-auto"
   >
-    <h2>{heroTitle}</h2>
-    <h3 class="opacity-75">
-      {description}
-    </h3>
+    <h2 class="text-3xl md:text-4xl">{heroHeader}</h2>
+    <p class="text-3xl opacity-75 md:text-4xl">
+      {heroDescription}
+    </p>
+    <p>{heroParagraph}</p>
   </div>
 </section>
