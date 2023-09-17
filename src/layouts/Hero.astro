@@ -3,24 +3,25 @@ import "../styles/global.css";
 
 export interface Props {
   heroHeader: string;
-  heroDescription: string;
+  heroDescription?: string;
   heroParagraph?: string;
+  heroImage?: string;
 }
 
-const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
+const { heroDescription, heroHeader, heroParagraph, heroImage }: Props =
+  Astro.props;
 ---
 
 <section
   id="hero"
-  class="container mx-auto grid h-3/4 grid-cols-1 lg:grid-cols-2 lg:place-items-center"
+  class="container mx-auto grid h-3/4 grid-cols-1 place-content-around lg:grid-cols-2 lg:place-items-center lg:gap-12"
 >
-  <div id="hero-img-container" class="container self-center lg:self-auto">
-    <!-- <img src="/favicon.svg" alt="logo" /> -->
-    <img src="/public/developer_coffee.svg" alt="logo" />
+  <div id="hero-img-container" class="container lg:self-auto">
+    <img src={heroImage} alt="logo" />
   </div>
   <div
     id="hero-text-container"
-    class="align-end container grid gap-[1em] self-end lg:self-auto"
+    class="align-end container grid gap-[1em] lg:self-auto"
   >
     <h2 class="text-3xl md:text-4xl">{heroHeader}</h2>
     <p class="text-3xl opacity-75 md:text-4xl">

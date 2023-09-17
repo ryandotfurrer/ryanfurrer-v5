@@ -4,9 +4,9 @@ import Hero from "../layouts/Hero.astro";
 import Footer from "../layouts/Footer.astro";
 import "../styles/global.css";
 const pageTitle = "Ryan Furrer";
-const heroHeader = "Ryan Furrer";
-const heroDescription =
+const heroHeader =
   "Helping people build the web presence they deserve through quailty code.";
+const heroImage = "/public/developer_programming.svg";
 ---
 
 <html lang="en">
@@ -24,7 +24,22 @@ const heroDescription =
   <body>
     <header>
       <HeaderNavBar />
-      <Hero heroHeader={heroHeader} heroDescription={heroDescription} />
+      <Hero heroHeader={heroHeader} heroImage={heroImage} />
+      <section
+        id="header-cta-container"
+        class="container lg:grid lg:place-items-center"
+      >
+        <article>
+          <div id="hero-link-container" class="lg:flex lg:gap-8">
+            <p>
+              <a href="/blog" class="text-emerald-600 dark:text-emerald-400"
+                >Read blog articles</a
+              >
+            </p>
+            <p><a href="/projects">View my projects</a></p>
+          </div>
+        </article>
+      </section>
     </header>
     <main>
       <section>
