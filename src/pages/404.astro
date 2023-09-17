@@ -1,6 +1,7 @@
 ---
 import HeaderNavBar from "../layouts/HeaderNavBar.astro";
 import Hero from "../layouts/Hero.astro";
+import SocialLinks from "../layouts/SocialLinks.astro";
 import Footer from "../components/Footer";
 import "../styles/global.css";
 const pageTitle = "404: Page Not Found";
@@ -35,29 +36,20 @@ const heroParagraph =
       <section>
         <article>
           <div id="read-more-blogs">
-            <p>Can I interest you in some of my blog posts?"</p>
-            <p><a href="/blog">Read More</a></p>
+            <p>Can I interest you in some of my blogs?</p>
+            <p>
+              <div
+                id="link-container"
+                class="flex flex-col md:flex-row md:gap-6"
+              >
+                <p><a href="/blog">Yes I'd love to read some.</a></p>
+                <p><a href="/">No, take me home.</a></p>
+              </div>
+            </p>
           </div>
-          <div id="social-icons">
+          <div id="social-icons" class="grid grid-cols-1 gap-1">
             <p>Or maybe you'd like to follow me elsewhere?</p>
-            <div id="icon-container" class="flex gap-6 text-4xl">
-              <a href="#" target="_blank" rel="noopener noreferrer"
-                ><i class="fa-brands fa-x-twitter opacity-75 hover:opacity-100"
-                ></i></a
-              >
-              <a href="#" target="_blank" rel="noopener noreferrer"
-                ><i class="fa-brands fa-github opacity-75 hover:opacity-100"
-                ></i></a
-              >
-              <a href="#" target="_blank" rel="noopener noreferrer"
-                ><i class="fa-brands fa-linkedin opacity-75 hover:opacity-100"
-                ></i></a
-              >
-              <a href="#" target="_blank" rel="noopener noreferrer"
-                ><i class="fa-brands fa-threads opacity-75 hover:opacity-100"
-                ></i></a
-              >
-            </div>
+            <SocialLinks />
           </div>
         </article>
       </section>
