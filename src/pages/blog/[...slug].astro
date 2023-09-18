@@ -4,6 +4,7 @@ import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import HeaderNavBar from "../../layouts/HeaderNavBar.astro";
 import Footer from "../../layouts/Footer.astro";
 import "../../styles/global.css";
+import "../../styles/highlightjs-styles/nord.min.css";
 
 export async function getStaticPaths() {
   const sbApi = useStoryblokApi();
@@ -41,6 +42,8 @@ const story = data.story;
       is:inline
       src="https://kit.fontawesome.com/dec2579292.js"
       crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/src/styles/highlightjs-styles/nord.min.css" />
+    <script is:inline src="/highlight.min.js"></script>
     <title>{story.name}</title>
   </head>
   <body>
@@ -50,5 +53,8 @@ const story = data.story;
       <StoryblokComponent blok={story.content} />
     </main>
     <Footer />
+    <script is:inline>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>

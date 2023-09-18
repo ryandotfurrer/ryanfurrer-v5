@@ -88,7 +88,7 @@ a > i:hover {
 
 /* Apply styles to inline code elements that are not part of a codeblock */
 code {
-  @apply rounded bg-emerald-600 px-2 py-1 text-zinc-50 dark:bg-emerald-400 dark:text-zinc-950;
+  @apply rounded bg-emerald-600 px-2 py-1 text-sm text-zinc-50 dark:bg-emerald-400 dark:text-zinc-950;
 }
 
 /* Applies border to codeblock */
