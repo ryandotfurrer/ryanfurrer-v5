@@ -8,7 +8,7 @@ const pageTitle = "404: Page Not Found";
 const heroHeader = "Uh oh, a 404 Error?!";
 const heroDescription = "Shoot, you're not supposed to see this.";
 const heroParagraph =
-  "This is awkward...sorry about that! It seems the page you tried visiting does not exist, or you've found a broken link. But while you're here 👇🏻";
+  "It seems the page you tried visiting does not exist, or you've found a broken link. But while you're here...";
 const heroImage = "/developer_code-inspection.svg";
 ---
 
@@ -33,10 +33,13 @@ const heroImage = "/developer_code-inspection.svg";
         heroParagraph={heroParagraph}
         heroImage={heroImage}
       />
+      <div class="flex place-content-center">
+        <p class="animate-bounce text-6xl">👇🏻</p>
+      </div>
     </header>
     <main>
-      <section>
-        <article>
+      <section class="grid place-items-center">
+        <article class="space-y-[3em]">
           <div id="read-more-blogs">
             <p class="font-bold">Can I interest you in some of my blogs?</p>
             <p>
@@ -48,10 +51,10 @@ const heroImage = "/developer_code-inspection.svg";
                   <a
                     href="/blog"
                     class="dark:text-edmerald-400 text-emerald-600"
-                    >Yes I'd love to read some.</a
+                    >Yes I'd love to read some ✅</a
                   >
                 </p>
-                <p><a href="/">No, take me home.</a></p>
+                <p><a href="/">No, take me home ❌</a></p>
               </div>
             </p>
           </div>
