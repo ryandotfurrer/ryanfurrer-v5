@@ -97,9 +97,9 @@ pre {
   @apply grid grid-cols-1;
 }
 
-/* pre > code {
-  @apply inline-block w-full overflow-x-scroll !important;
-} */
+pre > code {
+  @apply lg:text-base;
+}
 
 /* Semantic HTML Styles */
 
