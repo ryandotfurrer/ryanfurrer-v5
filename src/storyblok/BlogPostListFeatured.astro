@@ -2,6 +2,7 @@
 import { storyblokEditable } from "@storyblok/astro";
 import { useStoryblokApi } from "@storyblok/astro";
 const { blok } = Astro.props;
+import "../styles/global.css";
 
 const storyblokApi = useStoryblokApi();
 
@@ -30,8 +31,6 @@ const posts = data.stories.map(
     };
   },
 );
-
-import "../styles/global.css";
 ---
 
 <ul

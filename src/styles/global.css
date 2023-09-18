@@ -149,3 +149,15 @@ article:is(#blog-post) {
     transform: none !important;
   }
 }
+
+@media (prefers-contrast: more) {
+  *,
+  *::before,
+  *::after {
+    opacity: 100% !important;
+  }
+
+  a:hover {
+    text-decoration: underline !important;
+  }
+}
