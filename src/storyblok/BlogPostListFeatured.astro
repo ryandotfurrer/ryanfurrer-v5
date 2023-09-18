@@ -43,10 +43,10 @@ const posts = data.stories.map(
       <li class="rounded-md border-2 border-zinc-300 bg-zinc-200 p-6 dark:border-zinc-700 dark:bg-zinc-800">
         <a
           href={post.slug}
-          class="block border-0 pb-[1em] opacity-100 hover:border-0"
+          class="mb-[1em] block overflow-hidden border-0 opacity-100 hover:border-0"
         >
           <img
-            class="rounded"
+            class="rounded transition-transform duration-300 hover:scale-125"
             src={post.featuredImage.filename}
             alt={post.featuredImage.alt}
           />
@@ -58,7 +58,7 @@ const posts = data.stories.map(
         >
           <h3>{post.title}</h3>
         </a>
-        <p class="font-normal opacity-75">{post.description}</p>
+        <p class="truncate font-normal opacity-75">{post.description}</p>
       </li>
     ))
   }
