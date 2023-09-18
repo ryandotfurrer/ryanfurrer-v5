@@ -7,6 +7,7 @@ const pageTitle = "Ryan Furrer";
 const heroHeader =
   "Helping people build the web presence they deserve through quailty code.";
 const heroImage = "/developer_programming.svg";
+import BlogPostList from "../storyblok/BlogPostList.astro";
 ---
 
 <html lang="en">
@@ -62,6 +63,24 @@ const heroImage = "/developer_programming.svg";
           veniam commodi et voluptatibus alias blanditiis dicta fugit magni sed,
           delectus culpa facere saepe. Odit amet sunt ea debitis ipsa molestiae?
           Perspiciatis id nulla corrupti quidem ut!
+        </p>
+      </section>
+      <section>
+        <h2>Blogs</h2>
+        <p>
+          I enjoy writing articles from time to time about things I've learned,
+          project updates, and more. Below you can find my three most recent
+          posts and if you'd like you can <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer">subscribe to my Newsletter</a
+          > to be notified when I publish new ones.
+        </p>
+        <BlogPostList />
+        <p>
+          <a href="/blog" class="text-emerald-600 dark:text-emerald-400"
+            >View all articles</a
+          >
         </p>
       </section>
     </main>
