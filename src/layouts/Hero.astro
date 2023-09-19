@@ -18,7 +18,7 @@ const { heroDescription, heroHeader, heroParagraph, heroImage }: Props =
 >
   <div
     id="hero-img-container"
-    class="animate-fade animate-once animate-duration-500 animate-delay-100 animate-ease-in-out container lg:self-auto"
+    class="container animate-fade animate-delay-500 animate-duration-500 animate-once animate-ease-in-out lg:self-auto"
   >
     <img src={heroImage} alt="logo" />
   </div>
@@ -28,7 +28,7 @@ const { heroDescription, heroHeader, heroParagraph, heroImage }: Props =
   >
     <div
       id="hero-header-container"
-      class="animate-fade animate-once animate-duration-500 animate-ease-in-out animate-delay-300"
+      class="animate-fade animate-delay-700 animate-duration-500 animate-once animate-ease-in-out"
     >
       <h2 class="text-3xl md:text-4xl">
         {heroHeader}
@@ -36,7 +36,7 @@ const { heroDescription, heroHeader, heroParagraph, heroImage }: Props =
     </div>
     <div
       id="hero-description-container"
-      class="animate-fade-down animate-once animate-duration-700 animate-delay-500 animate-ease-in-out"
+      class="animate-fade-down animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out"
     >
       <p class="text-3xl opacity-75 md:text-4xl">
         {heroDescription}
@@ -44,7 +44,7 @@ const { heroDescription, heroHeader, heroParagraph, heroImage }: Props =
     </div>
     <div
       id="hero-paragraph-container"
-      class="animate-fade-down animate-once animate-duration-500 animate-delay-1000 animate-ease-in-out"
+      class="animate-fade-down animate-delay-[1200ms] animate-duration-500 animate-once animate-ease-in-out"
     >
       <p>
         {heroParagraph}
