@@ -23,7 +23,7 @@ const posts = data.stories.map(
         dateStyle: "full",
       }),
       description: story.content.description,
-      slug: story.full_slug,
+      slug: "blog/" + story.full_slug,
       featuredImage: story.content.featuredImage,
     };
   },
@@ -51,7 +51,7 @@ const { blok } = Astro.props;
         </a>
         <p class="text-sm opacity-50">{post.date}</p>
         <a
-          href=`/blog/{post.slug}`
+          href={post.slug}
           class="opacity-100 hover:text-emerald-600 hover:underline dark:hover:text-emerald-400"
         >
           <h3>{post.title}</h3>
