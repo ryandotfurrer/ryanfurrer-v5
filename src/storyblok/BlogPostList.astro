@@ -5,7 +5,7 @@ import "../styles/global.css";
 
 const storyblokApi = useStoryblokApi();
 
-const { data } = await storyblokApi.get("cdn/stories", {
+const { data } = await storyblokApi.get("cdn/stories/blog", {
   version: import.meta.env.DEV ? "draft" : "published",
   content_type: "blogPost",
   sort_by: "first_published_at:desc",
@@ -23,7 +23,7 @@ const posts = data.stories.map(
         dateStyle: "full",
       }),
       description: story.content.description,
-      slug: "blog/" + story.full_slug,
+      slug: story.full_slug,
       featuredImage: story.content.featuredImage,
     };
   },
