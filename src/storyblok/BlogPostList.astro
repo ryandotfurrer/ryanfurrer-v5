@@ -5,7 +5,7 @@ import "../styles/global.css";
 
 const storyblokApi = useStoryblokApi();
 
-const { data } = await storyblokApi.get("cdn/stories/blog", {
+const { data } = await storyblokApi.get("cdn/stories", {
   version: import.meta.env.DEV ? "draft" : "published",
   content_type: "blogPost",
   sort_by: "first_published_at:desc",
