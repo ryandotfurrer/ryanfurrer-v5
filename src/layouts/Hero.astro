@@ -16,17 +16,39 @@ const { heroDescription, heroHeader, heroParagraph, heroImage }: Props =
   id="hero"
   class="container mx-auto grid h-3/4 grid-cols-1 place-content-around lg:grid-cols-2 lg:place-items-center lg:gap-12"
 >
-  <div id="hero-img-container" class="container lg:self-auto">
+  <div
+    id="hero-img-container"
+    class="animate-fade animate-once animate-duration-500 animate-delay-100 animate-ease-in-out container lg:self-auto"
+  >
     <img src={heroImage} alt="logo" />
   </div>
   <div
     id="hero-text-container"
     class="align-end container grid gap-[1em] lg:self-auto"
   >
-    <h2 class="text-3xl md:text-4xl">{heroHeader}</h2>
-    <p class="text-3xl opacity-75 md:text-4xl">
-      {heroDescription}
-    </p>
-    <p>{heroParagraph}</p>
+    <div
+      id="hero-header-container"
+      class="animate-fade animate-once animate-duration-500 animate-ease-in-out animate-delay-300"
+    >
+      <h2 class="text-3xl md:text-4xl">
+        {heroHeader}
+      </h2>
+    </div>
+    <div
+      id="hero-description-container"
+      class="animate-fade-down animate-once animate-duration-700 animate-delay-500 animate-ease-in-out"
+    >
+      <p class="text-3xl opacity-75 md:text-4xl">
+        {heroDescription}
+      </p>
+    </div>
+    <div
+      id="hero-paragraph-container"
+      class="animate-fade-down animate-once animate-duration-500 animate-delay-1000 animate-ease-in-out"
+    >
+      <p>
+        {heroParagraph}
+      </p>
+    </div>
   </div>
 </section>
