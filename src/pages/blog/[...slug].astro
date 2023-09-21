@@ -45,14 +45,20 @@ const story = data.story;
     <meta property="og:title" content={story.name} />
     <meta property="og:description" content={story.content.description} />
     <meta property="og:image" content={story.content.featuredImage.filename} />
-    <meta property="og:url" content={story.full_slug} />
+    <meta
+      property="og:url"
+      content={`https://rfportfolioastro.netlify.app/blog/${story.full_slug}`}
+    />
     <meta property="og:site_name" content="Ryan Furrer" />
     <meta name="twitter:card" content={story.content.featuredImage.filename} />
     <meta name="twitter:image:alt" content={story.content.featuredImage.alt} />
 
     <link rel="stylesheet" href="/src/styles/highlightjs-styles/nord.min.css" />
 
-    <link rel="canonical" href={slug} />
+    <link
+      rel="canonical"
+      href={`https://rfportfolioastro.netlify.app/blog/${story.full_slug}`}
+    />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
