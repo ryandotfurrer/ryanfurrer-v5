@@ -1,0 +1,54 @@
+---
+import HeaderNavBar from "../layouts/HeaderNavBar.astro";
+import Hero from "../layouts/Hero.astro";
+import Footer from "../layouts/Footer.astro";
+import "../styles/global.css";
+const pageTitle = "Projects";
+const heroHeader = "Projects";
+const heroDescription = "What I've created and worked on";
+const heroImage = "/developer_feeling-proud.svg";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <script
+      is:inline
+      src="https://kit.fontawesome.com/dec2579292.js"
+      crossorigin="anonymous"></script>
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <header>
+      <HeaderNavBar />
+      <Hero
+        heroHeader={heroHeader}
+        heroDescription={heroDescription}
+        heroImage={heroImage}
+      />
+    </header>
+    <main>
+      <section>
+        <article>
+          <h2>Heading</h2>
+          <div class="grid place-items-center gap-8 md:grid-cols-2">
+            <img
+              src="/avatar-2x.webp"
+              class="mx-auto w-1/2 rounded-full md:w-full"
+            />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Accusamus corporis dolor rerum saepe cum, placeat quo fugiat quas
+              quidem facere velit, sapiente iste impedit nulla dicta esse quae
+              adipisci explicabo error eveniet maiores culpa molestias.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
