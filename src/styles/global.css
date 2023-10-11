@@ -133,6 +133,10 @@ article:is(#blog-post) {
   @apply max-w-prose;
 }
 
+#tech-container > ul > li {
+  @apply flex rounded bg-zinc-300 p-2 text-sm text-zinc-600 dark:bg-zinc-700 dark:text-zinc-300;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
