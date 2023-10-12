@@ -133,8 +133,52 @@ article:is(#blog-post) {
   @apply max-w-prose;
 }
 
-#tech-container > ul > li {
+.rf-tech-container > ul > li {
   @apply flex rounded bg-zinc-300 p-2 text-sm text-zinc-600 dark:bg-zinc-700 dark:text-zinc-300;
+}
+
+.rf-astro-project-tag {
+  @apply bg-[#e1d5f0] text-[#17161D] dark:bg-[#4b2a7d] dark:text-[#E3E2E9] !important;
+}
+
+.rf-react-project-tag {
+  @apply bg-[#387ca0] text-white !important;
+}
+
+.rf-tailwind-project-tag {
+  @apply bg-[#364153] text-white dark:bg-[#4ba3e3] !important;
+}
+
+.rf-storyblok-project-tag {
+  @apply bg-[#00b3b0] text-white !important;
+}
+
+.rf-html-project-tag {
+  @apply bg-[#dc6c41] text-white dark:bg-[#e78247] !important;
+}
+
+.rf-css-project-tag {
+  @apply bg-[#3671b2] text-white dark:bg-[#57a5d8] !important;
+}
+
+.rf-scss-project-tag {
+  @apply bg-[#bf6b97] text-white !important;
+}
+
+.rf-javascript-project-tag {
+  @apply bg-[#f7dd4a] text-black !important;
+}
+
+.rf-cloudinary-project-tag {
+  @apply bg-[#3847be] text-white !important;
+}
+
+.rf-gatsby-project-tag {
+  @apply bg-[#4f2e80] text-white dark:bg-[#5f3694] !important;
+}
+
+.rf-typescript-project-tag {
+  @apply bg-[#3178C6] text-white !important;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
