@@ -1,0 +1,16 @@
+---
+import "../styles/global.css";
+
+export interface Props {
+  technologyName: string;
+}
+
+const { technologyName }: Props = Astro.props;
+---
+
+<li
+  data-name={technologyName}
+  class="flex rounded bg-zinc-300 p-2 text-sm text-zinc-600 dark:bg-zinc-700 dark:text-zinc-300"
+>
+  {technologyName}
+</li>

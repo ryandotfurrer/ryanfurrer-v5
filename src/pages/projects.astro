@@ -3,6 +3,8 @@ import HeaderNavBar from "../layouts/HeaderNavBar.astro";
 import Hero from "../layouts/Hero.astro";
 import Footer from "../layouts/Footer.astro";
 import "../styles/global.css";
+import ProjectCard from "../layouts/ProjectCard.astro";
+import ProjectTechTag from "../layouts/ProjectTechTag.astro";
 const pageTitle = "Projects";
 const heroHeader = "Projects";
 const heroDescription = "What I've created and worked on";
@@ -37,6 +39,18 @@ const heroImage = "/developer_code-thinking.svg";
           id="project-grid-container"
           class="grid gap-[2em] md:grid-cols-2 xl:grid-cols-3"
         >
+          <ProjectCard
+            projectName="ryanfurrer.com"
+            projectDescription="This very site!"
+            projectLiveLink="https://rfportfolioastro.netlify.app/"
+            projectGithubLink="https://github.com/ryanfurrer/rf-astro-portfolio-and-blog"
+          >
+            <ProjectTechTag technologyName="Astro" />
+            <ProjectTechTag technologyName="React" />
+            <ProjectTechTag technologyName="Tailwind CSS" />
+            <ProjectTechTag technologyName="Storyblok" />
+            <ProjectTechTag technologyName="SEO" />
+          </ProjectCard>
           <article
             class="rounded-md border-2 border-zinc-300 bg-zinc-200 p-6 dark:border-zinc-700 dark:bg-zinc-800"
           >

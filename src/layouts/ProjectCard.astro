@@ -1,0 +1,43 @@
+---
+import "../styles/global.css";
+
+export interface Props {
+  projectName: string;
+  projectDescription?: string;
+  projectLiveLink: string;
+  projectGithubLink: string;
+}
+
+const {
+  projectDescription,
+  projectName,
+  projectLiveLink,
+  projectGithubLink,
+}: Props = Astro.props;
+---
+
+<article
+  class="rounded-md border-2 border-zinc-300 bg-zinc-200 p-6 dark:border-zinc-700 dark:bg-zinc-800"
+>
+  <h3>{projectName}</h3>
+  <p>{projectDescription}</p>
+  <div class="rf-tech-container">
+    <ul class="flex flex-wrap gap-2">
+      <slot />
+    </ul>
+  </div>
+  <div id="link-container">
+    <ul>
+      <li>
+        <a href={projectLiveLink} target="_blank" rel="noopener noreferrer"
+          >Live Site</a
+        >
+      </li>
+      <li>
+        <a href={projectGithubLink} target="_blank" rel="noopener noreferrer"
+          >GitHub</a
+        >
+      </li>
+    </ul>
+  </div>
+</article>
