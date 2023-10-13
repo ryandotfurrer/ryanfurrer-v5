@@ -177,6 +177,10 @@ li[data-name="TypeScript"] {
   @apply bg-[#3178C6] text-white;
 }
 
+li[data-name="Open Props CSS"] {
+  @apply bg-[#4962e3] text-[#f8f9fa] dark:bg-[#798ef5] dark:text-[#222529];
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {

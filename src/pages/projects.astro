@@ -35,13 +35,17 @@ const heroImage = "/developer_code-thinking.svg";
     <main>
       <section class="grid gap-[3em]">
         <h2>Personal Projects</h2>
+        <p>
+          All projects are in chronological order aside from my previous
+          portfolio revisions.
+        </p>
         <div
           id="project-grid-container"
           class="grid gap-[2em] md:grid-cols-2 xl:grid-cols-3"
         >
           <ProjectCard
             projectName="ryanfurrer.com"
-            projectDescription="This very site!"
+            projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias architecto a tempora? Iusto rem, a et dolorum nostrum alias tempore temporibus consequuntur, deleniti quia voluptas?"
             projectLiveLink="https://rfportfolioastro.netlify.app/"
             projectGithubLink="https://github.com/ryanfurrer/rf-astro-portfolio-and-blog"
           >
@@ -51,103 +55,85 @@ const heroImage = "/developer_code-thinking.svg";
             <ProjectTechTag technologyName="Storyblok" />
             <ProjectTechTag technologyName="SEO" />
           </ProjectCard>
-          <article
-            class="rounded-md border-2 border-zinc-300 bg-zinc-200 p-6 dark:border-zinc-700 dark:bg-zinc-800"
+
+          <ProjectCard
+            projectName="Minimal Portfolio Template"
+            projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias architecto a tempora? Iusto rem, a et dolorum nostrum alias tempore temporibus consequuntur, deleniti quia voluptas?"
+            projectLiveLink="https://rf-minimal-portfolio.netlify.app/"
+            projectGithubLink="https://github.com/ryanfurrer/rf-minimal-portfolio"
           >
-            <h3>ryanfurrer.com</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              architecto a tempora? Iusto rem, a et dolorum nostrum alias
-              tempore temporibus consequuntur, deleniti quia voluptas?
-            </p>
-            <div class="rf-tech-container">
-              <ul class="flex flex-wrap gap-2">
-                <li class="rf-astro-project-tag">Astro</li>
-                <li class="rf-react-project-tag">React</li>
-                <li class="rf-tailwind-project-tag">Tailwind CSS</li>
-                <li class="rf-storyblok-project-tag">Storyblok CMS</li>
-                <li>SEO</li>
-              </ul>
-            </div>
-            <div id="link-container">
-              <ul>
-                <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer"
-                    >Live Site</a
-                  >
-                </li>
-                <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer"
-                    >GitHub</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </article>
-          <article
-            class="rounded-md border-2 border-zinc-300 bg-zinc-200 p-6 dark:border-zinc-700 dark:bg-zinc-800"
+            <ProjectTechTag technologyName="HTML" />
+            <ProjectTechTag technologyName="Open Props CSS" />
+            <ProjectTechTag technologyName="JavaScript" />
+          </ProjectCard>
+
+          <ProjectCard
+            projectName="Grid Drawing"
+            projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias architecto a tempora? Iusto rem, a et dolorum nostrum alias tempore temporibus consequuntur, deleniti quia voluptas?"
+            projectLiveLink="https://rf-grid-drawing.netlify.app/"
+            projectGithubLink="https://github.com/ryanfurrer/rf-grid-drawing"
           >
-            <h3>Portfolio v4</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              architecto a tempora? Iusto rem, a et dolorum nostrum alias
-              tempore temporibus consequuntur, deleniti quia voluptas?
-            </p>
-            <div class="rf-tech-container">
-              <ul class="flex flex-wrap gap-2">
-                <li class="rf-html-project-tag">HTML</li>
-                <li class="rf-scss-project-tag">SCSS</li>
-                <li class="rf-javascript-project-tag">JavaScript</li>
-                <li>SEO</li>
-              </ul>
-            </div>
-            <div id="link-container">
-              <ul>
-                <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer"
-                    >Live Site</a
-                  >
-                </li>
-                <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer"
-                    >GitHub</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </article>
-          <article
-            class="rounded-md border-2 border-zinc-300 bg-zinc-200 p-6 dark:border-zinc-700 dark:bg-zinc-800"
+            <ProjectTechTag technologyName="HTML" />
+            <ProjectTechTag technologyName="SCSS" />
+            <ProjectTechTag technologyName="JavaScript" />
+          </ProjectCard>
+
+          <ProjectCard
+            projectName="Basic Blackjack"
+            projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias architecto a tempora? Iusto rem, a et dolorum nostrum alias tempore temporibus consequuntur, deleniti quia voluptas?"
+            projectLiveLink="https://rf-blackjack.netlify.app/"
+            projectGithubLink="https://github.com/ryanfurrer/rf-blackjack"
           >
-            <h3>Personal Wedding Website</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              architecto a tempora? Iusto rem, a et dolorum nostrum alias
-              tempore temporibus consequuntur, deleniti quia voluptas?
-            </p>
-            <div class="rf-tech-container">
-              <ul class="flex flex-wrap gap-2">
-                <li class="rf-html-project-tag">HTML</li>
-                <li class="rf-scss-project-tag">SCSS</li>
-                <li class="rf-javascript-project-tag">JavaScript</li>
-                <li class="rf-cloudinary-project-tag">Cloudinary</li>
-              </ul>
-            </div>
-            <div id="link-container">
-              <ul>
-                <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer"
-                    >Live Site</a
-                  >
-                </li>
-                <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer"
-                    >GitHub</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </article>
+            <ProjectTechTag technologyName="HTML" />
+            <ProjectTechTag technologyName="CSS" />
+            <ProjectTechTag technologyName="JavaScript" />
+          </ProjectCard>
+
+          <ProjectCard
+            projectName="furrever.wedding"
+            projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias architecto a tempora? Iusto rem, a et dolorum nostrum alias tempore temporibus consequuntur, deleniti quia voluptas?"
+            projectLiveLink="https://furrever.netlify.app/"
+            projectGithubLink="https://github.com/ryanfurrer/furrever"
+          >
+            <ProjectTechTag technologyName="HTML" />
+            <ProjectTechTag technologyName="SCSS" />
+            <ProjectTechTag technologyName="JavaScript" />
+            <ProjectTechTag technologyName="Cloudinary" />
+          </ProjectCard>
+
+          <ProjectCard
+            projectName="Portfolio v4"
+            projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias architecto a tempora? Iusto rem, a et dolorum nostrum alias tempore temporibus consequuntur, deleniti quia voluptas?"
+            projectLiveLink="https://ryanfurrer.com/"
+            projectGithubLink="https://github.com/ryanfurrer/ryanfurrer.com"
+          >
+            <ProjectTechTag technologyName="HTML" />
+            <ProjectTechTag technologyName="SCSS" />
+            <ProjectTechTag technologyName="JavaScript" />
+            <ProjectTechTag technologyName="SEO" />
+          </ProjectCard>
+
+          <ProjectCard
+            projectName="Portfolio v3"
+            projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias architecto a tempora? Iusto rem, a et dolorum nostrum alias tempore temporibus consequuntur, deleniti quia voluptas?"
+            projectLiveLink="https://ryanfurrer-v3.netlify.app/"
+            projectGithubLink="https://github.com/ryanfurrer/ryanfurrer-v3"
+          >
+            <ProjectTechTag technologyName="HTML" />
+            <ProjectTechTag technologyName="SCSS" />
+            <ProjectTechTag technologyName="JavaScript" />
+          </ProjectCard>
+
+          <ProjectCard
+            projectName="Portfolio v2"
+            projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias architecto a tempora? Iusto rem, a et dolorum nostrum alias tempore temporibus consequuntur, deleniti quia voluptas?"
+            projectLiveLink="https://ryanfurrer-v2.netlify.app/"
+            projectGithubLink="https://github.com/ryanfurrer/ryanfurrer-v2"
+          >
+            <ProjectTechTag technologyName="HTML" />
+            <ProjectTechTag technologyName="Open Props CSS" />
+            <ProjectTechTag technologyName="JavaScript" />
+          </ProjectCard>
         </div>
       </section>
       <section class="grid gap-[3em]">
@@ -156,36 +142,15 @@ const heroImage = "/developer_code-thinking.svg";
           id="project-grid-container"
           class="grid gap-[2em] md:grid-cols-2 xl:grid-cols-3"
         >
-          <article
-            class="rounded-md border-2 border-zinc-300 bg-zinc-200 p-6 dark:border-zinc-700 dark:bg-zinc-800"
+          <ProjectCard
+            projectName="fullstack.chat"
+            projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias architecto a tempora? Iusto rem, a et dolorum nostrum alias tempore temporibus consequuntur, deleniti quia voluptas?"
+            projectLiveLink="https://fullstack.chat/"
+            projectGithubLink="https://github.com/fullstack-chat/fsc-core"
           >
-            <h3>fullstack.chat</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              architecto a tempora? Iusto rem, a et dolorum nostrum alias
-              tempore temporibus consequuntur, deleniti quia voluptas?
-            </p>
-            <div class="rf-tech-container">
-              <ul class="flex flex-wrap gap-2">
-                <li class="rf-gatsby-project-tag">Gatsby</li>
-                <li class="rf-typescript-project-tag">TypeScript</li>
-              </ul>
-            </div>
-            <div id="link-container">
-              <ul>
-                <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer"
-                    >Live Site</a
-                  >
-                </li>
-                <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer"
-                    >GitHub</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </article>
+            <ProjectTechTag technologyName="Gatsby" />
+            <ProjectTechTag technologyName="TypeScript" />
+          </ProjectCard>
         </div>
       </section>
       <section class="grid gap-[3em]">
@@ -194,39 +159,18 @@ const heroImage = "/developer_code-thinking.svg";
           id="project-grid-container"
           class="grid gap-[2em] md:grid-cols-2 xl:grid-cols-3"
         >
-          <article
-            class="rounded-md border-2 border-zinc-300 bg-zinc-200 p-6 dark:border-zinc-700 dark:bg-zinc-800"
+          <ProjectCard
+            projectName="AIMS League"
+            projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias architecto a tempora? Iusto rem, a et dolorum nostrum alias tempore temporibus consequuntur, deleniti quia voluptas?"
+            projectLiveLink="https://aimsleague.com/"
+            projectGithubLink="https://github.com/aimsleague/website"
           >
-            <h3>AIMS</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              architecto a tempora? Iusto rem, a et dolorum nostrum alias
-              tempore temporibus consequuntur, deleniti quia voluptas?
-            </p>
-            <div class="rf-tech-container">
-              <ul class="flex flex-wrap gap-2">
-                <li class="rf-astro-project-tag">Astro</li>
-                <li class="rf-react-project-tag">React</li>
-                <li class="rf-tailwind-project-tag">Tailwind CSS</li>
-                <li class="rf-storyblok-project-tag">Storyblok CMS</li>
-                <li>SEO</li>
-              </ul>
-            </div>
-            <div id="link-container">
-              <ul>
-                <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer"
-                    >Live Site</a
-                  >
-                </li>
-                <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer"
-                    >GitHub</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </article>
+            <ProjectTechTag technologyName="Astro" />
+            <ProjectTechTag technologyName="React" />
+            <ProjectTechTag technologyName="Tailwind CSS" />
+            <ProjectTechTag technologyName="Storyblok" />
+            <ProjectTechTag technologyName="SEO" />
+          </ProjectCard>
         </div>
       </section>
     </main>
