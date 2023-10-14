@@ -51,15 +51,15 @@ h3 {
 }
 
 h4 {
-  @apply text-2xl md:text-4xl;
+  @apply text-xl md:text-2xl;
 }
 
 h5 {
-  @apply text-xl md:text-3xl;
+  @apply text-lg md:text-xl;
 }
 
 h6 {
-  @apply text-lg md:text-2xl;
+  @apply text-base md:text-lg;
 }
 
 /* Make links "stand out" by decreasing their opacity */
@@ -131,6 +131,19 @@ article {
 /* Makes max-width of articles with classname of .blog-post smaller than the rest of the website. */
 article:is(#blog-post) {
   @apply max-w-prose;
+}
+
+article:is(#blog-post) > ul,
+li {
+  margin-inline-start: 3em;
+}
+
+article:is(#blog-post) > ul {
+  list-style-type: disc;
+}
+
+article:is(#blog-post) > li {
+  list-style-type: decimal;
 }
 
 li[data-name="Astro"] {
