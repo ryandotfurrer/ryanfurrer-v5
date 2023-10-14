@@ -14,7 +14,11 @@ const date = new Date(blok.publishedDate).toLocaleDateString("en-US", {
     <h2>{blok.title}</h2>
     <p class="text-sm opacity-50">{date}</p>
     <p>{blok.description}</p>
-    <img src={blok.featuredImage.filename} alt={blok.featuredImage.alt} />
+    <img
+      src={blok.featuredImage.filename}
+      alt={blok.featuredImage.alt}
+      class="rounded"
+    />
     <Fragment set:html={content} />
   </article>
 </section>

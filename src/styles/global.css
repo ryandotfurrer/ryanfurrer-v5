@@ -135,7 +135,7 @@ article:is(#blog-post) {
 
 article:is(#blog-post) > ul,
 li {
-  margin-inline-start: 3em;
+  margin-inline-start: 1.5em;
 }
 
 article:is(#blog-post) > ul {
