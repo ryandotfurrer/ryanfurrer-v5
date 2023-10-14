@@ -8,18 +8,23 @@ const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get("cdn/stories", {
   version: import.meta.env.DEV ? "draft" : "published",
   content_type: "blogPost",
-  sort_by: "first_published_at:desc",
+  sort_by: "content.publishedDate",
 });
 
 const posts = data.stories.map(
   (story: {
-    content: { title: any; description?: any; featuredImage: any };
+    content: {
+      title: any;
+      description?: any;
+      featuredImage: any;
+      publishedDate: any;
+    };
     published_at: string | number | Date;
     full_slug: any;
   }) => {
     return {
       title: story.content.title,
-      date: new Date(story.published_at).toLocaleDateString("en-US", {
+      date: new Date(story.content.publishedDate).toLocaleDateString("en-US", {
         dateStyle: "full",
       }),
       description: story.content.description,
@@ -32,6 +37,7 @@ const posts = data.stories.map(
 const { blok } = Astro.props;
 ---
 
+<h2>Blogs</h2>
 <ul
   {...storyblokEditable(blok)}
   class="grid gap-[2em] md:grid-cols-2 xl:grid-cols-3"

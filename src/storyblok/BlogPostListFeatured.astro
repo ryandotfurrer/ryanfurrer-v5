@@ -9,20 +9,25 @@ const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get("cdn/stories", {
   version: import.meta.env.DEV ? "draft" : "published",
   content_type: "blogPost",
-  sort_by: "first_published_at:desc",
+  sort_by: "content.publishedDate",
   page: 1,
   per_page: 3,
 });
 
 const posts = data.stories.map(
   (story: {
-    content: { title: any; description?: any; featuredImage: any };
+    content: {
+      title: any;
+      description?: any;
+      featuredImage: any;
+      publishedDate: any;
+    };
     published_at: string | number | Date;
     full_slug: any;
   }) => {
     return {
       title: story.content.title,
-      date: new Date(story.published_at).toLocaleDateString("en-US", {
+      date: new Date(story.content.publishedDate).toLocaleDateString("en-US", {
         dateStyle: "full",
       }),
       description: story.content.description,
@@ -50,7 +55,7 @@ const posts = data.stories.map(
             alt={post.featuredImage.alt}
           />
         </a>
-        <p class="text-sm font-light opacity-50">{post.date}</p>
+        <p class="font-li text-sm opacity-50">{post.date}</p>
         <a
           href={`/blog/${post.slug}`}
           class="opacity-100 hover:text-emerald-600 hover:underline dark:hover:text-emerald-400"
