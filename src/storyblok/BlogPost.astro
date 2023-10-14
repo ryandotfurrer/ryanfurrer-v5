@@ -3,11 +3,16 @@ import { storyblokEditable, renderRichText } from "@storyblok/astro";
 const { blok } = Astro.props;
 const content = renderRichText(blok.content);
 import "../styles/global.css";
+
+const date = new Date(blok.publishedDate).toLocaleDateString("en-US", {
+  dateStyle: "full",
+});
 ---
 
 <section>
   <article {...storyblokEditable(blok)} id="blog-post">
     <h2>{blok.title}</h2>
+    <p class="text-sm opacity-50">{date}</p>
     <p>{blok.description}</p>
     <img src={blok.featuredImage.filename} alt={blok.featuredImage.alt} />
     <Fragment set:html={content} />
