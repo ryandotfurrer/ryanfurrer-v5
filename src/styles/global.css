@@ -114,7 +114,7 @@ nav:is(#header-nav) {
 
 /* Constrains elements inside the main element to a certain width (container class), centers them, and adds padding to the top and bottom of the main element. */
 main {
-  @apply container mx-auto space-y-[3em] py-[4em];
+  @apply container mx-auto max-w-full space-y-[3em] py-[4em];
 }
 
 /* Centers element on the page. Adds "flow" to elements nested inside the section element using the space-y-[] rule. Also adds horizontal padding so elements are not butting up on the extreme edges of the window on smaller screen sizes. */
@@ -134,7 +134,7 @@ article:is(#blog-post) {
 }
 
 article:is(#blog-post) > ul,
-li {
+ol {
   margin-inline-start: 1.5em;
 }
 
@@ -142,7 +142,7 @@ article:is(#blog-post) > ul {
   list-style-type: disc;
 }
 
-article:is(#blog-post) > li {
+article:is(#blog-post) > ol {
   list-style-type: decimal;
 }
 
