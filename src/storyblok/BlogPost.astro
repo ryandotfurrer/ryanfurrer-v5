@@ -11,8 +11,8 @@ const date = new Date(blok.publishedDate).toLocaleDateString("en-US", {
 
 <section>
   <article {...storyblokEditable(blok)} id="blog-post">
-    <h2>{blok.title}</h2>
-    <p class="text-sm opacity-50">{date}</p>
+    <h2 id="blog-title">{blok.title}</h2>
+    <p id="blog-publish-date" class="text-sm opacity-50">{date}</p>
     <p>{blok.description}</p>
     <img
       src={blok.featuredImage.filename}

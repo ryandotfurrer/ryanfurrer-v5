@@ -34,11 +34,11 @@ const { blok } = Astro.props;
 
 <ul
   {...storyblokEditable(blok)}
-  class="grid gap-[3em] md:grid-cols-2 xl:grid-cols-3"
+  class="grid gap-[2em] md:grid-cols-2 xl:grid-cols-3"
 >
   {
     posts.map((post) => (
-      <li class="rounded-md border-2 border-zinc-300 bg-zinc-200 p-6 dark:border-zinc-700 dark:bg-zinc-800">
+      <li class="space-y-[.5em] rounded-md border-2 border-zinc-300 bg-zinc-200 p-4 dark:border-zinc-700 dark:bg-zinc-800">
         <a
           href={post.slug}
           class="mb-[1em] block overflow-hidden border-0 opacity-100 hover:border-0"
@@ -49,14 +49,14 @@ const { blok } = Astro.props;
             alt={post.featuredImage.alt}
           />
         </a>
-        <p class="text-sm opacity-50">{post.date}</p>
+        <p class="text-sm font-light opacity-50">{post.date}</p>
         <a
           href={post.slug}
           class="opacity-100 hover:text-emerald-600 hover:underline dark:hover:text-emerald-400"
         >
-          <h3>{post.title}</h3>
+          <h3 class="text-2xl">{post.title}</h3>
         </a>
-        <p class="font-normal opacity-75">{post.description}</p>
+        <p class="text-base font-normal opacity-75">{post.description}</p>
       </li>
     ))
   }
