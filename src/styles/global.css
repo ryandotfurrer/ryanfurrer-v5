@@ -105,7 +105,7 @@ pre > code {
 
 /* Ensures header is at least equal to 65% of the devices dynamic viewport height. */
 header {
-  @apply min-h-[100vh];
+  @apply min-h-[80vh];
 }
 
 nav:is(#header-nav) {
