@@ -62,21 +62,8 @@ h6 {
   @apply text-base md:text-lg;
 }
 
-/* Make links "stand out" by decreasing their opacity */
-/* Opacity gets restored on hover */
-
-:is(p, li) > a {
-  @apply opacity-75;
-}
-
 :is(h1, h2, h3) > a:hover {
   @apply underline;
-}
-
-/* Restores opacity on hover */
-a:hover,
-a > i:hover {
-  @apply opacity-100 transition duration-300 ease-in-out;
 }
 
 /* Adds bottom border on any links hovered that are in the main, section, or artcle elements. */
@@ -237,4 +224,38 @@ li[data-name="Open Props CSS"] {
   a:hover {
     text-decoration: underline !important;
   }
+}
+
+/* New style rules to simplify */
+/* Insprired by Apple */
+/* Tell a story in the paragraphs and point out hte important items by using a lighter/darker font-color; #1D1D1F in light theme, #F5F5F7 in dark theme. */
+
+/* 
+
+LIGHT THEME
+bg = bg-white
+layer1bg = bg-gray-100
+main font color = text-zinc-500
+full font color = text-zinc-900
+
+DARK THEME
+bg = bg-black
+layer1bg = bg-neutral-900
+main font color = text-zinc-500
+full font color = text-neu
+
+*/
+
+body {
+  @apply bg-white text-zinc-500 dark:bg-black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  @apply text-zinc-900 dark:text-neutral-100;
 }

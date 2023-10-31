@@ -44,10 +44,10 @@ const { blok } = Astro.props;
 >
   {
     posts.map((post) => (
-      <li class="space-y-[.5em] rounded-md border-2 border-zinc-300 bg-zinc-200 p-4 dark:border-zinc-700 dark:bg-zinc-800">
+      <li class="space-y-[.5em] rounded-md bg-gray-100 p-4 dark:bg-neutral-900">
         <a
           href={post.slug}
-          class="mb-[1em] block overflow-hidden border-0 opacity-100 hover:border-0"
+          class="mb-[1em] block overflow-hidden border-0 hover:border-0"
         >
           <img
             class="rounded transition-transform duration-300 hover:scale-125"
@@ -55,14 +55,14 @@ const { blok } = Astro.props;
             alt={post.featuredImage.alt}
           />
         </a>
-        <p class="text-sm font-light opacity-50">{post.date}</p>
+        <p class="text-sm font-light">{post.date}</p>
         <a
           href={post.slug}
-          class="opacity-100 hover:text-emerald-600 hover:underline dark:hover:text-emerald-400"
+          class="hover:text-emerald-600 hover:underline dark:hover:text-emerald-400"
         >
           <h3 class="text-2xl">{post.title}</h3>
         </a>
-        <p class="text-base font-normal opacity-75">{post.description}</p>
+        <p class="text-base font-normal ">{post.description}</p>
       </li>
     ))
   }
