@@ -12,7 +12,7 @@ const date = new Date(blok.publishedDate).toLocaleDateString("en-US", {
 <section>
   <article {...storyblokEditable(blok)} id="blog-post">
     <h2 id="blog-title">{blok.title}</h2>
-    <p id="blog-publish-date" class="text-sm">{date}</p>
+    <p id="blog-publish-date">{date}</p>
     <p>{blok.description}</p>
     <img
       src={blok.featuredImage.filename}

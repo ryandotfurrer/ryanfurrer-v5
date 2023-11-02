@@ -15,7 +15,7 @@ body {
   @apply font-sans text-lg font-semibold leading-relaxed;
 
   /* Global Light & Dark Theme */
-  @apply bg-zinc-100 text-zinc-950 dark:bg-zinc-900 dark:text-zinc-50;
+  @apply bg-white text-zinc-500 dark:bg-black;
 }
 
 /* Typography Styles */
@@ -96,7 +96,7 @@ header {
 }
 
 nav:is(#header-nav) {
-  @apply container mx-auto flex items-center px-8 py-12 text-lg md:text-xl;
+  @apply container mx-auto flex items-center px-8 py-12;
 }
 
 /* Constrains elements inside the main element to a certain width (container class), centers them, and adds padding to the top and bottom of the main element. */
@@ -246,16 +246,15 @@ full font color = text-zinc-50
 
 */
 
-body {
+/* body {
   @apply bg-white text-zinc-500 dark:bg-black;
-}
+} */
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-a {
+h6 {
   @apply text-zinc-900 dark:text-neutral-100;
 }

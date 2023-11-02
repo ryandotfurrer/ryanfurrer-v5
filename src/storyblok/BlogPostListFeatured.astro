@@ -52,14 +52,14 @@ const posts = data.stories.map(
             alt={post.featuredImage.alt}
           />
         </a>
-        <p class="font-li text-sm">{post.date}</p>
+        <p>{post.date}</p>
         <a
           href={`/blog/${post.slug}`}
           class="hover:text-emerald-600 hover:underline dark:hover:text-emerald-400"
         >
-          <h3 class="text-2xl">{post.title}</h3>
+          <h3>{post.title}</h3>
         </a>
-        <p class="text-base">{post.description}</p>
+        <p>{post.description}</p>
       </li>
     ))
   }
