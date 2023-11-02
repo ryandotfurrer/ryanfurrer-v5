@@ -150,51 +150,51 @@ article:is(#blog-post) > ol {
 }
 
 li[data-name="Astro"] {
-  @apply bg-[#e1d5f0] text-zinc-900 dark:bg-[#4b2a7d] dark:text-zinc-50;
+  @apply bg-[#5820e1] text-zinc-50 dark:bg-[#bab2ff] dark:text-zinc-900;
 }
 
 li[data-name="React"] {
-  @apply bg-[#387ca0] text-zinc-50;
+  @apply bg-[#2e5570] text-zinc-50 dark:bg-[#8bbed5] dark:text-zinc-900;
 }
 
 li[data-name="Tailwind CSS"] {
-  @apply bg-[#364153] text-zinc-50 dark:bg-[#4ba3e3];
+  @apply bg-[#38bdf8] text-zinc-50 dark:bg-[#7dd5fc] dark:text-zinc-900;
 }
 
 li[data-name="Storyblok"] {
-  @apply bg-[#00b3b0] text-zinc-50;
+  @apply bg-[#00b3b0] text-zinc-50 dark:bg-[#90fff1] dark:text-zinc-900;
 }
 
 li[data-name="HTML"] {
-  @apply bg-[#dc6c41] text-zinc-50 dark:bg-[#e78247];
+  @apply bg-[#f14a29] text-zinc-50 dark:bg-[#f89b79] dark:text-zinc-900;
 }
 
 li[data-name="CSS"] {
-  @apply bg-[#3671b2] text-zinc-50 dark:bg-[#57a5d8];
+  @apply bg-[#2c4bdc] text-zinc-50 dark:bg-[#9ab8f6] dark:text-zinc-900;
 }
 
 li[data-name="SCSS"] {
-  @apply bg-[#bf6b97] text-zinc-50;
+  @apply bg-[#bf6b97] text-zinc-50 dark:bg-[#d393b6] dark:text-zinc-900;
 }
 
 li[data-name="JavaScript"] {
-  @apply bg-[#f7dd4a] text-zinc-900;
+  @apply bg-[#e3b10f] text-zinc-50 dark:bg-[#f7dd4a] dark:text-zinc-900;
 }
 
 li[data-name="Cloudinary"] {
-  @apply bg-[#3847be] text-zinc-50;
+  @apply bg-[#3847be] text-zinc-50 dark:bg-[#a2bbee] dark:text-zinc-900;
 }
 
 li[data-name="Gatsby"] {
-  @apply bg-[#4f2e80] text-zinc-50 dark:bg-[#5f3694];
+  @apply bg-[#8a4baf] text-zinc-50 dark:bg-[#d8bceb] dark:text-zinc-900;
 }
 
 li[data-name="TypeScript"] {
-  @apply bg-[#3178C6] text-zinc-50;
+  @apply bg-[#215da8] text-zinc-50 dark:bg-[#91b9e8] dark:text-zinc-900;
 }
 
 li[data-name="Open Props CSS"] {
-  @apply bg-[#4962e3] text-zinc-50 dark:bg-[#798ef5] dark:text-zinc-900;
+  @apply bg-[#3544c0] text-zinc-50 dark:bg-[#a0baf0] dark:text-zinc-900;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
