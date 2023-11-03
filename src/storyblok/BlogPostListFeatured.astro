@@ -44,7 +44,7 @@ const posts = data.stories.map(
       <li class="space-y-[.5em] rounded-md bg-zinc-100 p-6 dark:bg-neutral-900">
         <a
           href={`/blog/${post.slug}`}
-          class="mb-[1em] block overflow-hidden border-0 hover:border-0"
+          class="mb-[1em] block overflow-hidden border-0"
         >
           <img
             class="rounded transition-transform duration-300 hover:scale-125"
@@ -53,10 +53,7 @@ const posts = data.stories.map(
           />
         </a>
         <p>{post.date}</p>
-        <a
-          href={`/blog/${post.slug}`}
-          class="hover:text-emerald-600 hover:underline dark:hover:text-emerald-400"
-        >
+        <a href={`/blog/${post.slug}`}>
           <h3>{post.title}</h3>
         </a>
         <p>{post.description}</p>
