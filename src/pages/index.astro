@@ -30,18 +30,23 @@ const heroHeader =
         class="container animate-fade-down animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out"
       >
         <div>
-          <div id="hero-link-container">
-            <p>
-              <a href="/blog" class="text-emerald-600 dark:text-emerald-400"
-                >Read blog articles</a
-              >
-            </p>
-            <p>
+          <div id="hero-link-container" class="flex flex-col gap-4">
+            <p class="text-2xl">
               <a
                 href="/projects"
-                class="hover:text-zinc-900 dark:hover:text-zinc-50"
-                >View my projects</a
+                class="dark:text-emerald-40 flex place-items-center gap-2 text-emerald-600 hover:no-underline dark:text-emerald-400"
               >
+                <i class="fa-solid fa-code-branch"></i>View my projects</a
+              >
+            </p>
+            <p class="text-2xl">
+              <a
+                href="/blog"
+                class="flex place-items-center gap-2 hover:text-zinc-900 hover:no-underline dark:hover:text-zinc-50"
+              >
+                <i class="fa-solid fa-newspaper"></i>
+                 Read blog articles
+              </a>
             </p>
           </div>
         </div>
