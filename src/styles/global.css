@@ -87,7 +87,7 @@ pre > code {
 
 /* Ensures header is at least equal to 65% of the devices dynamic viewport height. */
 header {
-  @apply min-h-[80vh];
+  @apply grid min-h-[80vh] grid-cols-1;
 }
 
 nav:is(#header-nav) {
@@ -96,7 +96,7 @@ nav:is(#header-nav) {
 
 /* Constrains elements inside the main element to a certain width (container class), centers them, and adds padding to the top and bottom of the main element. */
 main {
-  @apply container mx-auto space-y-[3em] py-[4em];
+  @apply container mx-auto space-y-[3em] py-[3em];
 }
 
 /* Centers element on the page. Adds "flow" to elements nested inside the section element using the space-y-[] rule. Also adds horizontal padding so elements are not butting up on the extreme edges of the window on smaller screen sizes. */
