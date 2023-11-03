@@ -12,12 +12,12 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
 
 <section
   id="hero"
-  class="container mx-auto grid grid-cols-1 place-content-center"
+  class="container mx-auto grid h-3/4 grid-cols-1 place-content-center"
 >
-  <div id="hero-text-container" class="flex flex-col gap-2">
+  <div id="hero-text-container" class="grid gap-2">
     <div
       id="hero-header-container"
-      class="animate-fade animate-delay-700 animate-duration-500 animate-once animate-ease-in-out xl:max-w-[63%]"
+      class="animate-fade animate-delay-700 animate-duration-500 animate-once animate-ease-in-out xl:max-w-[60%]"
     >
       <h2>
         {heroHeader}
@@ -25,7 +25,7 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
     </div>
     <div
       id="hero-description-container"
-      class="animate-fade-down animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out xl:max-w-[63%]"
+      class="animate-fade-down text-4xl animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out md:text-5xl xl:max-w-[60%]"
     >
       <p>
         {heroDescription}
@@ -33,7 +33,7 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
     </div>
     <div
       id="hero-paragraph-container"
-      class="animate-fade-down animate-delay-[1200ms] animate-duration-500 animate-once animate-ease-in-out xl:max-w-[63%]"
+      class="animate-fade-down animate-delay-[1200ms] animate-duration-500 animate-once animate-ease-in-out xl:max-w-[60%]"
     >
       <p>
         {heroParagraph}

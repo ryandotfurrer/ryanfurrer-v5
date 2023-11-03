@@ -1,0 +1,69 @@
+---
+import "../styles/global.css";
+
+export interface Props {
+  heroHeader: string;
+  heroDescription?: string;
+  heroParagraph?: string;
+}
+
+const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
+---
+
+<section
+  id="hero"
+  class="container mx-auto grid h-3/4 grid-cols-1 place-content-center gap-12"
+>
+  <div id="hero-text-container" class="grid gap-2">
+    <div
+      id="hero-header-container"
+      class="animate-fade animate-delay-700 animate-duration-500 animate-once animate-ease-in-out xl:max-w-[63%]"
+    >
+      <h2>
+        {heroHeader}
+      </h2>
+    </div>
+    <div
+      id="hero-description-container"
+      class="animate-fade-down animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out xl:max-w-[63%]"
+    >
+      <p>
+        {heroDescription}
+      </p>
+    </div>
+    <div
+      id="hero-paragraph-container"
+      class="animate-fade-down animate-delay-[1200ms] animate-duration-500 animate-once animate-ease-in-out xl:max-w-[60%]"
+    >
+      <p>
+        {heroParagraph}
+      </p>
+    </div>
+  </div>
+  <div
+    id="header-cta-container"
+    class="container animate-fade-down animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out"
+  >
+    <div>
+      <div id="hero-link-container" class="flex flex-col gap-4">
+        <p class="text-xl md:text-2xl">
+          <a
+            href="/projects"
+            class="dark:text-emerald-40 flex place-items-center gap-2 text-emerald-600 hover:no-underline dark:text-emerald-400"
+          >
+            <i class="fa-solid fa-code-branch"></i>View my projects</a
+          >
+        </p>
+        <p class="text-xl md:text-2xl">
+          <a
+            href="/blog"
+            class="flex place-items-center gap-2 hover:text-zinc-900 hover:no-underline dark:hover:text-zinc-50"
+          >
+            <i class="fa-solid fa-newspaper"></i>
+             Read blog articles
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

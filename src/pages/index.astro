@@ -1,6 +1,6 @@
 ---
 import HeaderNavBar from "../layouts/HeaderNavBar.astro";
-import Hero from "../layouts/Hero.astro";
+import HeroHome from "../layouts/HeroHome.astro";
 import Footer from "../layouts/Footer.astro";
 import BlogPostListFeatured from "../storyblok/BlogPostListFeatured.astro";
 import "../styles/global.css";
@@ -24,34 +24,9 @@ const heroHeader =
   <body>
     <header>
       <HeaderNavBar />
-      <Hero heroHeader={heroHeader} />
-      <section
-        id="header-cta-container"
-        class="container animate-fade-down animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out"
-      >
-        <div>
-          <div id="hero-link-container" class="flex flex-col gap-4">
-            <p class="text-2xl">
-              <a
-                href="/projects"
-                class="dark:text-emerald-40 flex place-items-center gap-2 text-emerald-600 hover:no-underline dark:text-emerald-400"
-              >
-                <i class="fa-solid fa-code-branch"></i>View my projects</a
-              >
-            </p>
-            <p class="text-2xl">
-              <a
-                href="/blog"
-                class="flex place-items-center gap-2 hover:text-zinc-900 hover:no-underline dark:hover:text-zinc-50"
-              >
-                <i class="fa-solid fa-newspaper"></i>
-                 Read blog articles
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroHome heroHeader={heroHeader} />
     </header>
+
     <main>
       <section>
         <h2>Section Heading</h2>

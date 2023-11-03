@@ -27,7 +27,7 @@ body {
 
 :is(#hero) p {
   text-wrap: balance;
-  @apply text-4xl tracking-tight md:text-5xl;
+  /* @apply text-4xl tracking-tight md:text-5xl; */
 }
 
 :is(h1, h2, h3, h4, h5, h6) > span::after {
@@ -87,7 +87,7 @@ pre > code {
 
 /* Ensures header is at least equal to 65% of the devices dynamic viewport height. */
 header {
-  @apply grid min-h-[80vh] grid-cols-1;
+  @apply h-[75vh];
 }
 
 nav:is(#header-nav) {
