@@ -17,7 +17,7 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
   <div id="hero-text-container">
     <div
       id="hero-header-container"
-      class="animate-fade animate-delay-700 animate-duration-500 animate-once animate-ease-in-out"
+      class="animate-fade animate-delay-700 animate-duration-500 animate-once animate-ease-in-out xl:max-w-[63%]"
     >
       <h2>
         {heroHeader}
@@ -25,7 +25,7 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
     </div>
     <div
       id="hero-description-container"
-      class="animate-fade-down animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out"
+      class="animate-fade-down animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out xl:max-w-[63%]"
     >
       <p>
         {heroDescription}
@@ -33,7 +33,7 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
     </div>
     <div
       id="hero-paragraph-container"
-      class="animate-fade-down animate-delay-[1200ms] animate-duration-500 animate-once animate-ease-in-out"
+      class="animate-fade-down animate-delay-[1200ms] animate-duration-500 animate-once animate-ease-in-out xl:max-w-[63%]"
     >
       <p>
         {heroParagraph}

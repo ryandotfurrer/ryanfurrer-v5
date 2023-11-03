@@ -27,18 +27,24 @@ const heroHeader =
       <Hero heroHeader={heroHeader} />
       <section
         id="header-cta-container"
-        class="container animate-fade-down animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out lg:grid lg:place-items-center"
+        class="container animate-fade-down animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out"
       >
-        <article>
-          <div id="hero-link-container" class="lg:flex lg:gap-8">
+        <div>
+          <div id="hero-link-container">
             <p>
               <a href="/blog" class="text-emerald-600 dark:text-emerald-400"
                 >Read blog articles</a
               >
             </p>
-            <p><a href="/projects">View my projects</a></p>
+            <p>
+              <a
+                href="/projects"
+                class="hover:text-zinc-900 dark:hover:text-zinc-50"
+                >View my projects</a
+              >
+            </p>
           </div>
-        </article>
+        </div>
       </section>
     </header>
     <main>
