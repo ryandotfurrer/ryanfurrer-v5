@@ -8,7 +8,6 @@ import ProjectTechTag from "../layouts/ProjectTechTag.astro";
 const pageTitle = "Projects";
 const heroHeader = "Projects";
 const heroDescription = "What I've created and worked on";
-const heroImage = "/developer_code-thinking.svg";
 ---
 
 <html lang="en">
@@ -26,11 +25,7 @@ const heroImage = "/developer_code-thinking.svg";
   <body>
     <header>
       <HeaderNavBar />
-      <Hero
-        heroHeader={heroHeader}
-        heroDescription={heroDescription}
-        heroImage={heroImage}
-      />
+      <Hero heroHeader={heroHeader} heroDescription={heroDescription} />
     </header>
     <main>
       <section>

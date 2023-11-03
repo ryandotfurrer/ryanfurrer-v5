@@ -5,27 +5,16 @@ export interface Props {
   heroHeader: string;
   heroDescription?: string;
   heroParagraph?: string;
-  heroImage?: string;
 }
 
-const { heroDescription, heroHeader, heroParagraph, heroImage }: Props =
-  Astro.props;
+const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
 ---
 
 <section
   id="hero"
-  class="container mx-auto grid h-3/4 grid-cols-1 place-content-around lg:grid-cols-2 lg:place-items-center lg:gap-12"
+  class="container mx-auto grid h-2/3 grid-cols-1 place-content-center"
 >
-  <div
-    id="hero-img-container"
-    class="container animate-fade animate-delay-500 animate-duration-500 animate-once animate-ease-in-out lg:self-auto"
-  >
-    <img src={heroImage} alt="logo" />
-  </div>
-  <div
-    id="hero-text-container"
-    class="align-end container grid gap-[1em] lg:self-auto"
-  >
+  <div id="hero-text-container">
     <div
       id="hero-header-container"
       class="animate-fade animate-delay-700 animate-duration-500 animate-once animate-ease-in-out"
