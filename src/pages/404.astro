@@ -5,8 +5,8 @@ import SocialLinks from "../layouts/SocialLinks.astro";
 import Footer from "../layouts/Footer.astro";
 import "../styles/global.css";
 const pageTitle = "404: Page Not Found";
-const heroHeader = "Uh oh, a 404 Error?!";
-const heroDescription = "Shoot, you're not supposed to see this.";
+const heroHeader =
+  "Uh oh, a 404 Error?! Shoot, you're not supposed to see this.";
 const heroParagraph =
   "It seems the page you tried visiting does not exist, or you've found a broken link. But while you're here...";
 ---
@@ -26,11 +26,7 @@ const heroParagraph =
   <body>
     <header>
       <HeaderNavBar />
-      <Hero
-        heroHeader={heroHeader}
-        heroDescription={heroDescription}
-        heroParagraph={heroParagraph}
-      />
+      <Hero heroHeader={heroHeader} heroParagraph={heroParagraph} />
       <div
         class="flex animate-fade-down place-content-center animate-delay-[1700ms] animate-duration-1000 animate-once animate-ease-in-out"
       >
