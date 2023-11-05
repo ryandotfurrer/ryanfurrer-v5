@@ -42,18 +42,18 @@ const posts = data.stories.map(
   {
     posts.map((post) => (
       <li class="space-y-[.5em] rounded-md bg-zinc-100 p-6 dark:bg-neutral-900">
-        <a
-          href={`/blog/${post.slug}`}
-          class="mb-[1em] block overflow-hidden border-0"
-        >
+        <a href={`/blog/${post.slug}`} class="mb-[1em] block overflow-hidden">
           <img
-            class="rounded transition-transform duration-300 hover:scale-125"
+            class="transition-transform duration-300 hover:scale-125"
             src={post.featuredImage.filename}
             alt={post.featuredImage.alt}
           />
         </a>
         <p>{post.date}</p>
-        <a href={`/blog/${post.slug}`}>
+        <a
+          href={`/blog/${post.slug}`}
+          class="decoration-zinc-900 dark:decoration-zinc-50"
+        >
           <h3>{post.title}</h3>
         </a>
         <p>{post.description}</p>
