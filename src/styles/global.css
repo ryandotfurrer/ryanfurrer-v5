@@ -96,7 +96,11 @@ nav:is(#header-nav) {
 
 /* Constrains elements inside the main element to a certain width (container class), centers them, and adds padding to the top and bottom of the main element. */
 main {
-  @apply container mx-auto animate-fade space-y-[3em] py-[4em] animate-delay-[1400ms] animate-duration-700 animate-once animate-ease-in-out lg:pb-[4em] lg:pt-0;
+  @apply container mx-auto space-y-[3em] py-[4em] lg:pb-[4em] lg:pt-0;
+}
+
+#main-fade-in {
+  @apply animate-fade animate-delay-[1400ms] animate-duration-300 animate-once animate-ease-in;
 }
 
 /* Centers element on the page. Adds "flow" to elements nested inside the section element using the space-y-[] rule. Also adds horizontal padding so elements are not butting up on the extreme edges of the window on smaller screen sizes. */
