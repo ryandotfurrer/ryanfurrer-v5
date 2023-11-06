@@ -4,46 +4,30 @@ import "../styles/global.css";
 
 <style>
   #navlist {
-    @apply fixed -right-full top-24 z-50 flex h-screen w-full flex-col gap-[2em] bg-white bg-cover px-[2em] pt-8 text-right dark:bg-black;
-
-    li {
-      .navlink {
-        color: var(--subheader);
-        font-size: var(--font-size-fluid-1);
-        font-weight: var(--font-weight-6);
-        text-decoration: none;
-      }
-    }
+    @apply fixed -right-full top-24 z-50 flex h-screen w-full flex-col gap-[2em] bg-white bg-cover px-[2em] pt-8 text-right dark:bg-black md:static md:h-auto md:w-auto md:flex-row md:px-0 md:py-0;
   }
   #navlist.active {
-    right: 0;
+    @apply right-0;
   }
 
   #hamburger {
-    border: none;
-    display: block;
-    display: flex;
-    flex-flow: column wrap;
-    gap: 0.35rem;
-    padding: 0;
+    @apply flex flex-col flex-wrap gap-[.35rem] border-none p-0 md:hidden;
   }
 
   .bar {
-    @apply block h-[.15rem] w-6 bg-zinc-500;
-    transition: all var(--transition-200ms);
-    -webkit-transition: all var(--transition-200ms);
+    @apply block h-[.15em] w-[1.5rem] bg-zinc-500 md:hidden;
   }
 
   #hamburger.active .bar:nth-child(2) {
-    opacity: 0;
+    @apply opacity-0;
   }
 
   #hamburger.active .bar:nth-child(1) {
-    transform: translateY(0.5rem) rotate(45deg);
+    @apply translate-y-[.5rem] rotate-45;
   }
 
   #hamburger.active .bar:nth-child(3) {
-    transform: translateY(-0.5rem) rotate(-45deg);
+    @apply -translate-y-[.5rem] -rotate-45;
   }
 </style>
 
