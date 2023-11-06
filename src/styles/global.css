@@ -131,10 +131,6 @@ main {
   @apply animate-fade animate-delay-[1400ms] animate-duration-300 animate-once animate-ease-in;
 }
 
-main p {
-  @apply leading-relaxed;
-}
-
 /* Centers element on the page. Adds "flow" to elements nested inside the section element using the space-y-[] rule. Also adds horizontal padding so elements are not butting up on the extreme edges of the window on smaller screen sizes. */
 section {
   @apply mx-auto max-w-full space-y-[1em] px-8;
@@ -154,6 +150,10 @@ article:is(#blog-post) #blog-title {
 article:is(#blog-post) img:not(#blog-featured-image),
 article:is(#blog-post) picture:not(#blog-featured-image) {
   @apply mx-auto border-0 xl:w-4/5;
+}
+
+article:is(#blog-post) p {
+  @apply leading-relaxed;
 }
 
 article:is(#blog-post) > ul,
