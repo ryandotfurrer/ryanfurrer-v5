@@ -4,7 +4,7 @@ import "../styles/global.css";
 
 <style>
   #navlist {
-    @apply fixed -right-full top-24 z-50 flex h-screen w-full flex-col gap-[2em] bg-white bg-cover px-[2em] pt-8 text-right dark:bg-black md:static md:h-auto md:w-auto md:flex-row md:px-0 md:py-0;
+    @apply fixed -right-full top-24 z-50 flex h-screen w-full flex-col gap-[2em] bg-white bg-cover px-[2em] pt-8 text-right transition-[right] duration-300 ease-in-out dark:bg-black md:static md:top-0 md:h-auto md:w-auto md:flex-row md:px-0 md:py-0;
   }
   #navlist.active {
     @apply right-0;
@@ -23,11 +23,11 @@ import "../styles/global.css";
   }
 
   #hamburger.active .bar:nth-child(1) {
-    @apply translate-y-[.5rem] rotate-45;
+    @apply translate-y-[.5rem] rotate-45 transition-transform ease-in-out;
   }
 
   #hamburger.active .bar:nth-child(3) {
-    @apply -translate-y-[.5rem] -rotate-45;
+    @apply -translate-y-[.5rem] -rotate-45 transition-transform ease-in-out;
   }
 </style>
 
