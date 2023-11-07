@@ -96,19 +96,16 @@ picture {
 }
 
 /* Apply styles to inline code elements that are not part of a codeblock */
-code {
-  @apply break-words rounded;
+
+code,
+pre > code {
+  @apply break-words rounded font-normal sm:text-xs md:text-base;
 }
 
 /* Applies border to codeblock */
 pre {
   /* @apply max-w-full overflow-x-scroll whitespace-pre rounded !important; */
   @apply grid grid-cols-1;
-}
-
-code,
-pre > code {
-  @apply font-normal sm:text-sm md:text-base;
 }
 
 /* Semantic HTML Styles */
