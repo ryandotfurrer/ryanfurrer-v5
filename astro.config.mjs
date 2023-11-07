@@ -7,9 +7,8 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   markdown: {
-    // syntaxHighlight: "shiki",
     shikiConfig: {
-      theme: "dracula",
+      theme: "github-dark",
       wrap: true,
       langs: [
         "astro",
