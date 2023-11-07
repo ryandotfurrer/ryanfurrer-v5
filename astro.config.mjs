@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
-import storyblok from "@storyblok/astro";
 import basicSsl from "@vitejs/plugin-basic-ssl";
 import react from "@astrojs/react";
+import storyblok from "@storyblok/astro";
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
@@ -10,7 +10,6 @@ export default defineConfig({
     plugins: [basicSsl()],
     server: {
       https: true,
-      open: "./src/pages/index.astro",
     },
   },
   integrations: [
