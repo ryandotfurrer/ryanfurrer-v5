@@ -22,10 +22,9 @@ full font color = text-zinc-50
 */
 
 /* Global Styles */
-
-::selection {
+/* ::selection {
   @apply bg-emerald-100 dark:bg-emerald-950;
-}
+} */
 
 body {
   /* Layout */
@@ -98,7 +97,7 @@ picture {
 
 /* Apply styles to inline code elements that are not part of a codeblock */
 code {
-  @apply rounded bg-emerald-600 px-2 py-1 text-sm text-zinc-50 dark:bg-emerald-400 dark:text-zinc-950;
+  @apply break-words rounded;
 }
 
 /* Applies border to codeblock */
@@ -107,8 +106,9 @@ pre {
   @apply grid grid-cols-1;
 }
 
+code,
 pre > code {
-  @apply lg:text-base;
+  @apply font-normal sm:text-sm md:text-base;
 }
 
 /* Semantic HTML Styles */
