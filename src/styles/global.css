@@ -99,7 +99,7 @@ picture {
 
 code,
 pre > code {
-  @apply break-words rounded font-normal sm:text-xs md:text-base;
+  @apply break-words rounded text-xs font-normal md:text-base;
 }
 
 /* Applies border to codeblock */
