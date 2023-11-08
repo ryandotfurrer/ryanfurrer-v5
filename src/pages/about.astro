@@ -21,7 +21,7 @@ const heroDescription =
       crossorigin="anonymous"></script>
     <title>{pageTitle}</title>
     <style>
-      main > article > section > * > a {
+      * > a {
         @apply underline;
       }
     </style>
@@ -34,24 +34,24 @@ const heroDescription =
     <main id="main-fade-in">
       <article class="mx-auto space-y-[3em] border-0 xl:w-4/5">
         <section
-          class="grid grid-cols-1 text-2xl md:w-4/5 md:grid-cols-2 md:place-items-center md:gap-8 md:text-3xl"
+          class="mx-auto grid grid-cols-1 text-3xl md:grid-cols-2 md:place-items-center md:gap-8 md:text-4xl"
         >
-          <img src="/avatar-2x.webp" class="mx-auto" />
+          <img src="/avatar-2x.webp" />
           <p>
             <span class="text-zinc-900 dark:text-zinc-50">I'm Ryan Furrer</span
             >, an <span class="text-zinc-900 dark:text-zinc-50"
               >incredibly passionate</span
             >, self-taught <span class="text-zinc-900 dark:text-zinc-50"
               >Front-End Web Developer</span
-            > career transitioner.
+            >.
           </p>
         </section>
         <section>
           <h2>Personal Background</h2>
           <p>
             First, thank you for visiting my site; I appreciate your interest in
-            me and my work! I <span class="text-zinc-900 dark:text-zinc-50"
-              >currently reside in Islip, NY, USA</span
+            me and my work! <span class="text-zinc-900 dark:text-zinc-50"
+              >I currently reside in Islip, NY, USA</span
             >, and was born and raised on Long Island, NY. Moving into the
             software engineering industry will be my third, and hopefully final,
             career transition. Previously, I was a musician and music educator,
@@ -85,6 +85,7 @@ const heroDescription =
         <section>
           <h2>My Journey</h2>
           <h3>Music</h3>
+          <img src="/about-music.webp" alt="Row of string instruments." />
           <p>
             As previously mentioned, <span
               class="text-zinc-900 dark:text-zinc-50"
@@ -115,6 +116,10 @@ const heroDescription =
             >. That is when I transitioned into Procurement.
           </p>
           <h3>Procurement</h3>
+          <img
+            src="/about-procurement.webp"
+            alt="Rows of cubicles in a corporate office building."
+          />
           <p>
             On March 16, 2020 - the same day most of the world shut down from
             COVID-19, I started my first job as a Buyer at a government
@@ -146,6 +151,7 @@ const heroDescription =
             >.
           </p>
           <h3>Web Development</h3>
+          <img src="/about-web-dev.webp" alt=`14" MacBook Pro in Space Black` />
           <p>
             <span class="text-zinc-900 dark:text-zinc-50">It was late 2019</span
             > when I decided to start studying programming for a career change;
@@ -258,21 +264,34 @@ const heroDescription =
         </section>
         <section>
           <h2>Conclusion</h2>
-          <p>
-            If you read all that, I appreciate you, and even if you didn't, I
-            still appreciate you for stopping by! If you'd like to chat, I'd
-            love to hear from you. You can <a
-              href="mailto:ryandotfurrer@gmail.com">email me</a
-            >, reach out to me on <a
-              href="https://twitter.com/ryandotfurrer"
-              target="_blank"
-              rel="noopener noreferrer">X (formerly Twitter)</a
-            >, or set up a time to chat via <a
-              href="https://cal.com/ryanfurrer"
-              target="_blank"
-              rel="noopener noreferrer">Cal</a
-            >.
-          </p>
+          <div
+            class="mx-auto grid grid-cols-1 text-2xl md:grid-cols-2 md:place-items-center md:gap-8 md:text-3xl"
+          >
+            <img
+              class="mb-[1em] md:mb-0"
+              src="/about-conclusion.webp"
+              alt="Picture of Ryan Furrer."
+            />
+            <div>
+              <p class="mb-[1em]" '>
+                If you read all that, I appreciate you, and even if you didn't,
+                I still appreciate you for stopping by!
+              </p>
+              <p>
+                If you'd like to chat, I'd love to hear from you. You can <a
+                  href="mailto:ryandotfurrer@gmail.com">email me</a
+                >, reach out to me on <a
+                  href="https://twitter.com/ryandotfurrer"
+                  target="_blank"
+                  rel="noopener noreferrer">X (formerly Twitter)</a
+                >, or set up a time to chat via <a
+                  href="https://cal.com/ryanfurrer"
+                  target="_blank"
+                  rel="noopener noreferrer">Cal</a
+                >.
+              </p>
+            </div>
+          </div>
         </section>
       </article>
     </main>
