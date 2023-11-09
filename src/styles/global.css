@@ -90,6 +90,10 @@ a,
   @apply text-zinc-900 hover:text-emerald-600 hover:underline dark:text-zinc-50 dark:hover:text-emerald-400;
 }
 
+.story-text {
+  @apply text-zinc-900 dark:text-zinc-50;
+}
+
 img,
 picture {
   @apply rounded;
@@ -130,7 +134,7 @@ main {
 
 /* Centers element on the page. Adds "flow" to elements nested inside the section element using the space-y-[] rule. Also adds horizontal padding so elements are not butting up on the extreme edges of the window on smaller screen sizes. */
 section {
-  @apply mx-auto max-w-full space-y-[1em] px-8;
+  @apply mx-auto max-w-full space-y-[1em] px-8 md:space-y-[1.5em];
 }
 
 /* Centers element on the page. Adds "flow" to elements nested inside the section element using the space-y-[] rule. */
@@ -171,17 +175,40 @@ article:is(#blog-post) > ol {
 Light Theme bg colors = darker and saturated 
 Dark Theme bg colors = lighter and desaturated
 */
+[data-name="Astro"] {
+  @apply text-[#5820e1] dark:text-[#bab2ff];
+}
 
 li[data-name="Astro"] {
   @apply bg-[#5820e1] dark:bg-[#bab2ff];
+}
+
+[data-name="React"] {
+  @apply text-[#2e5570] dark:text-[#8bbed5];
 }
 
 li[data-name="React"] {
   @apply bg-[#2e5570] dark:bg-[#8bbed5];
 }
 
+[data-name="NextJS"] {
+  @apply text-[#0072F5] dark:text-[#68B5FB];
+}
+
+li[data-name="NextJS"] {
+  @apply bg-[#0072F5] dark:bg-[#68B5FB];
+}
+
+[data-name="Tailwind CSS"] {
+  @apply text-[#38bdf8] dark:text-[#7dd5fc];
+}
+
 li[data-name="Tailwind CSS"] {
   @apply bg-[#38bdf8] dark:bg-[#7dd5fc];
+}
+
+[data-name="Storyblok"] {
+  @apply text-[#00b3b0] dark:text-[#90fff1];
 }
 
 li[data-name="Storyblok"] {
