@@ -46,22 +46,33 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
   >
     <div>
       <div id="hero-link-container" class="flex flex-col gap-4">
-        <p class="text-xl md:text-2xl">
+        <p
+          class="flex place-items-center gap-4 text-xl transition-[gap] duration-500 ease-in-out hover:gap-8 md:text-2xl"
+        >
           <a
             href="/projects"
-            class="dark:text-emerald-40 flex place-items-center gap-2 text-emerald-600 duration-300 ease-in-out hover:-translate-y-2 hover:no-underline dark:text-emerald-400"
+            class="dark:text-emerald-40 flex place-items-center gap-2 text-emerald-600 ease-in-out hover:no-underline dark:text-emerald-400"
           >
-            <i class="fa-solid fa-code-branch"></i>View my projects</a
-          >
+            <i class="fa-solid fa-code-branch"></i>View my projects
+          </a>
+          <i
+            class="fa-solid fa-arrow-right text-emerald-600 opacity-0 duration-300 ease-in-out dark:text-emerald-400"
+          ></i>
         </p>
-        <p class="text-xl md:text-2xl">
+        <p
+          class="flex place-items-center gap-4 text-xl transition-[gap] duration-500 ease-in-out hover:gap-8 md:text-2xl"
+        >
           <a
             href="/blog"
-            class="flex place-items-center gap-2 duration-300 ease-in-out hover:-translate-y-2 hover:text-zinc-900 hover:no-underline dark:hover:text-zinc-50"
+            class="flex place-items-center gap-2 ease-in-out hover:text-zinc-900 hover:no-underline dark:hover:text-zinc-50"
           >
             <i class="fa-solid fa-newspaper"></i>
              Read blog articles
           </a>
+
+          <i
+            class="fa-solid fa-arrow-right text-zinc-900 opacity-0 transition-opacity duration-300 ease-in-out dark:text-zinc-50"
+          ></i>
         </p>
       </div>
     </div>
