@@ -20,11 +20,11 @@ const heroDescription =
       src="https://kit.fontawesome.com/dec2579292.js"
       crossorigin="anonymous"></script>
     <title>{pageTitle}</title>
-    <style>
+    <!-- <style>
       * > a {
         @apply underline;
       }
-    </style>
+    </style> -->
   </head>
   <body>
     <header>
@@ -33,13 +33,29 @@ const heroDescription =
     </header>
     <main id="main-fade-in">
       <section>
-        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Contact Me</h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam,
-          architecto nemo itaque recusandae delectus perspiciatis enim! Et quos,
-          repudiandae at eos eum unde atque ratione reprehenderit repellat
-          quidem odit. Odio cum ipsa quaerat animi rerum!
+          You can email me directly at <a href="mailto:ryandotfurrer@gmail.com"
+            >ryandotfurrer@gmail.com</a
+          >, using the <span class="story-text">contact form below</span>, or
+          schedule a call with me via <a
+            href="https://cal.com/ryanfurrer"
+            target="_blank"
+            rel="noopener noreferrer">Cal</a
+          >.
         </p>
+        <div id="contact-button-container" class="grid justify-start gap-4">
+          <button class="btn-primary"
+            ><a
+              href="https://cal.com/ryanfurrer"
+              target="_blank"
+              rel="noopener noreferrer">Chat with Ryan</a
+            ></button
+          >
+          <button class="btn-secondary"
+            ><a href="mailto:ryandotfurrer@gmail.com">Email Ryan</a></button
+          >
+        </div>
       </section>
     </main>
     <Footer />
