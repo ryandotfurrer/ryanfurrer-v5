@@ -86,7 +86,7 @@ h6 {
 
 .btn-primary > a,
 .btn-secondary > a {
-  @apply block px-4 py-3 hover:no-underline;
+  @apply block px-4 py-3;
 }
 
 .btn-primary {
@@ -107,7 +107,7 @@ h6 {
 
 a,
 * > a {
-  @apply text-zinc-900 hover:text-emerald-600 hover:underline dark:text-zinc-50 dark:hover:text-emerald-400;
+  @apply text-zinc-900 hover:text-emerald-600 dark:text-zinc-50 dark:hover:text-emerald-400;
 }
 
 .story-text {
