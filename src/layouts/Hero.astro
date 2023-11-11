@@ -27,7 +27,9 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
       id="hero-description-container"
       class="animate-fade-down text-4xl animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out md:text-5xl xl:max-w-[60%]"
     >
-      <p>
+      <p
+        class="bg-gradient-to-t from-emerald-700 to-emerald-400 bg-clip-text py-1 text-transparent dark:from-emerald-600 dark:to-emerald-300"
+      >
         {heroDescription}
       </p>
     </div>
