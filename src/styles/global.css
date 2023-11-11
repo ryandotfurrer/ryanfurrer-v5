@@ -199,7 +199,7 @@ article:is(#blog-post) > ol {
 Light Theme bg colors = darker and saturated 
 Dark Theme bg colors = lighter and desaturated
 */
-[data-name="Astro"] {
+p > span[data-name="Astro"] {
   @apply text-[#5820e1] dark:text-[#bab2ff];
 }
 
@@ -207,7 +207,7 @@ li[data-name="Astro"] {
   @apply bg-[#5820e1] dark:bg-[#bab2ff];
 }
 
-[data-name="React"] {
+p > span[data-name="React"] {
   @apply text-[#2e5570] dark:text-[#8bbed5];
 }
 
@@ -215,7 +215,7 @@ li[data-name="React"] {
   @apply bg-[#2e5570] dark:bg-[#8bbed5];
 }
 
-[data-name="NextJS"] {
+p > span[data-name="NextJS"] {
   @apply text-[#0072F5] dark:text-[#68B5FB];
 }
 
@@ -223,7 +223,7 @@ li[data-name="NextJS"] {
   @apply bg-[#0072F5] dark:bg-[#68B5FB];
 }
 
-[data-name="Tailwind CSS"] {
+p > span[data-name="Tailwind CSS"] {
   @apply text-[#38bdf8] dark:text-[#7dd5fc];
 }
 
@@ -231,7 +231,7 @@ li[data-name="Tailwind CSS"] {
   @apply bg-[#38bdf8] dark:bg-[#7dd5fc];
 }
 
-[data-name="Storyblok"] {
+p > span[data-name="Storyblok"] {
   @apply text-[#00b3b0] dark:text-[#90fff1];
 }
 
