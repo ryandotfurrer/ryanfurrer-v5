@@ -1,0 +1,47 @@
+---
+import HeaderNavBar from "../layouts/HeaderNavBar.astro";
+import Hero from "../layouts/Hero.astro";
+import Footer from "../layouts/Footer.astro";
+import "../styles/global.css";
+const pageTitle = "Contact Ryan";
+const heroHeader = "Want to chat, email, or connect?";
+const heroDescription =
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.d";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <script
+      is:inline
+      src="https://kit.fontawesome.com/dec2579292.js"
+      crossorigin="anonymous"></script>
+    <title>{pageTitle}</title>
+    <style>
+      * > a {
+        @apply underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <HeaderNavBar />
+      <Hero heroHeader={heroHeader} heroDescription={heroDescription} />
+    </header>
+    <main id="main-fade-in">
+      <section>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam,
+          architecto nemo itaque recusandae delectus perspiciatis enim! Et quos,
+          repudiandae at eos eum unde atque ratione reprehenderit repellat
+          quidem odit. Odio cum ipsa quaerat animi rerum!
+        </p>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

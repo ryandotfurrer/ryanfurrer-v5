@@ -49,7 +49,6 @@ body {
 
 :is(#hero) p {
   text-wrap: balance;
-  /* @apply text-4xl tracking-tight md:text-5xl; */
 }
 
 :is(h1, h2, h3, h4, h5, h6) > span::after {
