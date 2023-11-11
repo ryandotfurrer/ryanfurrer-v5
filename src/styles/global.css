@@ -46,10 +46,10 @@ body {
   text-wrap: balance;
 }
 
-:is(h1, h2, h3, h4, h5, h6) > span::after {
+/* :is(h1, h2, h3, h4, h5, h6) > span::after {
   content: "🔗";
   @apply pl-[.5em] text-[50%];
-}
+} */
 
 :is(h1, h2, h3) {
   @apply leading-none;
@@ -150,6 +150,10 @@ nav:is(#header-nav) {
 /* Constrains elements inside the main element to a certain width (container class), centers them, and adds padding to the top and bottom of the main element. */
 main {
   @apply container mx-auto animate-fade space-y-[3em] pb-[3em] animate-delay-300 animate-duration-300;
+}
+
+main a {
+  @apply underline;
 }
 
 #main-fade-in {

@@ -5,8 +5,7 @@ import Footer from "../layouts/Footer.astro";
 import "../styles/global.css";
 const pageTitle = "Contact Ryan";
 const heroHeader = "Want to chat, email, or connect?";
-const heroDescription =
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.d";
+const heroDescription = "I'd love to hear from you.";
 ---
 
 <html lang="en">
@@ -44,11 +43,14 @@ const heroDescription =
             ><a
               href="https://cal.com/ryanfurrer"
               target="_blank"
-              rel="noopener noreferrer">Chat with Ryan</a
+              rel="noopener noreferrer"
+              class="no-underline">Chat with Ryan</a
             ></button
           >
           <button class="btn-secondary"
-            ><a href="mailto:ryandotfurrer@gmail.com">Email Ryan</a></button
+            ><a href="mailto:ryandotfurrer@gmail.com" class="no-underline"
+              >Email Ryan</a
+            ></button
           >
         </div>
       </section>

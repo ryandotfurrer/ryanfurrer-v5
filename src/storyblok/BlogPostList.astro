@@ -53,8 +53,10 @@ const { blok } = Astro.props;
           />
         </a>
         <p>{post.date}</p>
-        <a href={post.slug} class="decoration-zinc-900 dark:decoration-zinc-50">
-          <h3>{post.title}</h3>
+        <a href={post.slug}>
+          <h3 class=" hover:text-emerald-600 dark:hover:text-emerald-400">
+            {post.title}
+          </h3>
         </a>
         <p>{post.description}</p>
       </li>
