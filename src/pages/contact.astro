@@ -29,14 +29,15 @@ const heroDescription = "I'd love to hear from you.";
       <section>
         <h2>Contact Me</h2>
         <p>
-          You can email me directly at <a href="mailto:ryandotfurrer@gmail.com"
-            >ryandotfurrer@gmail.com</a
-          >, using the <span class="story-text">contact form below</span>, or
-          schedule a call with me via <a
+          You can <a href="mailto:ryandotfurrer@gmail.com">email me directly</a>
+           at ryandotfurrer@gmail.com, using the <span class="story-text"
+            >contact form below</span
+          >, or
+          <a
             href="https://cal.com/ryanfurrer"
             target="_blank"
-            rel="noopener noreferrer">Cal</a
-          >.
+            rel="noopener noreferrer">schedule a call</a
+          >. with me via Cal.
         </p>
         <div id="contact-button-container" class="grid justify-start gap-4">
           <button class="btn-primary"
@@ -52,6 +53,47 @@ const heroDescription = "I'd love to hear from you.";
               >Email Ryan</a
             ></button
           >
+        </div>
+      </section>
+
+      <section id="contact-form">
+        <div
+          id="contact-form-container"
+          class="bg-zinc-100 p-8 dark:bg-zinc-900"
+        >
+          <form name="contact" class="grid grid-cols-1 gap-[1em]">
+            <div id="name-input-container">
+              <label for="name" class="text-zinc-900 dark:text-zinc-50"
+                >Name<input
+                  type="text"
+                  name="name"
+                  required
+                  autocomplete="name"
+                  class="rounded bg-white p-3 dark:bg-zinc-700"
+                /></label
+              >
+            </div>
+            <div id="email-input-container">
+              <label for="email"
+                >Email<input
+                  type="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  class="rounded bg-white p-3"
+                /></label
+              >
+            </div>
+            <div id="message-input-container">
+              <label for="message"
+                >Message<textarea
+                  name="message"
+                  required
+                  autocorrect="on"
+                  class="rounded bg-white p-3"></textarea></label
+              >
+            </div>
+          </form>
         </div>
       </section>
     </main>
