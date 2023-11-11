@@ -28,7 +28,7 @@ const heroHeader =
     </header>
     <main id="main-fade-in">
       <section>
-        <h2>👋🏻 Pleased to meet you</h2>
+        <h2>👋🏻 Hey there</h2>
         <div
           id="greeting-container"
           class="mx-auto grid grid-cols-1 space-y-[1em] text-xl md:place-items-center md:text-2xl lg:grid-cols-2 lg:gap-8 xl:text-3xl 2xl:w-4/5"
@@ -76,7 +76,7 @@ const heroHeader =
             <p class="text-xl md:text-2xl">
               <a
                 class="flex flex-row place-items-center gap-4 transition-[gap] duration-300 ease-in-out hover:gap-8 hover:no-underline"
-                href="about"
+                href="/about"
                 >Learn more about me <i class="fa-solid fa-arrow-right"></i></a
               >
             </p>
@@ -95,9 +95,11 @@ const heroHeader =
           > to be notified when I publish new ones.
         </p>
         <BlogPostListFeatured />
-        <p>
-          <a href="/blog" class="text-emerald-600 dark:text-emerald-400"
-            >View all articles</a
+        <p class="text-xl md:text-2xl">
+          <a
+            class="flex flex-row place-items-center gap-4 transition-[gap] duration-300 ease-in-out hover:gap-8 hover:no-underline"
+            href="/blog"
+            >View all articles <i class="fa-solid fa-arrow-right"></i></a
           >
         </p>
       </section>
