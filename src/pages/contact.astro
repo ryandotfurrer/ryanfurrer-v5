@@ -3,6 +3,7 @@ import HeaderNavBar from "../layouts/HeaderNavBar.astro";
 import Hero from "../layouts/Hero.astro";
 import Footer from "../layouts/Footer.astro";
 import "../styles/global.css";
+import SocialLinks from "../layouts/SocialLinks.astro";
 const pageTitle = "Contact Ryan";
 const heroHeader = "Want to chat, email, or connect?";
 const heroDescription = "I'd love to hear from you.";
@@ -27,7 +28,7 @@ const heroDescription = "I'd love to hear from you.";
     </header>
     <main id="main-fade-in">
       <section>
-        <h2>Contact Me</h2>
+        <h1>Contact Me</h1>
         <p>
           You can <a href="mailto:ryandotfurrer@gmail.com">email me directly</a>
            at ryandotfurrer@gmail.com, using the <span class="story-text"
@@ -59,41 +60,84 @@ const heroDescription = "I'd love to hear from you.";
       <section id="contact-form">
         <div
           id="contact-form-container"
-          class="bg-zinc-100 p-8 dark:bg-zinc-900"
+          class="grid grid-cols-1 space-y-[1em] rounded-md bg-zinc-100 p-8 dark:bg-zinc-900 lg:grid-cols-2 lg:gap-12 lg:space-y-0 lg:p-16"
         >
-          <form name="contact" class="grid grid-cols-1 gap-[1em]">
-            <div id="name-input-container">
-              <label for="name" class="text-zinc-900 dark:text-zinc-50"
-                >Name<input
-                  type="text"
-                  name="name"
-                  required
-                  autocomplete="name"
-                  class="rounded bg-white p-3 dark:bg-zinc-700"
-                /></label
+          <div
+            id="contact-text-container"
+            class="grid grid-cols-1 space-y-[3em] lg:space-y-[1em]"
+          >
+            <aside class="grid grid-cols-1 space-y-[1em] lg:space-y-0">
+              <h2>Connect</h2>
+              <p>
+                You can find me on <a
+                  href="https://twitter.com/ryandotfurrer"
+                  target="_blank"
+                  rel="noopener noreferrer">X (formerly Twitter)</a
+                >, <a
+                  href="https://www.threads.net/@ryandotfurrer"
+                  target="_blank"
+                  rel="noopener noreferrer">Threads</a
+                >, <a
+                  href="https://github.com/ryanfurrer"
+                  target="_blank"
+                  rel="noopener noreferrer">GitHub</a
+                >, and <a
+                  href="https://www.linkedin.com/in/ryanfurrer/"
+                  target="_blank"
+                  rel="noopener noreferrer">Linkedin</a
+                >.
+              </p>
+              <SocialLinks />
+            </aside>
+            <aside class="grid grid-cols-1 space-y-[1em] lg:space-y-0">
+              <h2>Contact Me</h2>
+              <p>
+                Like I said, I'd love to hear from you no matter what. I am open
+                to employment opportunities, mentorships (being both a mentor
+                and mentee), collaborating projects, and more! I am just
+                exicited to meet new people in the space and grow as a
+                developer.
+              </p>
+            </aside>
+          </div>
+          <div id="contact-form-container">
+            <form name="contact" class="grid grid-cols-1 space-y-[1em]">
+              <div id="name-input-container" class="input-container">
+                <label for="name"
+                  >Name<input
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                    autocomplete="name"
+                  /></label
+                >
+              </div>
+              <div id="email-input-container" class="input-container">
+                <label for="email"
+                  >Email<input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                  /></label
+                >
+              </div>
+              <div id="message-input-container" class="input-container">
+                <label for="message"
+                  >Message<textarea
+                    name="message"
+                    id="message"
+                    required
+                    autocorrect="on"></textarea></label
+                >
+              </div>
+              <button type="submit" class="btn-primary lg:w-max"
+                >Send Email</button
               >
-            </div>
-            <div id="email-input-container">
-              <label for="email"
-                >Email<input
-                  type="email"
-                  name="email"
-                  required
-                  autocomplete="email"
-                  class="rounded bg-white p-3"
-                /></label
-              >
-            </div>
-            <div id="message-input-container">
-              <label for="message"
-                >Message<textarea
-                  name="message"
-                  required
-                  autocorrect="on"
-                  class="rounded bg-white p-3"></textarea></label
-              >
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </section>
     </main>
