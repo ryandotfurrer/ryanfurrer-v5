@@ -146,6 +146,10 @@ picture {
 
 /* Apply styles to inline code elements that are not part of a codeblock */
 
+code {
+  @apply bg-zinc-200 p-1 text-zinc-900 dark:bg-zinc-700 dark:text-zinc-50;
+}
+
 code,
 pre > code {
   @apply break-words rounded text-xs font-normal md:text-base;
