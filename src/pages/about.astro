@@ -1,4 +1,5 @@
 ---
+import { SEO } from "astro-seo";
 import HeaderNavBar from "../layouts/HeaderNavBar.astro";
 import Hero from "../layouts/Hero.astro";
 import Footer from "../layouts/Footer.astro";
@@ -12,6 +13,13 @@ const heroDescription = "Here is where you can learn a bit more about me.";
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <SEO
+      title=`${pageTitle}`
+      description=`${heroDescription}`
+      twitter={{
+        creator: "@ryandotfurrer",
+      }}
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />

@@ -1,4 +1,5 @@
 ---
+import { SEO } from "astro-seo";
 import { useStoryblokApi } from "@storyblok/astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import HeaderNavBar from "../../layouts/HeaderNavBar.astro";
@@ -34,9 +35,14 @@ const story = data.story;
 
 <html lang="en">
   <head>
-    <title>{story.name}</title>
-
     <meta charset="UTF-8" />
+    <SEO
+      title=`${story.name}`
+      description=`${story.content}`
+      twitter={{
+        creator: "@ryandotfurrer",
+      }}
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta name="author" content="Ryan Furrer" />
