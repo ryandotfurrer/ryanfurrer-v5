@@ -1,4 +1,5 @@
 ---
+import { SEO } from "astro-seo";
 import HeaderNavBar from "../layouts/HeaderNavBar.astro";
 import Hero from "../layouts/Hero.astro";
 import SocialLinks from "../layouts/SocialLinks.astro";
@@ -14,6 +15,13 @@ const heroParagraph =
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <SEO
+      title=`${pageTitle}`
+      description=`${heroParagraph}`
+      twitter={{
+        creator: "@ryandotfurrer",
+      }}
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
@@ -27,11 +35,6 @@ const heroParagraph =
     <header>
       <HeaderNavBar />
       <Hero heroHeader={heroHeader} heroParagraph={heroParagraph} />
-      <div
-        class="flex animate-fade-down place-content-center animate-delay-[1700ms] animate-duration-1000 animate-once animate-ease-in-out"
-      >
-        <p class="animate-bounce">👇🏻</p>
-      </div>
     </header>
     <main id="main-fade-in">
       <section class="grid place-items-center">
