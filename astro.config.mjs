@@ -6,6 +6,11 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://www.ryanfurrer.com",
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: "hover",
+  },
   markdown: {
     shikiConfig: {
       theme: "github-dark",
