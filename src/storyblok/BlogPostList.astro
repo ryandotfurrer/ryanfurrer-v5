@@ -37,6 +37,18 @@ const posts = data.stories.map(
 const { blok } = Astro.props;
 ---
 
+<style>
+  h3 {
+    @apply text-[1.44rem] leading-tight lg:text-[1.563rem];
+  }
+  p {
+    @apply text-base;
+  }
+  img {
+    @apply aspect-video;
+  }
+</style>
+
 <h2>Blogs</h2>
 <ul
   {...storyblokEditable(blok)}

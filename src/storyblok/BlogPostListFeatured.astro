@@ -38,6 +38,18 @@ const posts = data.stories.map(
 );
 ---
 
+<style>
+  h3 {
+    @apply text-[1.44rem] leading-tight lg:text-[1.563rem];
+  }
+  p {
+    @apply text-base;
+  }
+  img {
+    @apply aspect-video;
+  }
+</style>
+
 <ul {...storyblokEditable(blok)} class="grid gap-[2em] md:grid-cols-2">
   {
     posts.map((post) => (
