@@ -281,11 +281,11 @@ li[data-name="React"] {
 }
 
 p > span[data-name="NextJS"] {
-  @apply text-[#0072F5] dark:text-[#68B5FB];
+  @apply text-neutral-900 dark:text-neutral-100;
 }
 
 li[data-name="NextJS"] {
-  @apply bg-[#0072F5] dark:bg-[#68B5FB];
+  @apply bg-black dark:bg-white;
 }
 
 p > span[data-name="Tailwind CSS"] {
