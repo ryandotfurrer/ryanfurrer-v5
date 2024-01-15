@@ -4,18 +4,18 @@ import "../styles/global.css";
 
 <style>
   #navlist {
-    @apply fixed -right-full top-24 z-50 flex h-screen w-full flex-col gap-[2em] bg-white bg-cover px-[2em] pt-8 text-right transition-[right] duration-300 ease-in-out dark:bg-black md:static md:top-0 md:h-auto md:w-auto md:flex-row md:px-0 md:py-0;
+    @apply fixed -right-full top-24 z-50 flex h-screen w-full flex-col gap-[2em] bg-white bg-cover px-[2em] pt-8 text-right transition-[right] duration-300 ease-in-out dark:bg-black lg:static lg:top-0 lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:py-0;
   }
   #navlist.active {
     @apply right-0;
   }
 
   #hamburger {
-    @apply flex flex-col flex-wrap gap-[.35rem] border-none p-0 md:hidden;
+    @apply flex flex-col flex-wrap gap-[.35rem] border-none p-0 lg:hidden;
   }
 
   .bar {
-    @apply block h-[.15em] w-[1.5rem] bg-zinc-400 md:hidden;
+    @apply block h-[.15em] w-[1.5rem] bg-zinc-400 lg:hidden;
   }
 
   #hamburger.active .bar:nth-child(2) {
