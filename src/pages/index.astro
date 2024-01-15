@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import "../styles/global.css";
 import HeaderNavBar from "../layouts/HeaderNavBar.astro";
 import HeroHome from "../layouts/HeroHome.astro";
 import Footer from "../layouts/Footer.astro";
@@ -39,7 +40,7 @@ const heroHeader =
         <h2>Hello There</h2>
         <div
           id="greeting-container"
-          class="mx-auto grid grid-cols-1 space-y-[1em] text-xl md:place-items-center md:text-2xl lg:grid-cols-2 lg:gap-8 xl:text-3xl 2xl:w-4/5"
+          class="mx-auto grid grid-cols-1 space-y-[1em] md:place-items-center lg:grid-cols-2 lg:gap-8 2xl:w-4/5"
         >
           <img
             src="/avatar-2x.webp"
@@ -82,7 +83,7 @@ const heroHeader =
                 >newsletter</a
               > as well.
             </p>
-            <p class="text-xl md:text-2xl">
+            <p class="text-xl font-semibold md:text-2xl">
               <a
                 class="flex flex-row place-items-center gap-4 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8"
                 href="/about"
@@ -104,7 +105,7 @@ const heroHeader =
           > to be notified when I publish new ones.
         </p>
         <BlogPostListFeatured />
-        <p class="text-xl md:text-2xl">
+        <p class="text-xl font-semibold md:text-2xl">
           <a
             class="flex flex-row place-items-center gap-4 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8"
             href="/blog"

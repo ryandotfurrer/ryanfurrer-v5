@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 /* New style rules to simplify design */
-/* Insprired by Apple */
+/* Inspired by Apple */
 /* Tell a story in the paragraphs and point out hte important items by using a darker/lighter font-color; text-zinc-900 in light theme, text-zinc-50 in dark theme. */
 
 /* 
@@ -21,37 +21,78 @@ main font color = text-zinc-500
 full font color = text-zinc-50
 */
 
-html {
-  text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-}
+@layer base {
+  * {
+    @apply min-w-0;
+  }
 
-body {
-  /* Layout */
-  /* Ensures the footer stays at bottom no matter how much content is on the page. */
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  text-rendering: optimizeSpeed;
-  -webkit-font-smoothing: antialiased;
+  :root {
+    font-size: 18px;
+  }
 
-  /* Text and Font */
-  text-wrap: pretty;
-  @apply font-sans text-lg font-semibold md:text-xl;
+  body {
+    @apply text-pretty grid max-h-screen bg-white font-sans text-base text-zinc-500 dark:bg-black dark:text-zinc-400 md:text-xl;
+    grid-template-rows: auto 1fr auto;
+  }
 
-  /* Global Light & Dark Theme */
-  @apply bg-white text-zinc-500 dark:bg-black;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-balance font-bold text-zinc-900 dark:text-zinc-50;
+  }
 
-/* Typography Styles */
-:is(h1, h2, h3, h4, h5, h6) {
-  text-wrap: balance;
-  @apply font-bold tracking-tight text-zinc-900 dark:text-zinc-50;
+  h1,
+  h2,
+  h3 {
+    @apply leading-none tracking-tight;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply leading-none tracking-tight;
+  }
+
+  h1 {
+    @apply text-[2.986rem] lg:text-[3.815rem];
+  }
+
+  h2 {
+    @apply text-[2.488rem] lg:text-[3.052rem];
+  }
+
+  h3 {
+    @apply text-[2.074rem] lg:text-[2.441rem];
+  }
+
+  h4 {
+    @apply text-[1.728rem] lg:text-[1.953rem];
+  }
+
+  h5 {
+    @apply text-[1.44rem] lg:text-[1.563rem];
+  }
+
+  h6 {
+    @apply text-[1.2rem] lg:text-[1.25rem];
+  }
+
+  a,
+  * > a {
+    @apply text-zinc-900 hover:text-emerald-600 dark:text-zinc-50 dark:hover:text-emerald-400;
+  }
+
+  .flow > * + * {
+    margin-block-start: 1em;
+    margin-block-start: clamp(1rem, 1rem + 0vw, 1rem);
+  }
 }
 
 :is(#hero) p {
-  text-wrap: balance;
+  @apply text-balance text-[2.074rem] font-semibold leading-none lg:text-[2.441rem];
 }
 
 /* :is(h1, h2, h3, h4, h5, h6) > span::after {
@@ -59,11 +100,7 @@ body {
   @apply pl-[.5em] text-[50%];
 } */
 
-:is(h1, h2, h3) {
-  @apply leading-none;
-}
-
-h1 {
+/* h1 {
   @apply text-5xl md:text-6xl;
 }
 
@@ -85,7 +122,7 @@ h5 {
 
 h6 {
   @apply text-lg md:text-xl;
-}
+} */
 
 .btn-primary,
 .btn-secondary {
@@ -128,11 +165,6 @@ textarea {
 
 textarea {
   min-height: 15vh;
-}
-
-a,
-* > a {
-  @apply text-zinc-900 hover:text-emerald-600 dark:text-zinc-50 dark:hover:text-emerald-400;
 }
 
 .story-text {
@@ -230,7 +262,7 @@ article:is(#blog-post) > ol {
 /* Project Tech Tag Styling */
 /* 
 Light Theme bg colors = darker and saturated 
-Dark Theme bg colors = lighter and desaturated
+Dark Theme bg colors = lighter and de-saturated
 */
 p > span[data-name="Astro"] {
   @apply text-[#5820e1] dark:text-[#bab2ff];
