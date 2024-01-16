@@ -82,9 +82,9 @@ full font color = text-zinc-50
   }
 }
 
-:is(#hero) p {
-  @apply text-balance text-lg font-semibold leading-none;
-}
+/* :is(#hero) p {
+  @apply text-balance text-3xl font-semibold leading-none;
+} */
 
 .btn-primary,
 .btn-secondary {

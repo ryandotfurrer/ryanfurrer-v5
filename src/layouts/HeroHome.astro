@@ -19,7 +19,7 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
       id="hero-header-container"
       class="animate-fade animate-delay-700 animate-duration-500 animate-once animate-ease-in-out xl:max-w-[63%]"
     >
-      <h2>
+      <h2 class="text-3xl">
         {heroHeader}
       </h2>
     </div>
@@ -27,7 +27,7 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
       id="hero-description-container"
       class="animate-fade-down animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out xl:max-w-[63%]"
     >
-      <p>
+      <p class="text-balance text-2xl font-semibold leading-none">
         {heroDescription}
       </p>
     </div>
@@ -35,7 +35,7 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
       id="hero-paragraph-container"
       class="animate-fade-down animate-delay-[1200ms] animate-duration-500 animate-once animate-ease-in-out xl:max-w-[60%]"
     >
-      <p>
+      <p class="text-balance text-xl font-semibold leading-none">
         {heroParagraph}
       </p>
     </div>
@@ -45,13 +45,16 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
     class="container animate-fade-down animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out"
   >
     <div>
-      <div id="hero-link-container" class="flex flex-col gap-4 lg:w-max">
+      <div
+        id="hero-link-container"
+        class="flex flex-col text-lg font-semibold sm:gap-4 md:gap-2 lg:w-max"
+      >
         <p
-          class="flex place-items-center gap-4 text-xl transition-[gap] duration-500 ease-in-out hover:gap-8 md:text-2xl"
+          class="flex place-items-center gap-4 transition-[gap] duration-500 ease-in-out hover:gap-8"
         >
           <a
             href="/projects"
-            class="dark:text-emerald-40 flex place-items-center gap-2 text-emerald-600 ease-in-out dark:text-emerald-400"
+            class="flex place-items-center gap-2 text-emerald-600 ease-in-out dark:text-emerald-400"
           >
             <i class="fa-solid fa-code-branch"></i>View my projects
           </a>
@@ -60,7 +63,7 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
           ></i>
         </p>
         <p
-          class="flex place-items-center gap-4 text-xl transition-[gap] duration-500 ease-in-out hover:gap-8 md:text-2xl"
+          class="flex place-items-center gap-4 transition-[gap] duration-500 ease-in-out hover:gap-8"
         >
           <a
             href="/blog"
@@ -79,8 +82,7 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
   </div>
 </section>
 
-<style>
+<!-- <style>
   :is(#hero) p {
     @apply text-balance text-[1.44rem] font-semibold lg:text-[1.563rem];
-  }
-</style>
+  } -->

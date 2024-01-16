@@ -19,16 +19,16 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
       id="hero-header-container"
       class="animate-fade animate-delay-700 animate-duration-500 animate-once animate-ease-in-out xl:max-w-[60%]"
     >
-      <h2>
+      <h2 class="text-3xl">
         {heroHeader}
       </h2>
     </div>
     <div
       id="hero-description-container"
-      class="animate-fade-down text-4xl animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out md:text-5xl xl:max-w-[60%]"
+      class="animate-fade-down animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out xl:max-w-[60%]"
     >
       <p
-        class="bg-gradient-to-b from-emerald-500 to-emerald-700 bg-clip-text py-1 text-transparent dark:from-emerald-300 dark:to-emerald-600"
+        class="text-balance bg-gradient-to-b from-emerald-500 to-emerald-700 bg-clip-text py-1 text-2xl font-semibold leading-none text-transparent dark:from-emerald-300 dark:to-emerald-600"
       >
         {heroDescription}
       </p>
@@ -37,7 +37,7 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
       id="hero-paragraph-container"
       class="animate-fade-down animate-delay-[1200ms] animate-duration-500 animate-once animate-ease-in-out xl:max-w-[60%]"
     >
-      <p>
+      <p class="text-balance text-xl font-semibold leading-none">
         {heroParagraph}
       </p>
     </div>
