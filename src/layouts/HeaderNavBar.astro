@@ -1,21 +1,21 @@
 ---
-import "../styles/global.css";
+
 ---
 
 <style>
   #navlist {
-    @apply fixed -right-full top-24 z-50 flex h-screen w-full flex-col gap-[2em] bg-white bg-cover px-[2em] pt-8 text-right transition-[right] duration-300 ease-in-out dark:bg-black lg:static lg:top-0 lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:py-0;
+    @apply fixed -right-full top-24 z-50 flex h-screen w-full flex-col gap-6 bg-white px-8 pt-8 text-right transition-[right] duration-300 ease-in-out lg:static lg:top-0 lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:py-0 dark:bg-black;
   }
   #navlist.active {
     @apply right-0;
   }
 
   #hamburger {
-    @apply flex flex-col flex-wrap gap-[.35rem] border-none p-0 lg:hidden;
+    @apply flex flex-col flex-wrap gap-[.38rem] border-none p-0 text-base lg:hidden;
   }
 
   .bar {
-    @apply block h-[.15em] w-[1.5rem] bg-zinc-400 lg:hidden;
+    @apply block h-[.125rem] w-[1.4rem] bg-zinc-500 lg:hidden dark:bg-zinc-400;
   }
 
   #hamburger.active .bar:nth-child(2) {
@@ -29,49 +29,33 @@ import "../styles/global.css";
   #hamburger.active .bar:nth-child(3) {
     @apply -translate-y-[.5rem] -rotate-45 transition-transform ease-in-out;
   }
+
+  li > a {
+    @apply lowercase text-zinc-400 hover:text-emerald-600 dark:text-zinc-500 dark:hover:text-emerald-400;
+  }
 </style>
 
 <nav id="header-nav">
   <a
     href="/"
-    class="mr-auto text-[1.728rem] font-bold lowercase text-zinc-900 hover:text-emerald-600 dark:text-zinc-50 dark:hover:text-emerald-400 lg:text-[1.953rem]"
+    class="mr-auto text-lg font-semibold lowercase text-zinc-900 hover:text-emerald-600 dark:text-zinc-50 dark:hover:text-emerald-400"
     >Ryan Furrer</a
   >
   <ul id="navlist" class="flex gap-[1em]">
     <li>
-      <a
-        href="/"
-        class="navlink lowercase text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400"
-        >Home</a
-      >
+      <a href="/">Home</a>
     </li>
     <li>
-      <a
-        href="/projects"
-        class="navlink lowercase text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400"
-        >Projects</a
-      >
+      <a href="/projects">Projects</a>
     </li>
     <li>
-      <a
-        href="/blog"
-        class="navlink lowercase text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400"
-        >Blog</a
-      >
+      <a href="/blog">Blog</a>
     </li>
     <li>
-      <a
-        href="/about"
-        class="navlink lowercase text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400"
-        >About</a
-      >
+      <a href="/about">About</a>
     </li>
     <li>
-      <a
-        href="/contact"
-        class="navlink lowercase text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400"
-        >Contact</a
-      >
+      <a href="/contact">Contact</a>
     </li>
   </ul>
   <button id="hamburger" name="Mobile Menu" aria-label="Mobile Menu">
