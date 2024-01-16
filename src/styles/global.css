@@ -200,9 +200,9 @@ article:is(#blog-post) picture:not(#blog-featured-image) {
   @apply mx-auto border-0 xl:w-4/5;
 }
 
-/* article:is(#blog-post) p {
+article:is(#blog-post) p {
   @apply leading-relaxed;
-} */
+}
 
 article:is(#blog-post) > ul,
 article:is(#blog-post) > ol {
