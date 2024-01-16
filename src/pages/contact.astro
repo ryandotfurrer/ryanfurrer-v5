@@ -1,9 +1,9 @@
 ---
 import { SEO } from "astro-seo";
+import "../styles/global.css";
 import HeaderNavBar from "../layouts/HeaderNavBar.astro";
 import Hero from "../layouts/Hero.astro";
 import Footer from "../layouts/Footer.astro";
-import "../styles/global.css";
 import SocialLinks from "../layouts/SocialLinks.astro";
 const pageTitle = "Contact Ryan";
 const heroHeader = "Want to chat, email, or connect?";
@@ -39,9 +39,7 @@ const heroDescription = "I'd love to hear from you.";
         <h1>Contact Me</h1>
         <p>
           You can <a href="mailto:ryandotfurrer@gmail.com">email me directly</a>
-           at ryandotfurrer@gmail.com, using the <span class="story-text"
-            >contact form below</span
-          >, or
+           at ryandotfurrer@gmail.com, using the contact form below, or
           <a
             href="https://cal.com/ryanfurrer"
             target="_blank"
@@ -71,7 +69,7 @@ const heroDescription = "I'd love to hear from you.";
       <section id="contact-form">
         <div
           id="contact-form-container"
-          class="grid grid-cols-1 space-y-[1em] rounded-md bg-zinc-100 p-8 dark:bg-zinc-900 lg:grid-cols-2 lg:gap-12 lg:space-y-0 lg:p-16"
+          class="grid grid-cols-1 space-y-[1em] rounded-md bg-zinc-100 p-8 lg:grid-cols-2 lg:gap-12 lg:space-y-0 lg:p-16 dark:bg-zinc-900"
         >
           <div
             id="contact-text-container"

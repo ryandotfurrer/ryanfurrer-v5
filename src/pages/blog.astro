@@ -1,11 +1,11 @@
 ---
 import { SEO } from "astro-seo";
+import "../styles/global.css";
 import { useStoryblokApi } from "@storyblok/astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import HeaderNavBar from "../layouts/HeaderNavBar.astro";
 import Hero from "../layouts/Hero.astro";
 import Footer from "../layouts/Footer.astro";
-import "../styles/global.css";
 
 const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get("cdn/stories/blog", {
