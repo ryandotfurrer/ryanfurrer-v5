@@ -2,42 +2,28 @@
 import "../styles/global.css";
 ---
 
+<style>
+  a {
+    @apply text-zinc-500 hover:text-emerald-600 dark:text-zinc-400 dark:hover:text-emerald-400;
+  }
+</style>
+
 <nav class="container mx-auto">
   <ul class="grid">
     <li>
-      <a
-        href="/"
-        class="text-zinc-500 hover:text-emerald-600 dark:hover:text-emerald-400"
-        aria-label="home">Home</a
-      >
+      <a href="/" aria-label="home">Home</a>
     </li>
     <li>
-      <a
-        href="/projects"
-        class="text-zinc-500 hover:text-emerald-600 dark:hover:text-emerald-400"
-        aria-label="projects">Projects</a
-      >
+      <a href="/projects" aria-label="projects">Projects</a>
     </li>
     <li>
-      <a
-        href="/blog"
-        class="text-zinc-500 hover:text-emerald-600 dark:hover:text-emerald-400"
-        aria-label="blog">Blog</a
-      >
+      <a href="/blog" aria-label="blog">Blog</a>
     </li>
     <li>
-      <a
-        href="/about"
-        class="text-zinc-500 hover:text-emerald-600 dark:hover:text-emerald-400"
-        aria-label="about">About</a
-      >
+      <a href="/about" aria-label="about">About</a>
     </li>
     <li>
-      <a
-        href="/contact"
-        class="navlink text-zinc-500 hover:text-emerald-600 dark:hover:text-emerald-400"
-        aria-label="contact">Contact</a
-      >
+      <a href="/contact" aria-label="contact">Contact</a>
     </li>
     <li>
       <a
@@ -55,7 +41,6 @@ import "../styles/global.css";
         href="https://ryanfurrer.beehiiv.com/subscribe"
         target="_blank"
         rel="noopener noreferrer"
-        class="navlink text-zinc-500 hover:text-emerald-600 dark:hover:text-emerald-400"
         aria-label="newsletter"
         >Newsletter <i class="fa-solid fa-arrow-up-right-from-square"></i></a
       >
@@ -65,7 +50,6 @@ import "../styles/global.css";
         href="https://drive.google.com/file/d/1eCzvYH-JRKqutLZ-R9s5ZeMd8FddEJ3n/view?usp=drive_link"
         target="_blank"
         rel="noopener noreferrer"
-        class="navlink text-zinc-500 hover:text-emerald-600 dark:hover:text-emerald-400"
         aria-label="newsletter"
         >Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a
       >

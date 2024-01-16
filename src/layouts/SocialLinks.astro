@@ -2,13 +2,18 @@
 import "../styles/global.css";
 ---
 
+<style>
+  a {
+    @apply text-2xl text-zinc-500 hover:text-emerald-600 dark:text-zinc-400 dark:hover:text-emerald-400;
+  }
+</style>
+
 <div id="icon-container" class="flex gap-6">
   <a
     href="https://twitter.com/ryandotfurrer"
     target="_blank"
     rel="noopener noreferrer"
     aria-label=`View Ryan Furrer's X profile`
-    class="text-3xl text-zinc-500 hover:text-emerald-600 dark:hover:text-emerald-400"
     ><i class="fa-brands fa-x-twitter" aria-label=`View Ryan Furrer's X profile`
     ></i></a
   >
@@ -17,7 +22,6 @@ import "../styles/global.css";
     target="_blank"
     rel="noopener noreferrer"
     aria-label=`View Ryan Furrer's Threads profile`
-    class="text-3xl text-zinc-500 hover:text-emerald-600 dark:hover:text-emerald-400"
     ><i
       class="fa-brands fa-threads"
       aria-label=`View Ryan Furrer's Threads profile`></i></a
@@ -27,7 +31,6 @@ import "../styles/global.css";
     target="_blank"
     rel="noopener noreferrer"
     aria-label=`View Ryan Furrer's GitHub profile`
-    class="text-3xl text-zinc-500 hover:text-emerald-600 dark:hover:text-emerald-400"
     ><i
       class="fa-brands fa-github"
       aria-label=`View Ryan Furrer's GitHub profile`></i></a
@@ -37,7 +40,6 @@ import "../styles/global.css";
     target="_blank"
     rel="noopener noreferrer"
     aria-label=`View Ryan Furrer's Linkedin profile`
-    class="text-3xl text-zinc-500 hover:text-emerald-600 dark:hover:text-emerald-400"
     ><i
       class="fa-brands fa-linkedin"
       aria-label=`View Ryan Furrer's Linkedin profile`></i></a
