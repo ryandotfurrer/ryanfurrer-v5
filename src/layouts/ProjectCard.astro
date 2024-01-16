@@ -1,6 +1,4 @@
 ---
-import "../styles/global.css";
-
 export interface Props {
   projectName: string;
   projectDescription?: string;
@@ -17,9 +15,9 @@ const {
 ---
 
 <article class="rounded-md bg-zinc-100 p-6 dark:bg-zinc-900">
-  <h3>{projectName}</h3>
+  <h3 class="text-xl">{projectName}</h3>
   <p class="text-base">{projectDescription}</p>
-  <div class="rf-tech-container">
+  <div>
     <ul class="flex flex-wrap gap-2">
       <slot />
     </ul>

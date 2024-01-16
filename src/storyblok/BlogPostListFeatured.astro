@@ -2,7 +2,6 @@
 import { storyblokEditable } from "@storyblok/astro";
 import { useStoryblokApi } from "@storyblok/astro";
 const { blok } = Astro.props;
-import "../styles/global.css";
 
 const storyblokApi = useStoryblokApi();
 
@@ -38,36 +37,24 @@ const posts = data.stories.map(
 );
 ---
 
-<style>
-  h3 {
-    @apply text-[1.44rem] leading-tight lg:text-[1.563rem];
-  }
-  p {
-    @apply text-base;
-  }
-  img {
-    @apply aspect-video;
-  }
-</style>
-
 <ul {...storyblokEditable(blok)} class="grid gap-[2em] md:grid-cols-2">
   {
     posts.map((post) => (
       <li class="space-y-[.5em] rounded-md bg-zinc-100 p-6 dark:bg-neutral-900">
         <a href={`/blog/${post.slug}`} class="mb-[1em] block overflow-hidden">
           <img
-            class="transition-transform duration-300 hover:scale-110"
+            class="aspect-video transition-transform duration-300 hover:scale-110"
             src={post.featuredImage.filename}
             alt={post.featuredImage.alt}
           />
         </a>
-        <p>{post.date}</p>
+        <p class="text-sm">{post.date}</p>
         <a href={`/blog/${post.slug}`}>
-          <h3 class=" hover:text-emerald-600 dark:hover:text-emerald-400">
+          <h3 class="text-lg leading-tight hover:text-emerald-600 dark:hover:text-emerald-400">
             {post.title}
           </h3>
         </a>
-        <p>{post.description}</p>
+        <p class="sm:text-sm md:text-base">{post.description}</p>
       </li>
     ))
   }
