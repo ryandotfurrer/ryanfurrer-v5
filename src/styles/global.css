@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,12 +27,8 @@ full font color = text-zinc-50
     @apply min-w-0;
   }
 
-  :root {
-    font-size: 18px;
-  }
-
   body {
-    @apply text-pretty grid max-h-screen bg-white font-sans text-base text-zinc-500 dark:bg-black dark:text-zinc-400 md:text-xl;
+    @apply grid max-h-screen text-pretty bg-white font-sans text-base text-zinc-500 dark:bg-black dark:text-zinc-400;
     grid-template-rows: auto 1fr auto;
   }
 
@@ -41,43 +38,37 @@ full font color = text-zinc-50
   h4,
   h5,
   h6 {
-    @apply text-balance font-bold text-zinc-900 dark:text-zinc-50;
+    @apply text-balance font-semibold text-zinc-900 dark:text-zinc-50;
   }
 
   h1,
   h2,
   h3 {
-    @apply leading-none tracking-tight;
-  }
-
-  h1,
-  h2,
-  h3 {
-    @apply leading-none tracking-tight;
+    @apply leading-none tracking-tighter;
   }
 
   h1 {
-    @apply text-[2.986rem] lg:text-[3.815rem];
+    @apply text-5xl; /* clamp(3.3594rem, 2.8694rem + 2.45vw, 4.7681rem) */
   }
 
   h2 {
-    @apply text-[2.488rem] lg:text-[3.052rem];
+    @apply text-4xl; /* clamp(2.7994rem, 2.4461rem + 1.7663vw, 3.815rem) */
   }
 
   h3 {
-    @apply text-[2.074rem] lg:text-[2.441rem];
+    @apply text-3xl; /* clamp(2.3325rem, 2.0823rem + 1.2511vw, 3.0519rem) */
   }
 
   h4 {
-    @apply text-[1.728rem] lg:text-[1.953rem];
+    @apply text-2xl; /* clamp(1.9438rem, 1.7707rem + 0.8652vw, 2.4413rem) */
   }
 
   h5 {
-    @apply text-[1.44rem] lg:text-[1.563rem];
+    @apply text-xl; /* clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem) */
   }
 
   h6 {
-    @apply text-[1.2rem] lg:text-[1.25rem];
+    @apply text-lg; /* clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem) */
   }
 
   a,
@@ -92,37 +83,8 @@ full font color = text-zinc-50
 }
 
 :is(#hero) p {
-  @apply text-balance text-[2.074rem] font-semibold leading-none lg:text-[2.441rem];
+  @apply text-balance text-lg font-semibold leading-none;
 }
-
-/* :is(h1, h2, h3, h4, h5, h6) > span::after {
-  content: "🔗";
-  @apply pl-[.5em] text-[50%];
-} */
-
-/* h1 {
-  @apply text-5xl md:text-6xl;
-}
-
-h2 {
-  @apply text-4xl md:text-5xl;
-}
-
-h3 {
-  @apply text-3xl md:text-4xl;
-}
-
-h4 {
-  @apply text-2xl md:text-3xl;
-}
-
-h5 {
-  @apply text-xl md:text-2xl;
-}
-
-h6 {
-  @apply text-lg md:text-xl;
-} */
 
 .btn-primary,
 .btn-secondary {
@@ -160,7 +122,7 @@ label {
 
 input,
 textarea {
-  @apply rounded border-2 border-zinc-300 bg-zinc-200 p-3 text-base text-zinc-900 dark:border-zinc-500 dark:bg-zinc-800 dark:text-zinc-50;
+  @apply rounded border-2 border-zinc-300 bg-zinc-200 p-3 text-sm text-zinc-900 dark:border-zinc-500 dark:bg-zinc-800 dark:text-zinc-50;
 }
 
 textarea {
@@ -184,7 +146,7 @@ code {
 
 code,
 pre > code {
-  @apply break-words rounded text-xs font-normal md:text-base;
+  @apply break-words rounded text-xs font-normal;
 }
 
 /* Applies border to codeblock */
@@ -242,9 +204,9 @@ article:is(#blog-post) picture:not(#blog-featured-image) {
   @apply mx-auto border-0 xl:w-4/5;
 }
 
-article:is(#blog-post) p {
+/* article:is(#blog-post) p {
   @apply leading-relaxed;
-}
+} */
 
 article:is(#blog-post) > ul,
 article:is(#blog-post) > ol {
