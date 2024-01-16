@@ -6,7 +6,8 @@ import SocialLinks from "../layouts/SocialLinks.astro";
 import Footer from "../layouts/Footer.astro";
 import "../styles/global.css";
 const pageTitle = "404: Page Not Found";
-const heroHeader =
+const heroHeader = "Error 404: Page not found.";
+const heroDescription =
   "Uh oh, a 404 Error?! Shoot, you're not supposed to see this.";
 const heroParagraph =
   "It seems the page you tried visiting does not exist, or you've found a broken link. But while you're here...";
@@ -17,7 +18,7 @@ const heroParagraph =
     <meta charset="UTF-8" />
     <SEO
       title=`${pageTitle}`
-      description=`${heroParagraph}`
+      description=`${heroDescription}`
       twitter={{
         creator: "@ryandotfurrer",
       }}
@@ -34,28 +35,27 @@ const heroParagraph =
   <body>
     <header>
       <HeaderNavBar />
-      <Hero heroHeader={heroHeader} heroParagraph={heroParagraph} />
+      <Hero
+        heroHeader={heroHeader}
+        heroDescription={heroDescription}
+        heroParagraph={heroParagraph}
+      />
     </header>
     <main id="main-fade-in">
-      <section class="grid place-items-center">
-        <article class="space-y-[3em]">
-          <div id="read-more-blogs">
+      <section class="flow grid place-items-center">
+        <article class="flow">
+          <div id="read-more-blogs" class="flow">
             <p>Can I interest you in some of my blogs?</p>
             <p>
-              <div
-                id="link-container"
-                class="flex flex-col md:flex-row md:gap-6"
-              >
+              <div id="link-container" class="flex flex-col">
                 <p>
-                  <a href="/blog" class="text-emerald-600 dark:text-emerald-400"
-                    >Yes I'd love to read some ✅</a
-                  >
+                  ✅ <a href="/blog">Yes I'd love to read some</a>
                 </p>
-                <p><a href="/">No, take me home ❌</a></p>
+                <p>❌ <a href="/">No, take me home</a></p>
               </div>
             </p>
           </div>
-          <div id="social-icons" class="grid grid-cols-1 gap-1">
+          <div id="social-icons" class="flow grid grid-cols-1">
             <p>Or maybe you'd like to follow me elsewhere?</p>
             <SocialLinks />
           </div>
