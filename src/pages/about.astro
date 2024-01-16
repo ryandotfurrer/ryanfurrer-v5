@@ -3,7 +3,6 @@ import { SEO } from "astro-seo";
 import HeaderNavBar from "../layouts/HeaderNavBar.astro";
 import Hero from "../layouts/Hero.astro";
 import Footer from "../layouts/Footer.astro";
-import "../styles/global.css";
 const pageTitle = "About Me";
 const heroHeader =
   "My goal is to make the world a better place one website at a time";
@@ -35,10 +34,10 @@ const heroDescription = "Here is where you can learn a bit more about me.";
     <HeaderNavBar />
     <Hero heroHeader={heroHeader} heroDescription={heroDescription} />
   </header>
-  <main id="main-fade-in">
+  <main id="main-fade-in" class="flow">
     <article class="mx-auto space-y-[3em] border-0 2xl:w-4/5">
       <section
-        class="mx-auto grid grid-cols-1 space-y-[1em] text-xl md:place-items-center md:text-2xl lg:grid-cols-2 lg:gap-8 lg:text-3xl lg:leading-relaxed"
+        class="mx-auto grid grid-cols-1 space-y-[1em] md:place-items-center lg:grid-cols-2 lg:gap-8"
       >
         <img
           src="/avatar-2x.webp"
@@ -69,23 +68,18 @@ const heroDescription = "Here is where you can learn a bit more about me.";
         <h2>Personal Background</h2>
         <p>
           First, thank you for visiting my site; I appreciate your interest in
-          me and my work! <span class="text-zinc-900 dark:text-zinc-50"
-            >I currently reside in Islip, NY, USA</span
-          >, and was born and raised on Long Island, NY. Moving into the
-          software engineering industry will be my third, and hopefully final,
-          career transition. Previously, I was a musician and music educator,
-          and <span class="text-zinc-900 dark:text-zinc-50"
-            >I am currently a Buyer and Sub-Contracts Administrator in Supply
-            Chain</span
-          >.
+          me and my work! I currently reside in Islip, NY, USAand was born and
+          raised on Long Island, NY. Moving into the software engineering
+          industry will be my third, and hopefully final, career transition.
+          Previously, I was a musician and music educator, and I am currently a
+          Buyer and Sub-Contracts Administrator in Supply Chain.
         </p>
         <p>
-          <span class="text-zinc-900 dark:text-zinc-50"
-            >I attended three different schools for four and a half years,
-            majoring in Music Education and Music Performance</span
-          > before leaving without a degree. The last school I was at wanted
-          another four years out of me, and I saw the pile of student loan debt
-          continuing to grow, so I decided to drop out; more on that later.
+          I attended three different schools for four and a half years, majoring
+          in Music Education and Music Performance before leaving without a
+          degree. The last school I was at wanted another four years out of me,
+          and I saw the pile of student loan debt continuing to grow, so I
+          decided to drop out; more on that later.
         </p>
         <p>
           I have built websites and small projects mainly for myself; however, I
@@ -105,14 +99,12 @@ const heroDescription = "Here is where you can learn a bit more about me.";
         <h3>Music</h3>
         <img src="/about-music.webp" alt="Row of string instruments." />
         <p>
-          As previously mentioned, <span class="text-zinc-900 dark:text-zinc-50"
-            >my first career, passion, and love was, and forever will be, music</span
-          >. I started playing viola when I was eight years old and simply stuck
-          with it as I had natural talent; what kid doesn't like doing something
-          because they are good at it? However, it did not take more than two or
-          three years to realize <span class="text-zinc-900 dark:text-zinc-50"
-            >I wanted to do something with music for the rest of my life</span
-          >.
+          As previously mentioned, my first career, passion, and love was, and
+          forever will be, music. I started playing viola when I was eight years
+          old and simply stuck with it as I had natural talent; what kid doesn't
+          like doing something because they are good at it? However, it did not
+          take more than two or three years to realize I wanted to do something
+          with music for the rest of my life.
         </p>
         <p>
           At age fifteen, I began performing professionally at local musical
@@ -123,11 +115,9 @@ const heroDescription = "Here is where you can learn a bit more about me.";
         <p>
           When I dropped out of college in 2013, I went on to manage a couple of
           local music stores while continuing to perform professionally and
-          teach private music lessons. However, there came a time when <span
-            class="text-zinc-900 dark:text-zinc-50"
-            >I realized that I was not making enough money and needed to change
-            courses</span
-          >. That is when I transitioned into Procurement.
+          teach private music lessons. However, there came a time when I
+          realized that I was not making enough money and needed to change
+          courses. That is when I transitioned into Procurement.
         </p>
         <h3>Procurement</h3>
         <img
@@ -140,147 +130,110 @@ const heroDescription = "Here is where you can learn a bit more about me.";
           contractor. This was a completely new industry for me; I never heard
           of people buying items for a company for a living before! Due to the
           pandemic, I had to learn this new job remotely, which was new for me
-          and the company. I did well, and <span
-            class="text-zinc-900 dark:text-zinc-50"
-            >within 1.5 years, I got a small promotion</span
-          >.
+          and the company. I did well, and within 1.5 years, I got a small
+          promotion.
         </p>
         <p>
-          <span class="text-zinc-900 dark:text-zinc-50"
-            >While this felt great, this career was not for me for the long
-            haul; I was not passionate about it and wanted change</span
-          >. I was at “Company A” from March 2020 - March 2022, where I went to
-          another government contractor as a Buyer. I was only there from March
-          22 - January 2023 for various reasons, mainly due to an incredibly
-          unrealistic and unmanageable workload that was wreaking havoc on my
-          mental health.
+          While this felt great, this career was not for me for the long haul; I
+          was not passionate about it and wanted change. I was at “Company A”
+          from March 2020 - March 2022, where I went to another government
+          contractor as a Buyer. I was only there from March 22 - January 2023
+          for various reasons, mainly due to an incredibly unrealistic and
+          unmanageable workload that was wreaking havoc on my mental health.
         </p>
         <p>
           That leads us to where I am today: back at “Company A.” Returning to
           this company, I received another small promotion from Buyer to
-          Sub-Contracts Administrator. <span
-            class="text-zinc-900 dark:text-zinc-50"
-            >I have had a lot of growth in this field since 2020. however, I
-            still can't help but feel like it is not for me in the long run</span
-          >.
+          Sub-Contracts Administrator. I have had a lot of growth in this field
+          since 2020. however, I still can't help but feel like it is not for me
+          in the long run.
         </p>
         <h3>Web Development</h3>
         <img src="/about-web-dev.webp" alt=`14" MacBook Pro in Space Black` />
         <p>
-          <span class="text-zinc-900 dark:text-zinc-50">It was late 2019</span>
-           when I decided to start studying programming for a career change;
-          however, even that decision wasn't without its twists and turns. <span
-            class="text-zinc-900 dark:text-zinc-50"
-            >I started studying Front-End Web Development</span
-          >, then learning to be an AWS Solutions Architect, and then studying
-          to take the CompTIA A+ exam for a career in IT before circling back to
-
-
-          <span class="text-zinc-900 dark:text-zinc-50"
-            >Front-End Web Development</span
-          >.
+          It was late 2019 when I decided to start studying programming for a
+          career change; however, even that decision wasn't without its twists
+          and turns. I started studying Front-End Web Development, then learning
+          to be an AWS Solutions Architect, and then studying to take the
+          CompTIA A+ exam for a career in IT before circling back to Front-End
+          Web Development.
+        </p>
+        <p>Why did I choose Front-End Web Development?I just love it!</p>
+        <p>
+          It allows me to flex the creative muscles of my brain with design
+          choices while letting me program - something I've always been
+          interested in.
         </p>
         <p>
-          Why did I choose Front-End Web Development? <span
-            class="text-zinc-900 dark:text-zinc-50">I just love it!</span
-          >
-        </p>
-        <p>
-          <span class="text-zinc-900 dark:text-zinc-50"
-            >It allows me to flex the creative muscles of my brain with design
-            choices while letting me program - something I've always been
-            interested in.</span
-          >
-        </p>
-        <p>
-          My learning path has been through its ups and downs as well. <span
-            class="text-zinc-900 dark:text-zinc-50">Being self-taught</span
-          >, I had only myself to depend on, and that lack of structure
-          sometimes hindered me. <span class="text-zinc-900 dark:text-zinc-50"
-            >Learning on my own was completely new to me</span
-          >; whether it was a lack of discipline, running on motivation until it
-          ran out, life getting in the way, or my indecisiveness on what to
-          focus on and how to learn it, my progress learning has ebbed and
-          flowed in the last few years. This was by no means a result of a lack
-          of passion or interest, but <span
-            class="text-zinc-900 dark:text-zinc-50"
-            >just being overwhelmed at times</span
-          >.
+          My learning path has been through its ups and downs as well. Being
+          self-taught, I had only myself to depend on, and that lack of
+          structure sometimes hindered me. Learning on my own was completely new
+          to me; whether it was a lack of discipline, running on motivation
+          until it ran out, life getting in the way, or my indecisiveness on
+          what to focus on and how to learn it, my progress learning has ebbed
+          and flowed in the last few years. This was by no means a result of a
+          lack of passion or interest, but just being overwhelmed at times.
         </p>
       </section>
       <section>
         <h2>My Goals, Mission, and Values</h2>
         <h3>My Current Goal</h3>
         <p>
-          <span class="text-zinc-900 dark:text-zinc-50"
-            >Obtain a job as a Front-End Web Developer</span
-          >. I want to be happy in my career again and stick with it for life.
+          Obtain a job as a Front-End Web Developer. I want to be happy in my
+          career again and stick with it for life.
         </p>
         <h3>My End Goal</h3>
         <p>
-          <span class="text-zinc-900 dark:text-zinc-50"
-            >Become a Full-Stack Engineer</span
-          >. I look forward to learning back-end technologies to expand my
-          projects, build at least one successful SaaS, and provide more value
-          to clients and companies.
+          Become a Full-Stack Engineer. I look forward to learning back-end
+          technologies to expand my projects, build at least one successful
+          SaaS, and provide more value to clients and companies.
         </p>
         <h3>My Mission</h3>
         <p>
-          <span class="text-zinc-900 dark:text-zinc-50"
-            >To help people and companies</span
-          > build the web presence they deserve through quality websites, apps,
-          and services.
+          To help people and companies build the web presence they deserve
+          through quality websites, apps, and services.
         </p>
         <h3>My Values</h3>
         <h4>Inclusivity</h4>
         <p>
           Everyone deserves the same treatment, circumstances, and allowances.
-          Inclusivity in websites means ensuring <span
-            class="text-zinc-900 dark:text-zinc-50"
-            >accessibility is a primary focus rather than an afterthought</span
-          >.
+          Inclusivity in websites means ensuring accessibility is a primary
+          focus rather than an afterthought.
         </p>
         <h4>Educating Others</h4>
         <p>
           This harkens back to my days as a music teacher. However, to truly
           understand a concept and claim how to do something, you must be able
-          to teach it. Not only that, <span
-            class="text-zinc-900 dark:text-zinc-50"
-            >I want to give back to the Web Development community</span
-          > that has given so much to me; one way to do that is by sharing my
-          knowledge
+          to teach it. Not only that, I want to give back to the Web Development
+          community that has given so much to me; one way to do that is by
+          sharing my knowledge
         </p>
         <h4>Collaboration</h4>
         <p>
           While I often like working on my own, there is no denying that you can
           achieve much more by working with others. Whether it's bouncing ideas
           off friends in a Discord server, reaching out to the X (formerly
-          Twitter) world, or attending local Meetups, <span
-            class="text-zinc-900 dark:text-zinc-50"
-            >I believe we can all progress faster by working together</span
-          >.
+          Twitter) world, or attending local Meetups, I believe we can all
+          progress faster by working together.
         </p>
         <h4>Kindness</h4>
         <p>
-          I was raised by a few golden rules, and one of those was <span
-            class="italic text-zinc-900 dark:text-zinc-50"
-            >“Treat others how you want to be treated.”</span
-          > I try to live by this every single day.
+          I was raised by a few golden rules, and one of those was “Treat others
+          how you want to be treated.” I try to live by this every single day.
         </p>
         <h4>Bringing Others Up</h4>
         <p>
-          <span class="text-zinc-900 dark:text-zinc-50"
-            >I believe in bringing others up rather than putting them down</span
-          >. That means being there for friends and family, helping people in
-          need, encouraging them to continue their journey, and much more. There
-          is so much negativity in this world, and if I can try to lessen that
-          in any person's life, then I can rest easy.
+          I believe in bringing others up rather than putting them down. That
+          means being there for friends and family, helping people in need,
+          encouraging them to continue their journey, and much more. There is so
+          much negativity in this world, and if I can try to lessen that in any
+          person's life, then I can rest easy.
         </p>
       </section>
       <section>
         <h2>Conclusion</h2>
         <div
-          class="mx-auto grid grid-cols-1 text-2xl md:grid-cols-2 md:place-items-center md:gap-8 md:text-3xl"
+          class="mx-auto grid grid-cols-1 md:grid-cols-2 md:place-items-center md:gap-8"
         >
           <img
             class="mb-[1em] md:mb-0"
