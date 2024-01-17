@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionXL from "../components/SectionXL.astro";
+import Section2XL from "../components/Section2XL.astro";
+import NewHero from "../components/NewHero.astro";
+
+const title = "Test Page";
+const description = "Description of test page.";
+---
+
+<Layout title={title} description={description}>
+  <NewHero title="Test Page" description="Test Page description" />
+  <main class="flow container mx-auto">
+    <SectionXL>
+      <h2>First Section</h2>
+      <p class="mb-36">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+        reprehenderit blanditiis, beatae voluptates labore aut libero ut ratione
+        quia fuga inventore sit. Ullam, quidem asperiores? Temporibus quasi
+        expedita consectetur qui.
+      </p>
+    </SectionXL>
+    <Section2XL
+      class="flow container mx-auto max-w-screen-xl rounded-2xl bg-zinc-800 py-24"
+    >
+      <SectionXL>
+        <h2 class="text-center">Second Section</h2>
+        <p>
+          I created this started solely for myself to have a better and faster
+          jumping off point on new Astro projects. While it <em>largely</em>
+           un-opinionated, that does not mean there are zero opinions.
+        </p>
+        <p>
+          This starter template <em>may</em> grow a bit with styles and
+          components that match my desired style. You can, of course, change
+          whatever you would like in the appropriate folders. But to begin with
+          this starter features:
+        </p>
+        <ul class="ml-10 list-disc">
+          <li>
+            <p>Responsive font-sizing</p>
+          </li>
+          <li>
+            <p>
+              Responsive element spacing due to the addition of the <code
+                >.flow</code
+              > class
+            </p>
+          </li>
+          <li>
+            <p>
+              Poppins Google Font added to Tailwinds <code>fontSans</code>
+               class
+            </p>
+          </li>
+          <li>
+            <p>Basic light and dark mode</p>
+          </li>
+        </ul>
+      </SectionXL>
+    </Section2XL>
+    <SectionXL>
+      <h2 class="mt-36">Third Section</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+        reprehenderit blanditiis, beatae voluptates labore aut libero ut ratione
+        quia fuga inventore sit. Ullam, quidem asperiores? Temporibus quasi
+        expedita consectetur qui.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+        reprehenderit blanditiis, beatae voluptates labore aut libero ut ratione
+        quia fuga inventore sit. Ullam, quidem asperiores? Temporibus quasi
+        expedita consectetur qui.
+      </p>
+      <p class="mb-12">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+        reprehenderit blanditiis, beatae voluptates labore aut libero ut ratione
+        quia fuga inventore sit. Ullam, quidem asperiores? Temporibus quasi
+        expedita consectetur qui.
+      </p>
+    </SectionXL>
+  </main>
+</Layout>

@@ -1,0 +1,47 @@
+---
+import { SEO } from "astro-seo";
+import "../styles/newglobal.css";
+import NewNavBar from "../components/NewNavBar.astro";
+import Footer from "./Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEO
+      titleTemplate="%s - Ryan Furrer"
+      titleDefault="Ryan Furrer"
+      title={title}
+      description={description}
+      twitter={{
+        card: "summary",
+        creator: "@ryandotfurrer",
+        title: `${title}`,
+        // image: '',
+        // imageAlt: '',
+        description: `${description}`,
+      }}
+    />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body class="flow container mx-auto">
+    <div class="flow container mx-auto max-w-screen-2xl px-4">
+      <NewNavBar />
+      <slot />
+    </div>
+
+    <!-- <slot /> -->
+    <Footer />
+  </body>
+</html>

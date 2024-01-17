@@ -1,0 +1,16 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+}
+const { title, description }: Props = Astro.props;
+---
+
+<header class="flow grid min-h-[65vh] place-content-center text-center">
+  <h1>{title}</h1>
+  <p
+    class="text-2xl font-semibold leading-tight text-emerald-600 dark:text-emerald-400"
+  >
+    {description}
+  </p>
+</header>
