@@ -80,6 +80,10 @@ full font color = text-zinc-50
     margin-block-start: 1em;
     margin-block-start: clamp(1rem, 1rem + 0vw, 1rem);
   }
+
+  .noflow > * + * {
+    margin-block-start: 0;
+  }
 }
 
 /* :is(#hero) p {

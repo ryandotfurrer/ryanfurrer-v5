@@ -2,7 +2,8 @@
 import { SEO } from "astro-seo";
 import "../styles/newglobal.css";
 import NewNavBar from "../components/NewNavBar.astro";
-import Footer from "./Footer.astro";
+import NewFooter from "../components/NewFooter.astro";
+import NewHero from "../components/NewHero.astro";
 
 interface Props {
   title: string;
@@ -34,14 +35,17 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <script
+      is:inline
+      src="https://kit.fontawesome.com/dec2579292.js"
+      crossorigin="anonymous"></script>
   </head>
   <body class="flow container mx-auto">
     <div class="flow container mx-auto max-w-screen-2xl px-4">
       <NewNavBar />
+      <NewHero title={title} description={description} />
       <slot />
     </div>
-
-    <!-- <slot /> -->
-    <Footer />
+    <NewFooter />
   </body>
 </html>

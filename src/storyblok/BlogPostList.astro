@@ -39,25 +39,27 @@ const { blok } = Astro.props;
 <h2>Blogs</h2>
 <ul
   {...storyblokEditable(blok)}
-  class="grid gap-[2em] md:grid-cols-2 xl:grid-cols-3"
+  class="flow lg:noflow grid gap-[2em] lg:grid-cols-2 xl:grid-cols-3"
 >
   {
     posts.map((post) => (
-      <li class="space-y-[.5em] rounded-md bg-zinc-100 p-6 dark:bg-zinc-900">
+      <li class="flow rounded-md bg-zinc-100 dark:bg-zinc-900">
         <a href={post.slug} class="mb-[1em] block overflow-hidden">
           <img
-            class="aspect-video transition-transform duration-300 hover:scale-125"
+            class="aspect-video rounded-b-none transition-transform duration-300 hover:scale-125"
             src={post.featuredImage.filename}
             alt={post.featuredImage.alt}
           />
         </a>
-        <p class="text-sm">{post.date}</p>
-        <a href={post.slug}>
-          <h3 class="text-lg leading-tight hover:text-emerald-600 dark:hover:text-emerald-400">
-            {post.title}
-          </h3>
-        </a>
-        <p class="sm:text-sm md:text-base">{post.description}</p>
+        <div class="flow px-4 pb-4">
+          <p class="text-sm">{post.date}</p>
+          <a href={post.slug}>
+            <h3 class="text-lg leading-tight hover:text-emerald-600 dark:hover:text-emerald-400">
+              {post.title}
+            </h3>
+          </a>
+          <p>{post.description}</p>
+        </div>
       </li>
     ))
   }
