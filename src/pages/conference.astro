@@ -2,9 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import SectionXL from "../components/SectionXL.astro";
 import Section2XL from "../components/Section2XL.astro";
-import NewBlogPostListFeatured from "../storyblok/NewBlogPostListFeatured.astro";
+
 import { Image } from "astro:assets";
-import profilePicture from "../assets/rf-real-teal-bg.webp";
+import profilePicture from "../assets/photos/rf-real-teal-bg.webp";
 import SocialLinks from "../layouts/SocialLinks.astro";
 
 const title = "It was nice to meet you!";
@@ -73,25 +73,5 @@ const description =
         </div>
       </SectionXL>
     </Section2XL>
-    <!-- <SectionXL>
-      <h2>Blogs</h2>
-      <p>
-        I enjoy writing articles from time to time about things I've learned,
-        project updates, and more. Below you can find my three most recent posts
-        and if you'd like you can <a
-          href="https://ryanfurrer.beehiiv.com/subscribe"
-          target="_blank"
-          rel="noopener noreferrer">subscribe to my Newsletter</a
-        > to be notified when I publish new ones.
-      </p>
-      <NewBlogPostListFeatured />
-      <p class="text-lg font-semibold">
-        <a
-          class="flex flex-row place-items-center gap-4 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8"
-          href="/blog"
-          >View all articles <i class="fa-solid fa-arrow-right"></i></a
-        >
-      </p>
-    </SectionXL> -->
   </main>
 </Layout>
