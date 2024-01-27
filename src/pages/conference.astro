@@ -5,6 +5,7 @@ import Section2XL from "../components/Section2XL.astro";
 import NewBlogPostListFeatured from "../storyblok/NewBlogPostListFeatured.astro";
 import { Image } from "astro:assets";
 import profilePicture from "../assets/rf-real-teal-bg.webp";
+import SocialLinks from "../layouts/SocialLinks.astro";
 
 const title = "It was nice to meet you!";
 const description =
@@ -21,6 +22,7 @@ const description =
         >
           <div id="greeting-container" class="flow">
             <Image src={profilePicture} alt=`Ryan Furrer` class="rounded-md" />
+            <SocialLinks />
           </div>
           <div id="greeting-container-verbiage-container" class="flow">
             <p>
@@ -41,7 +43,7 @@ const description =
               If you or anyone you know are hiring junior web developers I'd
               love to show what I can bring to the team.
             </p>
-            <div class="flow mt-8">
+            <div class="flow mt-12">
               <button
                 class="mb-4 text-lg font-semibold transition-transform duration-300 ease-in-out hover:scale-110"
               >
