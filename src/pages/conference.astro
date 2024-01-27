@@ -3,64 +3,70 @@ import Layout from "../layouts/Layout.astro";
 import SectionXL from "../components/SectionXL.astro";
 import Section2XL from "../components/Section2XL.astro";
 import NewBlogPostListFeatured from "../storyblok/NewBlogPostListFeatured.astro";
+import { Image } from "astro:assets";
+import profilePicture from "../assets/rf-real-teal-bg.webp";
 
-const title = "Ryan Furrer";
+const title = "It was nice to meet you!";
 const description =
-  "Helping people build the web presence they deserve through quailty code.";
+  "If you're visiting this page, we must have met in person, and what a pleasure it was.";
 ---
 
 <Layout title={title} description={description}>
   <main class="flow container mx-auto">
     <Section2XL>
       <SectionXL>
-        <h2>Hello There</h2>
+        <h2>A little reminder about me</h2>
         <div
           class="flow lg:noflow grid lg:grid-cols-2 lg:place-items-center lg:gap-8"
         >
           <div id="greeting-container" class="flow">
-            <img
-              src="/avatar-2x.webp"
-              alt=`Memoji representing Ryan Furrer where his head is poking our from behind a laptop.`
-            />
+            <Image src={profilePicture} alt=`Ryan Furrer` class="rounded-md" />
           </div>
           <div id="greeting-container-verbiage-container" class="flow">
             <p>
-              Hi there, my name is Ryan Furrer I am a highly enthusiastic
-              Front-End Web Developer with a focus on Design and UI/UX. At
-              present, I am working with <span data-name="Astro">Astro</span>,
+              I'm Ryan Furrer, and I am a highly enthusiastic Front-End Web
+              Developer with a focus on Design and UI/UX. At present, I am
+              working with <span data-name="Astro">Astro</span>,
 
               <span data-name="React">React</span>, <span
                 data-name="Tailwind CSS">TailwindCSS</span
               >, and <span data-name="NextJS">NextJS</span>.
             </p>
+            <p
+              class="text-balance rounded-md bg-emerald-600 p-4 text-center text-xl font-semibold text-zinc-50 dark:bg-emerald-400 dark:text-zinc-900"
+            >
+              I'm also looking for my first job in in the industry!
+            </p>
             <p>
-              In addition, I also share my thoughts on web develoment through
-              blog posts on <a href="/" aria-label="my website">my website</a>, <a
-                href="https://dev.to/ryanfurrer"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View my profile on dev.to">DEV</a
-              >, and
-              <a
-                href="https://ryanfurrer.hashnode.dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View my profile on Hashnode">Hashnode</a
-              >. I send out a monthly <a
-                href="https://ryanfurrer.beehiiv.com/subscribe"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label=`View my newsletter issues and subscribe if you'd like`
-                >newsletter</a
-              > as well.
+              If you or anyone you know are hiring junior web developers I'd
+              love to show what I can bring to the team.
             </p>
-            <p class="text-lg font-semibold">
-              <a
-                class="flex flex-row place-items-center gap-4 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8"
-                href="/about"
-                >Learn more about me <i class="fa-solid fa-arrow-right"></i></a
+            <div class="flow mt-8">
+              <button
+                class="mb-4 text-lg font-semibold transition-transform duration-300 ease-in-out hover:scale-110"
               >
-            </p>
+                <a
+                  href="/contact"
+                  class="hover:text-text-zinc-50 rounded-md bg-amber-600 px-4 py-3 text-zinc-50 no-underline transition-colors hover:bg-amber-700 hover:text-zinc-50 dark:bg-amber-400 dark:text-zinc-900 dark:hover:bg-amber-500 dark:hover:text-zinc-900"
+                  ><i class="fa-solid fa-inbox pr-4"></i>Contact Me</a
+                ></button
+              >
+              <p class="text-lg font-semibold">
+                <a
+                  class="flex flex-row place-items-center gap-4 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8"
+                  href="/projects"
+                  >View my projects <i class="fa-solid fa-arrow-right"></i></a
+                >
+              </p>
+              <p class="text-lg font-semibold">
+                <a
+                  class="flex flex-row place-items-center gap-4 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8"
+                  href="/about"
+                  >Learn more about me <i class="fa-solid fa-arrow-right"
+                  ></i></a
+                >
+              </p>
+            </div>
           </div>
         </div>
       </SectionXL>
