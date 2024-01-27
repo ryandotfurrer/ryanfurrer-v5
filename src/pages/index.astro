@@ -5,6 +5,7 @@ import HeaderNavBar from "../layouts/HeaderNavBar.astro";
 import HeroHome from "../layouts/HeroHome.astro";
 import Footer from "../layouts/Footer.astro";
 import BlogPostListFeatured from "../storyblok/BlogPostListFeatured.astro";
+import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
 const pageTitle = "Ryan Furrer";
 const heroHeader =
   "Helping people build the web presence they deserve through quailty code.";
@@ -47,7 +48,7 @@ const heroHeader =
           />
           <div
             id="greeting-container-verbiage-container"
-            class="space-y-[1em] lg:leading-relaxed"
+            class="space-y-4 lg:leading-relaxed"
           >
             <p>
               Hi there, my name is Ryan Furrer I am a highly enthusiastic
@@ -84,6 +85,13 @@ const heroHeader =
                 class="flex flex-row place-items-center gap-4 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8"
                 href="/about"
                 >Learn more about me <i class="fa-solid fa-arrow-right"></i></a
+              >
+            </p>
+            <p class="text-lg font-semibold">
+              <a
+                class="flex flex-row place-items-center gap-4 text-amber-600 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8 hover:text-amber-700 dark:text-amber-400 dark:hover:text-amber-300"
+                href=`${resume}`
+                >View my resume <i class="fa-solid fa-arrow-right"></i></a
               >
             </p>
           </div>
