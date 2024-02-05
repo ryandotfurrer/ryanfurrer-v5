@@ -38,13 +38,7 @@ full font color = text-zinc-50
   h4,
   h5,
   h6 {
-    @apply text-balance font-semibold text-zinc-900 dark:text-zinc-50;
-  }
-
-  h1,
-  h2,
-  h3 {
-    @apply leading-none tracking-tighter;
+    @apply text-balance font-semibold leading-none tracking-tighter text-zinc-900 dark:text-zinc-50;
   }
 
   h1 {
@@ -212,14 +206,14 @@ article:is(#blog-post) > ol {
   list-style-type: decimal;
 }
 
-article:is(#blog-post) > h1,
+/* article:is(#blog-post) > h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  @apply leading-none;
-}
+  @apply leading-none tracking-tighter;
+} */
 
 /* Project Tech Tag Styling */
 /* 
