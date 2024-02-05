@@ -44,7 +44,11 @@ const { blok } = Astro.props;
   {
     posts.map((post) => (
       <li class="flow rounded-md bg-zinc-100 dark:bg-zinc-900">
-        <a href={post.slug} class="mb-[1em] block overflow-hidden">
+        <a
+          href={post.slug}
+          class="mb-[1em] block overflow-hidden"
+          aria-label=`Read more about ${post.title}`
+        >
           <img
             class="aspect-video rounded-b-none transition-transform duration-300 hover:scale-125"
             src={post.featuredImage.filename}
