@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { storyblokEditable } from "@storyblok/astro";
 import { useStoryblokApi } from "@storyblok/astro";
 
@@ -49,10 +50,12 @@ const { blok } = Astro.props;
           class="mb-[1em] block overflow-hidden"
           aria-label=`Read more about ${post.title}`
         >
-          <img
+          <Image
             class="aspect-video rounded-b-none transition-transform duration-300 hover:scale-125"
             src={post.featuredImage.filename}
             alt={post.featuredImage.alt}
+            width={1536}
+            height={1536}
           />
         </a>
         <div class="flow px-4 pb-4">

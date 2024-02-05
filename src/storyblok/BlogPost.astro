@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { storyblokEditable, renderRichText } from "@storyblok/astro";
 const { blok } = Astro.props;
 const content = renderRichText(blok.content);
@@ -13,10 +14,12 @@ const date = new Date(blok.publishedDate).toLocaleDateString("en-US", {
     <h2 id="blog-title">{blok.title}</h2>
     <p id="blog-publish-date" class="text-sm">{date}</p>
     <p>{blok.description}</p>
-    <img
+    <Image
       id="blog-featured-image"
       src={blok.featuredImage.filename}
       alt={blok.featuredImage.alt}
+      width={1536}
+      height={1536}
     />
     <Fragment set:html={content} />
   </article>

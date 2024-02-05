@@ -1,5 +1,7 @@
 ---
 import { SEO } from "astro-seo";
+import { Image } from "astro:assets";
+import memojiProfilePicture from "../assets/photos/avatar-2x.webp";
 import "../styles/global.css";
 import HeaderNavBar from "../layouts/HeaderNavBar.astro";
 import HeroHome from "../layouts/HeroHome.astro";
@@ -42,8 +44,8 @@ const heroHeader =
           id="greeting-container"
           class="mx-auto grid grid-cols-1 space-y-[1em] md:place-items-center lg:grid-cols-2 lg:gap-8 2xl:w-4/5"
         >
-          <img
-            src="/avatar-2x.webp"
+          <Image
+            src={memojiProfilePicture}
             alt=`Memoji representing Ryan Furrer where his head is poking our from behind a laptop.`
           />
           <div

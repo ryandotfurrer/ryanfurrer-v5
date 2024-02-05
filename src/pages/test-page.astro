@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import memojiProfilePicture from "../assets/photos/avatar-2x.webp";
 import Layout from "../layouts/Layout.astro";
 import SectionXL from "../components/SectionXL.astro";
 import Section2XL from "../components/Section2XL.astro";
@@ -18,8 +20,8 @@ const description =
           class="flow lg:noflow grid lg:grid-cols-2 lg:place-items-center lg:gap-8"
         >
           <div id="greeting-container" class="flow">
-            <img
-              src="/avatar-2x.webp"
+            <Image
+              src={memojiProfilePicture}
               alt=`Memoji representing Ryan Furrer where his head is poking our from behind a laptop.`
             />
           </div>
