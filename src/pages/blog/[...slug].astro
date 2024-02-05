@@ -59,17 +59,22 @@ const story = data.story;
     <meta name="twitter:card" content={story.content.featuredImage.filename} />
     <meta name="twitter:image:alt" content={story.content.featuredImage.alt} />
 
-    <link rel="stylesheet" href="/src/styles/highlightjs-styles/nord.min.css" />
-
     <link
-      rel="canonical"
-      href={`https://rfportfolioastro.netlify.app/blog/${story.full_slug}`}
+      rel="stylesheet"
+      href="/src/styles/highlightjs-styles/dracula.min.css"
     />
+
+    <link rel="canonical" href={`https://ryanfurrer.com/blog`} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <meta name="generator" content={Astro.generator} />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <script
       is:inline
       src="https://kit.fontawesome.com/dec2579292.js"
