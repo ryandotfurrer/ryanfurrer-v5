@@ -125,6 +125,10 @@ picture {
   @apply rounded;
 }
 
+blockquote {
+  @apply rounded border-l-4 border-emerald-600 bg-zinc-100 p-6 leading-relaxed text-zinc-900 dark:border-emerald-400 dark:bg-zinc-900 dark:text-zinc-50;
+}
+
 /* Apply styles to inline code elements that are not part of a codeblock */
 
 code {
@@ -191,13 +195,13 @@ article:is(#blog-post) picture:not(#blog-featured-image) {
   @apply mx-auto border-0 xl:w-4/5;
 }
 
-article:is(#blog-post) p {
+/* article:is(#blog-post) p {
   @apply leading-relaxed;
-}
+} */
 
 article:is(#blog-post) > ul,
 article:is(#blog-post) > ol {
-  margin-inline-start: 3em;
+  @apply ml-12;
 }
 
 article:is(#blog-post) > ul {
@@ -206,6 +210,15 @@ article:is(#blog-post) > ul {
 
 article:is(#blog-post) > ol {
   list-style-type: decimal;
+}
+
+article:is(#blog-post) > h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply leading-none;
 }
 
 /* Project Tech Tag Styling */
