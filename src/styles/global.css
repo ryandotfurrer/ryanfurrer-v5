@@ -195,7 +195,12 @@ article:is(#blog-post) picture:not(#blog-featured-image) {
 
 article:is(#blog-post) > ul,
 article:is(#blog-post) > ol {
-  @apply ml-12;
+  @apply mb-4 ml-12;
+}
+
+article:is(#blog-post) > ul > *,
+article:is(#blog-post) > ol > * {
+  @apply mt-1;
 }
 
 article:is(#blog-post) > ul {
