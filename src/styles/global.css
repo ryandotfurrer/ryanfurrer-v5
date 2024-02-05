@@ -92,28 +92,15 @@ full font color = text-zinc-50
 
 .btn-primary,
 .btn-secondary {
-  @apply block rounded border-2 transition duration-300 ease-in-out hover:scale-105;
-}
-
-.btn-primary > a,
-.btn-secondary > a {
-  @apply block px-4 py-3;
+  @apply block rounded border-2 px-4 py-3 transition duration-300 ease-in-out hover:scale-105;
 }
 
 .btn-primary {
-  @apply border-emerald-600  bg-emerald-600 dark:border-emerald-400 dark:bg-emerald-400;
-}
-
-.btn-primary > a {
-  @apply text-zinc-50 hover:text-zinc-50 dark:text-zinc-900 dark:hover:text-zinc-900;
+  @apply border-emerald-600  bg-emerald-600 text-zinc-50 hover:text-zinc-50 dark:border-emerald-400 dark:bg-emerald-400 dark:text-zinc-900 dark:hover:text-zinc-900;
 }
 
 .btn-secondary {
-  @apply border-zinc-900 dark:border-zinc-50;
-}
-
-.btn-secondary > a {
-  @apply hover:text-zinc-900 dark:hover:text-zinc-50;
+  @apply border-zinc-900 hover:text-zinc-900 dark:border-zinc-50 dark:hover:text-zinc-50;
 }
 
 button {
@@ -121,7 +108,7 @@ button {
 }
 
 label {
-  @apply flex flex-col gap-2 text-sm text-zinc-500;
+  @apply flex flex-col gap-2 text-sm text-zinc-600 dark:text-zinc-400;
 }
 
 input,
