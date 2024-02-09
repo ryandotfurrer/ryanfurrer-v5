@@ -20,19 +20,36 @@ const description =
         <div
           class="flow lg:noflow grid lg:grid-cols-2 lg:place-items-center lg:gap-8"
         >
-          <div id="greeting-container" class="flow">
+          <div id="greeting-container" class="flow col-span-1">
             <Image src={profilePicture} alt=`Ryan Furrer` class="rounded-md" />
             <SocialLinks />
           </div>
-          <div id="greeting-container-verbiage-container" class="flow">
+          <div
+            id="greeting-container-verbiage-container"
+            class="flow col-span-1"
+          >
             <p>
-              I'm Ryan Furrer, and I am a highly enthusiastic Front-End Web
-              Developer with a focus on Design and UI/UX. At present, I am
-              working with <span data-name="Astro">Astro</span>,
-
-              <span data-name="React">React</span>, <span
-                data-name="Tailwind CSS">TailwindCSS</span
-              >, and <span data-name="NextJS">NextJS</span>.
+              My name is Ryan Furrer and I am a highly enthusiastic Front-End
+              Web Developer, with a focus on Design and UI/UX.
+            </p>
+            <p>
+              At present, I am working with <span data-name="React">React</span
+              >, <span data-name="NextJS">NextJS</span>, <span data-name="Astro"
+                >Astro</span
+              >, and <span data-name="Tailwind CSS">TailwindCSS</span>.
+            </p>
+            <p>
+              In addition, I also share my thoughts and learnings on web
+              development, tech, and productivity through blog posts here on <a
+                href="/blog"
+                aria-label="my website">my website</a
+              > and my <a
+                href="https://ryanfurrer.beehiiv.com/subscribe"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label=`View my newsletter issues and subscribe if you'd like`
+                >newsletter</a
+              > as well.
             </p>
             <p
               class="text-balance rounded-md bg-emerald-600 p-4 text-center text-xl font-semibold text-emerald-50 dark:bg-emerald-400 dark:text-zinc-900"
