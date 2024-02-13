@@ -161,7 +161,7 @@ main {
 }
 
 main a {
-  @apply underline;
+  @apply underline decoration-emerald-600 dark:decoration-emerald-400;
 }
 
 #main-fade-in {
