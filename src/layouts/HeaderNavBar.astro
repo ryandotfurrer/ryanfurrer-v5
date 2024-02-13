@@ -41,34 +41,33 @@ import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
   aria-label="main navigation bar"
 >
   <a
+    aria-label="Go to website home"
     href="/"
     class="mr-auto text-lg font-semibold lowercase text-zinc-900 hover:text-emerald-600 dark:text-zinc-50 dark:hover:text-emerald-400"
     >Ryan Furrer</a
   >
   <ul id="navlist" class="flex gap-[1em]">
     <li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a href="/projects">Projects</a>
-    </li>
-    <li>
-      <a href="/blog">Blog</a>
-    </li>
-    <li>
-      <a href="/about">About</a>
-    </li>
-    <li>
       <a
         href=`${resume}`
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="newsletter"
+        aria-label="resume"
         >Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a
       >
     </li>
     <li>
-      <a href="/contact">Contact</a>
+      <a href="/projects" aria-label="projects">Projects</a>
+    </li>
+    <li>
+      <a href="/blog" aria-label="blog">Blog</a>
+    </li>
+    <li><a href="/now" aria-label="now">Now</a></li>
+    <li>
+      <a href="/about" aria-label="about">About</a>
+    </li>
+    <li>
+      <a href="/contact" aria-label="contact">Contact</a>
     </li>
   </ul>
   <button id="hamburger" name="Mobile Menu" aria-label="Mobile Menu">

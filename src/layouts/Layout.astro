@@ -1,8 +1,10 @@
 ---
 import { SEO } from "astro-seo";
 import "../styles/newglobal.css";
-import NewNavBar from "../components/NewNavBar.astro";
-import NewFooter from "../components/NewFooter.astro";
+import HeaderNavBar from "./HeaderNavBar.astro";
+import Footer from "./Footer.astro";
+// import NewNavBar from "../components/NewNavBar.astro";
+// import NewFooter from "../components/NewFooter.astro";
 import NewHero from "../components/NewHero.astro";
 
 interface Props {
@@ -49,10 +51,12 @@ const { title, description } = Astro.props;
   </head>
   <body class="flow container mx-auto">
     <div class="flow container mx-auto max-w-screen-2xl lg:px-8">
-      <NewNavBar />
+      <!-- <NewNavBar /> -->
+      <HeaderNavBar />
       <NewHero title={title} description={description} />
       <slot />
     </div>
-    <NewFooter />
+    <!-- <NewFooter /> -->
+    <Footer />
   </body>
 </html>
