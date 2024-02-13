@@ -1,13 +1,13 @@
 ---
-
+import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
 ---
 
 <style>
   #navlist {
-    @apply fixed -right-full top-24 z-50 flex h-screen w-full flex-col gap-6 bg-white px-4 pt-8 text-right transition-[right] duration-300 ease-in-out lg:static lg:top-0 lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:py-0 dark:bg-black;
+    @apply fixed -right-full top-24 z-50 flex h-screen w-full flex-col gap-6 bg-white px-8 pt-8 text-right transition-[right] duration-300 ease-in-out lg:static lg:top-0 lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:py-0 dark:bg-black;
   }
   #navlist.active {
-    @apply right-0 mx-auto;
+    @apply right-0;
   }
 
   #hamburger {
@@ -31,13 +31,13 @@
   }
 
   li > a {
-    @apply lowercase text-zinc-400 hover:text-emerald-600 dark:text-zinc-500 dark:hover:text-emerald-400;
+    @apply lowercase text-zinc-500 hover:text-emerald-600 dark:text-zinc-400 dark:hover:text-emerald-400;
   }
 </style>
 
 <nav
   id="header-nav"
-  class="container mx-auto flex max-w-screen-xl items-center py-8 lg:py-12"
+  class="container mx-auto flex items-center px-8 py-8 lg:py-12"
   aria-label="main navigation bar"
 >
   <a
@@ -45,7 +45,7 @@
     class="mr-auto text-lg font-semibold lowercase text-zinc-900 hover:text-emerald-600 dark:text-zinc-50 dark:hover:text-emerald-400"
     >Ryan Furrer</a
   >
-  <ul id="navlist" class="flex">
+  <ul id="navlist" class="flex gap-[1em]">
     <li>
       <a href="/">Home</a>
     </li>
@@ -57,6 +57,15 @@
     </li>
     <li>
       <a href="/about">About</a>
+    </li>
+    <li>
+      <a
+        href=`${resume}`
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="newsletter"
+        >Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a
+      >
     </li>
     <li>
       <a href="/contact">Contact</a>
