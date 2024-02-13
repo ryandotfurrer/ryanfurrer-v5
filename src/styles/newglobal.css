@@ -71,6 +71,19 @@ full font color = text-zinc-50
     @apply text-lg; /* clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem) */
   }
 
+  ul[role="list"],
+  ol[role="list"] {
+    @apply ml-8 mt-2;
+  }
+
+  ul[role="list"] {
+    @apply list-disc;
+  }
+
+  ol[role="list"] {
+    @apply list-decimal;
+  }
+
   a,
   * > a {
     @apply text-zinc-900  hover:text-emerald-600 dark:text-zinc-50 dark:hover:text-emerald-400;
