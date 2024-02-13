@@ -1,0 +1,78 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionXL from "../components/SectionXL.astro";
+import Section2XL from "../components/Section2XL.astro";
+
+const title = "Now";
+const description = "What I'm up to in the current moment";
+---
+
+<Layout title={title} description={description}>
+  <main class="flow container mx-auto">
+    <Section2XL>
+      <SectionXL>
+        <h2>February 12, 2024</h2>
+        <h3>What I do for work</h3>
+        <p>
+          I'm transiitoning careers from Procurement in Supply Chain to Web
+          Development. I've been studying web development with a focus on
+          front-end work since late 2019. Currently I am learning React/NextJS
+          and mySQL via <a
+            href="https://github.com/ryanfurrer"
+            target="_blank"
+            rel="noopener noreferrer">several projects</a
+          > as well as focusing on building my community on <a
+            href="https://twitter.com/ryandotfurrer"
+            target="_blank"
+            rel="noopener noreferrer"
+            >X,
+          </a><a
+            href="https://www.linkedin.com/in/ryanfurrer/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn,
+          </a> and <a
+            href="https://www.twitch.tv/ryandotfurrer"
+            target="_blank"
+            rel="noopener noreferrer">Twitch</a
+          >.
+        </p>
+        <h3>What I do for fun</h3>
+        <p>
+          Outisde of the work office, you'll often find me at my home officing
+          coding or playing video games. My current backlog includes but is
+          certainly <i>not</i> limited to:
+        </p>
+        <ul class="ml-8 list-disc">
+          <li>
+            <a
+              href="https://na.finalfantasyxvi.com/"
+              target="_blank"
+              rel="noopener noreferrer">Final Fantasy XVI</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://seaofstarsgame.co/"
+              target="_blank"
+              rel="noopener noreferrer">Sea of Stars</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://www.owlboygame.com/"
+              target="_blank"
+              rel="noopener noreferrer">Owl Boy</a
+            >
+          </li>
+        </ul>
+        <p>
+          <h3>Conferences I've attended</h3>
+          <ul class="ml-8 list-disc">
+            <li>THAT Conference, Austin, TX 2024</li>
+          </ul>
+        </p>
+      </SectionXL>
+    </Section2XL>
+  </main>
+</Layout>

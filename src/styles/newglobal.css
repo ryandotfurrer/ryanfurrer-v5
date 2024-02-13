@@ -73,7 +73,7 @@ full font color = text-zinc-50
 
   a,
   * > a {
-    @apply text-zinc-900 hover:text-emerald-600 dark:text-zinc-50 dark:hover:text-emerald-400;
+    @apply text-zinc-900 decoration-emerald-600  hover:text-emerald-600 dark:text-zinc-50 dark:decoration-emerald-400 dark:hover:text-emerald-400;
   }
 
   main a {
@@ -82,7 +82,7 @@ full font color = text-zinc-50
 
   .flow > * + * {
     margin-block-start: 1em;
-    margin-block-start: clamp(1rem, 1rem + 0vw, 2rem);
+    margin-block-start: clamp(1em, 1rem + 0vw, 2em);
   }
 
   .noflow > * + * {
