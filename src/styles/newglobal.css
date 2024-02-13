@@ -73,11 +73,11 @@ full font color = text-zinc-50
 
   a,
   * > a {
-    @apply text-zinc-900 decoration-emerald-600  hover:text-emerald-600 dark:text-zinc-50 dark:decoration-emerald-400 dark:hover:text-emerald-400;
+    @apply text-zinc-900  hover:text-emerald-600 dark:text-zinc-50 dark:hover:text-emerald-400;
   }
 
   main a {
-    @apply underline;
+    @apply underline decoration-emerald-600 dark:decoration-emerald-400;
   }
 
   .flow > * + * {
