@@ -121,6 +121,10 @@ picture {
   @apply rounded;
 }
 
+svg {
+  @apply block max-h-full max-w-full;
+}
+
 /* Project Tech Tag Styling */
 /* 
 Light Theme bg colors = darker and saturated 
@@ -225,4 +229,8 @@ li[data-name="Open Props CSS"] {
   a:hover {
     text-decoration: underline !important;
   }
+}
+
+.debug {
+  @apply outline outline-red-500;
 }

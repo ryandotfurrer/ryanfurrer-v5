@@ -3,6 +3,7 @@ import basicSsl from "@vitejs/plugin-basic-ssl";
 import react from "@astrojs/react";
 import storyblok from "@storyblok/astro";
 import tailwind from "@astrojs/tailwind";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
@@ -86,5 +87,6 @@ export default defineConfig({
         page: "storyblok/Page",
       },
     }),
+    icon(),
   ],
 });
