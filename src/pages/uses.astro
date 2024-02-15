@@ -6,6 +6,7 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import cleanshotxLogo from "../assets/logos/cleanshotx.svg";
 import raycastLogo from "../assets/logos/raycast.svg";
+import simplenote from "../assets/logos/simplenote.png";
 
 const title = "Uses";
 const description =
@@ -116,7 +117,7 @@ const description =
             </h3>
             <Icon
               name="software/brainfm"
-              class="mx-auto aspect-square h-auto w-1/2"
+              class="mx-auto aspect-square h-auto w-1/2 text-indigo-600 dark:text-indigo-400"
             />
           </div>
 
@@ -206,8 +207,9 @@ const description =
                 >Simplenote</a
               >
             </h3>
-            <Icon
-              name="software/simplenote"
+            <Image
+              src={simplenote}
+              alt="simplenote logo"
               class="mx-auto aspect-square h-auto w-1/2"
             />
           </div>
