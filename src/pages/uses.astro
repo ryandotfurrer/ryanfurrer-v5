@@ -7,6 +7,7 @@ import { Icon } from "astro-icon/components";
 import cleanshotxLogo from "../assets/logos/cleanshotx.svg";
 import raycastLogo from "../assets/logos/raycast.svg";
 import simplenote from "../assets/logos/simplenote.png";
+import SoftwareCard from "../components/SoftwareCard.astro";
 
 const title = "Uses";
 const description =
@@ -70,18 +71,12 @@ const description =
         <div
           class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         >
-          <div
-            class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
-          >
-            <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">1Password</a
-              >
-            </h3>
+          <SoftwareCard name="1Password" href="https://1password.com/">
             <Icon
               name="software/1password"
-              class="debug mx-auto aspect-square h-auto w-1/2"
+              class="mx-auto aspect-square h-auto w-1/2"
             />
-          </div>
+          </SoftwareCard>
 
           <div
             class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
