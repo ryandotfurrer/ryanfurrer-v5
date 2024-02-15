@@ -2,7 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import SectionXL from "../components/SectionXL.astro";
 import Section2XL from "../components/Section2XL.astro";
+import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
+import cleanshotxLogo from "../assets/logos/cleanshotx.svg";
+import raycastLogo from "../assets/logos/raycast.svg";
 
 const title = "Uses";
 const description =
@@ -74,6 +77,20 @@ const description =
               >
             </h3>
             <Icon
+              name="software/1password"
+              class="debug mx-auto aspect-square h-auto w-1/2"
+            />
+          </div>
+
+          <div
+            class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
+          >
+            <h3 class="text-center text-xl">
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Affinity Suite</a
+              >
+            </h3>
+            <Icon
               name="software/affinity"
               class="mx-auto aspect-square h-auto w-1/2"
             />
@@ -95,7 +112,7 @@ const description =
             class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
           >
             <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">Arc</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">BrainFM</a>
             </h3>
             <Icon
               name="software/brainfm"
@@ -107,10 +124,13 @@ const description =
             class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
           >
             <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">Arc</a>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >CleanshotX</a
+              >
             </h3>
-            <Icon
-              name="software/arc"
+            <Image
+              src={cleanshotxLogo}
+              alt="cleanshotx logo"
               class="mx-auto aspect-square h-auto w-1/2"
             />
           </div>
@@ -119,7 +139,7 @@ const description =
             class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
           >
             <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">Arc</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Discord</a>
             </h3>
             <Icon
               name="software/discord"
@@ -131,10 +151,10 @@ const description =
             class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
           >
             <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">Arc</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">iTerm</a>
             </h3>
             <Icon
-              name="software/iTerm"
+              name="software/iterm"
               class="mx-auto aspect-square h-auto w-1/2"
             />
           </div>
@@ -143,7 +163,7 @@ const description =
             class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
           >
             <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">Arc</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Notion</a>
             </h3>
             <Icon
               name="software/notion"
@@ -155,11 +175,13 @@ const description =
             class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
           >
             <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">Arc</a>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Notion Calendar</a
+              >
             </h3>
             <Icon
               name="software/notion-calendar"
-              class="mx-auto aspect-square h-auto w-1/2"
+              class="mx-auto aspect-square h-auto w-1/2 text-zinc-900 dark:text-zinc-50"
             />
           </div>
 
@@ -167,10 +189,11 @@ const description =
             class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
           >
             <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">Arc</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Raycast</a>
             </h3>
-            <Icon
-              name="software/raycast"
+            <Image
+              src={raycastLogo}
+              alt=`raycast logo`
               class="mx-auto aspect-square h-auto w-1/2"
             />
           </div>
@@ -179,7 +202,9 @@ const description =
             class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
           >
             <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">Arc</a>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Simplenote</a
+              >
             </h3>
             <Icon
               name="software/simplenote"
@@ -191,7 +216,7 @@ const description =
             class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
           >
             <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">Arc</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Spark</a>
             </h3>
             <Icon
               name="software/spark"
@@ -203,7 +228,7 @@ const description =
             class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
           >
             <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">Arc</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Spotify</a>
             </h3>
             <Icon
               name="software/spotify"
@@ -215,7 +240,9 @@ const description =
             class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
           >
             <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">Arc</a>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Streamlabs</a
+              >
             </h3>
             <Icon
               name="software/streamlabs"
@@ -227,7 +254,7 @@ const description =
             class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
           >
             <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">Arc</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Todoist</a>
             </h3>
             <Icon
               name="software/todoist"
@@ -239,22 +266,10 @@ const description =
             class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
           >
             <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">Arc</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">VSCode</a>
             </h3>
             <Icon
               name="software/vscode"
-              class="mx-auto aspect-square h-auto w-1/2"
-            />
-          </div>
-
-          <div
-            class="flow grid aspect-square items-baseline rounded bg-zinc-200 p-6 dark:bg-zinc-800"
-          >
-            <h3 class="text-center text-xl">
-              <a href="#" target="_blank" rel="noopener noreferrer">Arc</a>
-            </h3>
-            <Icon
-              name="software/arc"
               class="mx-auto aspect-square h-auto w-1/2"
             />
           </div>
