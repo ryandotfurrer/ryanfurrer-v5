@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       // sans: ["Inter", "Arial", "sans-serif"],
-      sans: ["Poppins", "Arial", "sans-serif"],
+      sans: ["var(--font-poppins)"],
       serif: ["Noto Serif", "Georgia", "Times New Roman", "Times", "serif"],
     },
     fontSize: {

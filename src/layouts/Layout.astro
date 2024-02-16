@@ -1,6 +1,7 @@
 ---
 import { SEO } from "astro-seo";
 import "../styles/newglobal.css";
+import { AstroFont } from "astro-font";
 import HeaderNavBar from "./HeaderNavBar.astro";
 import Footer from "./Footer.astro";
 // import NewNavBar from "../components/NewNavBar.astro";
@@ -37,11 +38,18 @@ const { title, description } = Astro.props;
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
+    <AstroFont
+      config={[
+        {
+          src: [],
+          preload: false,
+          name: "Poppins",
+          display: "swap",
+          fallback: "sans-serif",
+          cssVariable: "font-poppins",
+          googleFontsURL: 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900',
+        },
+      ]}
     />
     <meta name="generator" content={Astro.generator} />
     <script
