@@ -11,7 +11,7 @@ const date = new Date(blok.publishedDate).toLocaleDateString("en-US", {
 
 <section>
   <article {...storyblokEditable(blok)} id="blog-post" class="max-w-prose">
-    <h2 id="blog-title">{blok.title}</h2>
+    <h1 id="blog-title">{blok.title}</h1>
     <p id="blog-publish-date" class="text-sm">{date}</p>
     <p>{blok.description}</p>
     <Image
