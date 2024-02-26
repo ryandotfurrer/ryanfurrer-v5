@@ -9,7 +9,6 @@ import Footer from "../layouts/Footer.astro";
 import BlogPostListFeatured from "../storyblok/BlogPostListFeatured.astro";
 import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
 import SocialLinks from "../layouts/SocialLinks.astro";
-import ogimage from "../../public/og-image.png";
 const pageTitle = "Home";
 const heroHeader =
   "Helping people build the web presence they  deserve through quality  code.";
@@ -27,7 +26,8 @@ const heroHeader =
         basic: {
           title: `${pageTitle}`,
           type: `string`,
-          image: "../../public/og-image.png",
+          image:
+            "https://a-us.storyblok.com/f/1016568/286x150/ae6da7aea8/og-image.svg",
         },
         image: {
           alt: "Ryan Furrer: Software engineer, streamer, and blogger.",
@@ -38,7 +38,8 @@ const heroHeader =
         site: "@ryandotfurrer",
         creator: "@ryandotfurrer",
         title: `${pageTitle}`,
-        image: "../../public/og-image.png",
+        image:
+          "https://a-us.storyblok.com/f/1016568/286x150/ae6da7aea8/og-image.svg",
         imageAlt: "Ryan Furrer: Software engineer, streamer, and blogger",
         description: `${heroHeader}`,
       }}
