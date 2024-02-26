@@ -6,6 +6,7 @@ import HeaderNavBar from "../../layouts/HeaderNavBar.astro";
 import Footer from "../../layouts/Footer.astro";
 import "../../styles/global.css";
 import "../../styles/highlightjs-styles/nord.min.css";
+import ogimage from "../../public/og-image.png";
 
 export const prerender = true;
 export async function getStaticPaths() {
@@ -38,10 +39,25 @@ const story = data.story;
   <head>
     <meta charset="UTF-8" />
     <SEO
-      title=`${story.name}`
-      description=`${story.content}`
+      titleTemplate="%s - Ryan Furrer"
+      titleDefault="Ryan Furrer"
+      title={story.title}
+      description={story.description}
+      openGraph={{
+        basic: {
+          title: `${story.title}`,
+          type: `string`,
+          image: `${ogimage}`,
+        },
+      }}
       twitter={{
+        card: "summary",
+        site: "@ryandotfurrer",
         creator: "@ryandotfurrer",
+        title: `${story.title}`,
+        image: `${ogimage}`,
+        imageAlt: "Ryan Furrer: Software engineer, streamer, and blogger",
+        description: `${story.description}`,
       }}
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

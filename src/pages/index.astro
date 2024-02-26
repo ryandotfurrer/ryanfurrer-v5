@@ -9,6 +9,7 @@ import Footer from "../layouts/Footer.astro";
 import BlogPostListFeatured from "../storyblok/BlogPostListFeatured.astro";
 import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
 import SocialLinks from "../layouts/SocialLinks.astro";
+import ogimage from "../../public/og-image.png";
 const pageTitle = "Ryan Furrer";
 const heroHeader =
   "Helping people build the web presence they deserve through quality  code.";
@@ -18,10 +19,25 @@ const heroHeader =
   <head>
     <meta charset="UTF-8" />
     <SEO
-      title=`${pageTitle}`
-      description=`${heroHeader}`
+      titleTemplate="%s - Ryan Furrer"
+      titleDefault="Ryan Furrer"
+      title={pageTitle}
+      description={heroHeader}
+      openGraph={{
+        basic: {
+          title: `${pageTitle}`,
+          type: `string`,
+          image: `${ogimage}`,
+        },
+      }}
       twitter={{
+        card: "summary",
+        site: "@ryandotfurrer",
         creator: "@ryandotfurrer",
+        title: `${pageTitle}`,
+        image: `${ogimage}`,
+        imageAlt: "Ryan Furrer: Software engineer, streamer, and blogger",
+        description: `${heroHeader}`,
       }}
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

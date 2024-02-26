@@ -6,6 +6,7 @@ import Hero from "../layouts/Hero.astro";
 import Footer from "../layouts/Footer.astro";
 import ProjectCard from "../layouts/ProjectCard.astro";
 import ProjectTechTag from "../layouts/ProjectTechTag.astro";
+import ogimage from "../../public/og-image.png";
 const pageTitle = "Projects";
 const heroHeader = "Projects";
 const heroDescription = "What I've created and worked on.";
@@ -15,10 +16,25 @@ const heroDescription = "What I've created and worked on.";
   <head>
     <meta charset="UTF-8" />
     <SEO
-      title=`${pageTitle}`
-      description=`${heroDescription}`
+      titleTemplate="%s - Ryan Furrer"
+      titleDefault="Ryan Furrer"
+      title={pageTitle}
+      description={heroHeader}
+      openGraph={{
+        basic: {
+          title: `${pageTitle}`,
+          type: `string`,
+          image: `${ogimage}`,
+        },
+      }}
       twitter={{
+        card: "summary",
+        site: "@ryandotfurrer",
         creator: "@ryandotfurrer",
+        title: `${pageTitle}`,
+        image: `${ogimage}`,
+        imageAlt: "Ryan Furrer: Software engineer, streamer, and blogger",
+        description: `${heroHeader}`,
       }}
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
