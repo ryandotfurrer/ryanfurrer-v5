@@ -10,38 +10,39 @@ import BlogPostListFeatured from "../storyblok/BlogPostListFeatured.astro";
 import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
 import SocialLinks from "../layouts/SocialLinks.astro";
 import ogimage from "../../public/og-image.png";
-const pageTitle = "Ryan Furrer";
+const pageTitle = "Home";
 const heroHeader =
-  "Helping people build the web presence they deserve through quality  code.";
+  "Helping people build the web presence they  deserve through quality  code.";
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <SEO
-      titleTemplate="%s - Ryan Furrer"
-      titleDefault="Ryan Furrer"
-      title={pageTitle}
-      description={heroHeader}
+      titleTemplate="%s | Ryan Furrer"
+      titleDefault="Software engineer, streamer, and blogger"
+      title="Home"
+      description="Ryan Furrer, a software engineer, streamer, and blogger with a focus on UX development. Proficient in React, NextJS, Astro, and Tailwind CSS, I bring transferable skills in project management, problem-solving, and more."
       openGraph={{
         basic: {
           title: `${pageTitle}`,
           type: `string`,
-          image: `${ogimage}`,
+          image: "../../public/og-image.png",
+        },
+        image: {
+          alt: "Ryan Furrer: Software engineer, streamer, and blogger.",
         },
       }}
       twitter={{
-        card: "summary",
+        card: "summary_large_image",
         site: "@ryandotfurrer",
         creator: "@ryandotfurrer",
         title: `${pageTitle}`,
-        image: `${ogimage}`,
+        image: "../../public/og-image.png",
         imageAlt: "Ryan Furrer: Software engineer, streamer, and blogger",
         description: `${heroHeader}`,
       }}
     />
-    <meta property="og:image" content=`${ogimage}` />
-    <meta name="twitter:image" content=`${ogimage}` />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

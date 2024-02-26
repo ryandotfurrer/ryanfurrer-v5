@@ -1,0 +1,33 @@
+---
+import { SEO } from "astro-seo";
+import ogimage from "../../public/og-image.png";
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<SEO
+  titleTemplate="%s - Ryan Furrer"
+  titleDefault="Ryan Furrer"
+  title={title}
+  description={description}
+  openGraph={{
+    basic: {
+      title: `${title}`,
+      type: `string`,
+      image: `${ogimage}`,
+    },
+  }}
+  twitter={{
+    card: "summary",
+    site: "@ryandotfurrer",
+    creator: "@ryandotfurrer",
+    title: `${title}`,
+    imageAlt: "Ryan Furrer: Software engineer, streamer, and blogger",
+    description: `${description}`,
+  }}
+/>
