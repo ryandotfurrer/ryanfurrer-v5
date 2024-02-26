@@ -28,7 +28,6 @@ const { title, description } = Astro.props;
         basic: {
           title: `${title}`,
           type: `string`,
-          image: `${ogimage}`,
         },
       }}
       twitter={{
@@ -36,7 +35,6 @@ const { title, description } = Astro.props;
         site: "@ryandotfurrer",
         creator: "@ryandotfurrer",
         title: `${title}`,
-        image: `${ogimage}`,
         imageAlt: "Ryan Furrer: Software engineer, streamer, and blogger",
         description: `${description}`,
       }}
@@ -44,6 +42,8 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content=`${ogimage}` />
+    <meta name="twitter:image" content=`${ogimage}` />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
