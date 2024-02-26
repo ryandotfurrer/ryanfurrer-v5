@@ -1,11 +1,9 @@
 ---
-import { SEO } from "astro-seo";
 import "../styles/global.css";
 import HeaderNavBar from "../layouts/HeaderNavBar.astro";
 import Hero from "../layouts/Hero.astro";
 import SocialLinks from "../layouts/SocialLinks.astro";
 import Footer from "../layouts/Footer.astro";
-import ogimage from "../../public/og-image.png";
 const pageTitle = "404: Page Not Found";
 const heroHeader = "Error 404: Page not found.";
 const heroDescription =
@@ -17,36 +15,28 @@ const heroParagraph =
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <SEO
-      titleTemplate="%s - Ryan Furrer"
-      titleDefault="Ryan Furrer"
-      title={pageTitle}
-      description={heroHeader}
-      openGraph={{
-        basic: {
-          title: `${pageTitle}`,
-          type: `string`,
-          image: `${ogimage}`,
-        },
-      }}
-      twitter={{
-        card: "summary",
-        site: "@ryandotfurrer",
-        creator: "@ryandotfurrer",
-        title: `${pageTitle}`,
-        image: `${ogimage}`,
-        imageAlt: "Ryan Furrer: Software engineer, streamer, and blogger",
-        description: `${heroHeader}`,
-      }}
-    />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ryan Furrer" />
+    <meta
+      name="description"
+      content="Ryan Furrer, a software engineer, streamer, and blogger with a focus on UX development. Proficient in React, NextJS, Astro, and Tailwind CSS, I bring transferable skills in project management, problem-solving, and more."
+    />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={heroHeader} />
+    <meta
+      property="og:image"
+      content="https://a-us.storyblok.com/f/1016568/1200x630/f5c66c3b30/og-image.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Ryan Furrer, a software engineer, streamer, and blogger"
+    />
+    <meta property="og:site_name" content="Ryan Furrer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image:alt"
+      content="Ryan Furrer, a software engineer, streamer, and blogger"
+    />
     <meta name="generator" content={Astro.generator} />
     <script
       is:inline
