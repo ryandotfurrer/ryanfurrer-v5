@@ -2,21 +2,191 @@
 import Layout from "../layouts/Layout.astro";
 import SectionXL from "../components/SectionXL.astro";
 import Section2XL from "../components/Section2XL.astro";
+import { Image } from "astro:assets";
+import dealsForDevs from "../assets/photos/dealsfordevs.png";
+import comingSoon from "../assets/photos/coming-soon.jpg";
 
 const title = "Now";
 const description = "What I'm up to in the current moment.";
 ---
 
 <Layout title={title} description={description}>
-  <main class="flow container mx-auto">
+  <main class="flow container mx-auto px-4">
     <Section2XL>
       <SectionXL>
         <h2 class="text-xl text-zinc-600 dark:text-zinc-300">Last Update:</h2>
-        <h2 class="mt-0">February 12, 2024</h2>
+        <h2 class="mt-0">February 26, 2024</h2>
+        <section id="whats-new" class="flow">
+          <h3 class="w-fit rounded bg-amber-400 px-6 py-4 text-zinc-900">
+            Whats new
+          </h3>
+          <p>
+            I am excited to announce that I am working on a couple of projects
+            with some incredible people I met at <a href="/blog/that-conference"
+              >THAT Conference</a
+            >, <a
+              href="https://twitter.com/jamesqquick"
+              target="_blank"
+              rel="noopener noreferrer">James Q. Quick</a
+            > and <a
+              href="https://twitter.com/shashiwhocodes"
+              target="_blank"
+              rel="noopener noreferrer">Shashi Lo</a
+            >!
+          </p>
+
+          <div class="mx-auto grid gap-8 xl:grid-cols-2">
+            <div
+              id="deals-for-devs"
+              class="flow rounded-md bg-amber-400 text-zinc-900 dark:bg-amber-400"
+            >
+              <a
+                href="https://www.dealsfordevs.com/"
+                class="mb-[1em] block overflow-hidden"
+                aria-label=`Read more about `
+              >
+                <Image
+                  src={dealsForDevs}
+                  class="aspect-video rounded-b-none transition-transform duration-300 hover:scale-110"
+                  alt="Deals for Devs landing pages"
+                />
+              </a>
+              <div class="flow px-4 pb-4">
+                <a href="#" class="decoration-zinc-900">
+                  <h4
+                    class="text-lg leading-tight text-zinc-900 hover:text-zinc-900 dark:hover:text-zinc-900"
+                  >
+                    Deals for Devs
+                  </h4>
+                </a>
+                <p>
+                  Deal for Devs is a project that James started and launched
+                  around Thanksgiving 2023. Since then, the demand for it has
+                  increased and James wants to take it to the next level.
+                </p>
+                <p class="noflow font-bold">Tech Stack:</p>
+                <ul class="ml-8 list-disc">
+                  <li>
+                    <a
+                      href="https://nextjs.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
+                      >NextJS</a
+                    > | The React Framework for the Web
+                  </li>
+                  <li>
+                    <a
+                      href="https://xata.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
+                      >Xata</a
+                    >
+                     | Serverless database platform powered by PostgreSQL
+                  </li>
+                  <li>
+                    <a
+                      href="https://sentry.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
+                      >Sentry</a
+                    > | App monitoring platform built for to get to the root
+                    cause for every issue
+                  </li>
+                  <li>
+                    <a
+                      href="https://clerk.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
+                      >Clerk</a
+                    > | The most comprehensive User Management Platform
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              id="Gridiron Survivor"
+              class="flow rounded-md bg-amber-400 text-zinc-900 dark:bg-amber-400"
+            >
+              <a
+                aria-disabled="true"
+                href="#"
+                class="mb-[1em] block overflow-hidden"
+                aria-label=`Disabled link`
+              >
+                <Image
+                  src={comingSoon}
+                  class="mb-[1em] block aspect-video overflow-hidden rounded-b-none transition-transform duration-300 hover:scale-110"
+                  alt="asdfgasfd"
+                />
+              </a>
+              <div class="flow px-4 pb-4">
+                <a href="#" class="decoration-zinc-900">
+                  <h4
+                    class="text-lg leading-tight text-zinc-900 hover:text-zinc-900 dark:hover:text-zinc-900"
+                  >
+                    Gridiron Survivor
+                  </h4>
+                </a>
+                <p>
+                  A football survivor, also known as a Survivor Pool, is a
+                  competition where participants pick one winning team per week
+                  to stay in the game. The goal is to survive by making correct
+                  picks each week without repeating teams.
+                </p>
+                <p class="noflow font-bold">Tech Stack:</p>
+                <ul class="ml-8 list-disc">
+                  <li>
+                    <a
+                      href="https://nextjs.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
+                      >NextJS</a
+                    > | The React Framework for the Web
+                  </li>
+                  <li>
+                    <a
+                      href="https://tailwindcss.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
+                      >Tailwind</a
+                    >
+                     | Rapidly build modern websites without ever leaving your
+                    HTML.
+                  </li>
+                  <li>
+                    <a
+                      href="https://ui.shadcn.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
+                      >Shadcn</a
+                    > | Beautifully designed components that you can copy and
+                    paste into your apps
+                  </li>
+                  <li>
+                    <a
+                      href="https://storybook.js.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
+                      >Storybook</a
+                    > | Build UIs without the grunt work
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
         <h3>What I do for work</h3>
         <p>
-          I'm transiitoning careers from Procurement in Supply Chain to Web
-          Development. I've been studying web development with a focus on
+          I'm transitioning careers from Procurement in Supply Chain to Web
+          Development and have been studying web development with a focus on
           front-end work since late 2019. Currently I am learning React/NextJS
           and mySQL via <a
             href="https://github.com/ryandotfurrer"
@@ -40,7 +210,7 @@ const description = "What I'm up to in the current moment.";
         </p>
         <h3>What I do for fun</h3>
         <p>
-          Outisde of the work office, you'll often find me at my home officing
+          Outisde of the work office, you'll often find me at my home office
           coding or playing video games. My current backlog includes but is
           certainly <i>not</i> limited to:
         </p>
