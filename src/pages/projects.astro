@@ -5,7 +5,8 @@ import Hero from "../layouts/Hero.astro";
 import Footer from "../layouts/Footer.astro";
 import ProjectCard from "../layouts/ProjectCard.astro";
 import ProjectTechTag from "../layouts/ProjectTechTag.astro";
-import ogimage from "../../public/og-image.png";
+import Section2XL from "../components/Section2XL.astro";
+import SectionXL from "../components/SectionXL.astro";
 const pageTitle = "Projects";
 const heroHeader = "Projects";
 const heroDescription = "What I've created and worked on.";
@@ -48,7 +49,27 @@ const heroDescription = "What I've created and worked on.";
       <HeaderNavBar />
       <Hero heroHeader={heroHeader} heroDescription={heroDescription} />
     </header>
-    <main id="main-fade-in">
+    <main id="main-fade-in" class="px-4">
+      <Section2XL>
+        <SectionXL>
+          <h2>Current Focus</h2>
+          <p>I am currently focusing on the following projects:</p>
+          <ol class="ml-12 list-decimal">
+            <li>Portfolio updates and refinement</li>
+            <li>Deals for Devs</li>
+            <li>Gridiron Survivor</li>
+            <li>Personal Project TBA</li>
+          </ol>
+          <p>Learn more about what I'm doing <a href="/now">now</a>.</p>
+          <p>
+            You can also catch me building in public on <a
+              href="https://www.twitch.tv/ryandotfurrer"
+              target="_blank"
+              rel="noopener noreferrer">Twitch</a
+            > every Monday, Tuesday, Wednesday, and Saturday!
+          </p>
+        </SectionXL>
+      </Section2XL>
       <section>
         <h2>Personal Projects</h2>
         <p>

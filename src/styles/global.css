@@ -170,7 +170,7 @@ main a {
 
 /* Centers element on the page. Adds "flow" to elements nested inside the section element using the space-y-[] rule. Also adds horizontal padding so elements are not butting up on the extreme edges of the window on smaller screen sizes. */
 section {
-  @apply mx-auto max-w-full space-y-[1em] px-8 md:space-y-[1.5em];
+  @apply mx-auto max-w-full space-y-[1em] md:space-y-[1.5em];
 }
 
 /* Centers element on the page. Adds "flow" to elements nested inside the section element using the space-y-[] rule. */
