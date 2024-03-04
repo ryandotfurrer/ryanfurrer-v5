@@ -17,7 +17,7 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
       id="hero-header-container"
       class="animate-fade animate-delay-700 animate-duration-500 animate-once animate-ease-in-out xl:max-w-[60%]"
     >
-      <h1 class="text-3xl">
+      <h1 class="text-3xl leading-tight">
         {heroHeader}
       </h1>
     </div>
@@ -26,7 +26,7 @@ const { heroDescription, heroHeader, heroParagraph }: Props = Astro.props;
       class="animate-fade-down animate-delay-1000 animate-duration-700 animate-once animate-ease-in-out xl:max-w-[60%]"
     >
       <p
-        class="text-balance py-1 text-2xl font-semibold leading-none text-emerald-600 dark:text-emerald-400"
+        class="text-balance py-1 text-2xl font-semibold leading-tight text-emerald-600 dark:text-emerald-400"
       >
         {heroDescription}
       </p>
