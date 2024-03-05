@@ -9,7 +9,7 @@ const { linkURL, linkText }: Props = Astro.props;
 
 <a
   href={linkURL}
-  class="dark:hover-text-zinc-900 group flex w-full items-center justify-center gap-4 rounded bg-emerald-600 px-6 py-3 text-zinc-50 transition-transform duration-300 ease-in-out hover:text-zinc-50 md:hover:scale-105 lg:max-w-fit dark:bg-emerald-400 dark:text-zinc-900 hover:dark:text-zinc-900"
+  class="dark:hover-text-zinc-900 group flex w-full items-center justify-center gap-4 rounded bg-emerald-600 px-6 py-3 text-zinc-50 no-underline transition-transform duration-300 ease-in-out hover:text-zinc-50 md:hover:scale-105 lg:max-w-fit dark:bg-emerald-400 dark:text-zinc-900 hover:dark:text-zinc-900"
 >
   <slot name="pre-icon" />
   {linkText}

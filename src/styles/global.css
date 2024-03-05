@@ -229,39 +229,39 @@ p > span[data-name="Astro"] {
   @apply text-[#5820e1] dark:text-[#bab2ff];
 }
 
-li[data-name="Astro"] {
+/* li[data-name="Astro"] {
   @apply bg-[#5820e1] dark:bg-[#bab2ff];
-}
+} */
 
 p > span[data-name="React"] {
   @apply text-[#2e5570] dark:text-[#8bbed5];
 }
 
-li[data-name="React"] {
+/* li[data-name="React"] {
   @apply bg-[#2e5570] dark:bg-[#8bbed5];
-}
+} */
 
 p > span[data-name="NextJS"] {
   @apply text-neutral-900 dark:text-neutral-100;
 }
 
-li[data-name="NextJS"] {
+/* li[data-name="NextJS"] {
   @apply bg-black dark:bg-white;
-}
+} */
 
 p > span[data-name="Tailwind CSS"] {
   @apply text-[#38bdf8] dark:text-[#7dd5fc];
 }
 
-li[data-name="Tailwind CSS"] {
+/* li[data-name="Tailwind CSS"] {
   @apply bg-[#38bdf8] dark:bg-[#7dd5fc];
-}
+} */
 
 p > span[data-name="Storyblok"] {
   @apply text-[#00b3b0] dark:text-[#90fff1];
 }
 
-li[data-name="Storyblok"] {
+/* li[data-name="Storyblok"] {
   @apply bg-[#00b3b0] dark:bg-[#90fff1];
 }
 
@@ -295,7 +295,7 @@ li[data-name="TypeScript"] {
 
 li[data-name="Open Props CSS"] {
   @apply bg-[#3544c0] dark:bg-[#a0baf0];
-}
+} */
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {

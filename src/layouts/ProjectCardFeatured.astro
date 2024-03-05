@@ -1,0 +1,46 @@
+---
+import LinkButtonPrimary from "../components/LinkButtonPrimary.astro";
+import LinkButtonSecondary from "../components/LinkButtonSecondary.astro";
+
+export interface Props {
+  projectName: string;
+  projectDescription?: string;
+  projectLiveLink: string;
+  projectGithubLink: string;
+}
+
+const {
+  projectDescription,
+  projectName,
+  projectLiveLink,
+  projectGithubLink,
+}: Props = Astro.props;
+---
+
+<article
+  class="overflow-hidden rounded-md bg-zinc-200 outline outline-zinc-300 dark:bg-zinc-800 dark:outline-none"
+>
+  <slot name="project-image" />
+  <div class="flow px-6 py-8">
+    <h3 class="text-xl">{projectName}</h3>
+    <p class="text-base">{projectDescription}</p>
+    <div>
+      <ul class="flex flex-wrap gap-2">
+        <slot />
+      </ul>
+    </div>
+    <div class="flow pt-6">
+      <ul class="grid gap-2 lg:max-w-fit lg:grid-cols-2 lg:gap-4">
+        <li class="text-base lg:max-w-fit">
+          <LinkButtonPrimary
+            linkURL={projectGithubLink}
+            linkText="GitHub Repo"
+          />
+        </li>
+        <li class="text-base lg:max-w-fit">
+          <LinkButtonSecondary linkURL={projectLiveLink} linkText="Live Site" />
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>

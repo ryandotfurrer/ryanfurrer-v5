@@ -1,13 +1,18 @@
 ---
 import { Image } from "astro:assets";
-import memojiProfilePicture from "../assets/photos/avatar-2x.webp";
 import "../styles/global.css";
+import memojiProfilePicture from "../assets/photos/avatar-2x.webp";
 import HeaderNavBar from "../layouts/HeaderNavBar.astro";
 import HeroHome from "../layouts/HeroHome.astro";
 import Footer from "../layouts/Footer.astro";
-import BlogPostListFeatured from "../storyblok/BlogPostListFeatured.astro";
+// import BlogPostListFeatured from "../storyblok/BlogPostListFeatured.astro";
+import AstroStarterImage from "../assets/photos/astro-starter-dark.png";
+import NextStarterImage from "../assets/photos/nextjs-starter-dark.png";
 import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
 import SocialLinks from "../layouts/SocialLinks.astro";
+import ProjectCardFeatured from "../layouts/ProjectCardFeatured.astro";
+import ProjectTechTag from "../layouts/ProjectTechTag.astro";
+import Section2XLFeatured from "../components/Section2XLFeatured.astro";
 const pageTitle = "Home";
 const heroHeader =
   "Helping build the web presence you deserve through quality code.";
@@ -124,7 +129,45 @@ const heroHeader =
           </div>
         </div>
       </section>
-      <section>
+      <Section2XLFeatured>
+        <h2>Featured Projects</h2>
+        <p>
+          Looking for more? Check out my <a href="/projects">projects page</a>.
+        </p>
+        <div class="flow lg:noflow grid gap-4 lg:grid-cols-2 lg:gap-8">
+          <ProjectCardFeatured
+            projectName="Astro Tailwind Starter"
+            projectDescription="A small and slightly opinionated template using Astro and Tailwind CSS."
+            projectLiveLink="https://rf-astro-tailwind-starter.vercel.app/"
+            projectGithubLink="https://github.com/ryandotfurrer/astro-tailwind-starter"
+          >
+            <ProjectTechTag technologyName="Astro" />
+            <ProjectTechTag technologyName="Tailwind CSS" />
+            <Image
+              slot="project-image"
+              class="aspect-video rounded-b-none transition-transform duration-300 hover:scale-105"
+              src={AstroStarterImage}
+              alt="asdf"
+            />
+          </ProjectCardFeatured>
+          <ProjectCardFeatured
+            projectName="Next Tailwind Starter"
+            projectDescription="A small and slightly opinionated template using Next and Tailwind CSS."
+            projectLiveLink="https://rf-next-tailwind-starter.vercel.app/"
+            projectGithubLink="https://github.com/ryandotfurrer/next-tailwind-starter"
+          >
+            <ProjectTechTag technologyName="NextJS" />
+            <ProjectTechTag technologyName="Tailwind CSS" />
+            <Image
+              slot="project-image"
+              class="aspect-video rounded-b-none transition-transform duration-300 hover:scale-105"
+              src={NextStarterImage}
+              alt="asdf"
+            />
+          </ProjectCardFeatured>
+        </div>
+      </Section2XLFeatured>
+      <!-- <section>
         <h2>Blogs</h2>
         <p>
           I publish two articles and two newsletter issues monthly. Newsletters
@@ -147,7 +190,7 @@ const heroHeader =
             >View all articles <i class="fa-solid fa-arrow-right"></i></a
           >
         </p>
-      </section>
+      </section> -->
     </main>
     <Footer />
   </body>
