@@ -1,197 +1,118 @@
 ---
 import { Image } from "astro:assets";
 import "../styles/global.css";
-import memojiProfilePicture from "../assets/photos/avatar-2x.webp";
-import HeaderNavBar from "../layouts/HeaderNavBar.astro";
-import HeroHome from "../layouts/HeroHome.astro";
-import Footer from "../layouts/Footer.astro";
-// import BlogPostListFeatured from "../storyblok/BlogPostListFeatured.astro";
 import AstroStarterImage from "../assets/photos/astro-starter-dark.png";
+import HeroHome from "../components/HeroHome.astro";
+import LayoutHome from "../layouts/LayoutHome.astro";
+import memojiProfilePicture from "../assets/photos/avatar-2x.webp";
 import NextStarterImage from "../assets/photos/nextjs-starter-dark.png";
-import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
-import SocialLinks from "../layouts/SocialLinks.astro";
 import ProjectCardFeatured from "../layouts/ProjectCardFeatured.astro";
 import ProjectTechTag from "../layouts/ProjectTechTag.astro";
+import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
+import Section2XL from "../components/Section2XL.astro";
+import SectionXL from "../components/SectionXL.astro";
 import Section2XLFeatured from "../components/Section2XLFeatured.astro";
-const pageTitle = "Home";
-const heroHeader =
-  "Helping build the web presence you deserve through quality code.";
+import SocialLinks from "../layouts/SocialLinks.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Ryan Furrer" />
-    <meta
-      name="description"
-      content="Ryan Furrer, a software engineer, streamer, and blogger with a focus on UX development. Proficient in React, NextJS, Astro, and Tailwind CSS, I bring transferable skills in project management, problem-solving, and more."
-    />
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={heroHeader} />
-    <meta
-      property="og:image"
-      content="https://a-us.storyblok.com/f/1016568/1200x630/f5c66c3b30/og-image.png"
-    />
-    <meta
-      property="og:image:alt"
-      content="Ryan Furrer, a software engineer, streamer, and blogger"
-    />
-    <meta property="og:site_name" content="Ryan Furrer" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:image:alt"
-      content="Ryan Furrer, a software engineer, streamer, and blogger"
-    />
-
-    <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      is:inline
-      src="https://kit.fontawesome.com/dec2579292.js"
-      crossorigin="anonymous"></script>
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <header>
-      <HeaderNavBar />
-      <HeroHome heroHeader={heroHeader} />
-    </header>
-    <main id="main-fade-in" class="px-4">
-      <section>
-        <h2>Hello There</h2>
+<LayoutHome
+  title="Ryan Furrer | Software Engineer"
+  description="Building the web presence you deserve through quality code."
+>
+  <main id="main-fade-in" class="flow px-4">
+    <section class="flow">
+      <h2 class="text-center">Hello There</h2>
+      <div
+        class="flow lg:noflow mx-auto grid max-w-screen-lg grid-cols-1 md:place-items-center lg:grid-cols-2 lg:gap-8"
+      >
+        <Image
+          src={memojiProfilePicture}
+          alt=`Memoji representing Ryan Furrer where his head is poking our from behind a laptop.`
+        />
         <div
-          id="greeting-container"
-          class="mx-auto grid grid-cols-1 space-y-[1em] md:place-items-center lg:grid-cols-2 lg:gap-8 2xl:w-4/5"
+          id="greeting-container-verbiage-container"
+          class="space-y-4 lg:leading-relaxed"
         >
-          <Image
-            src={memojiProfilePicture}
-            alt=`Memoji representing Ryan Furrer where his head is poking our from behind a laptop.`
-          />
-          <div
-            id="greeting-container-verbiage-container"
-            class="space-y-4 lg:leading-relaxed"
-          >
-            <p>
-              My name is Ryan Furrer, and I am a software engineer, <a
-                href="https://www.twitch.tv/ryandotfurrer"
-                target="_blank"
-                rel="noopener noreferrer">streamer</a
-              >, and <a href="/blog">blogger</a> with a focus on UX development.
-            </p>
-            <p>
-              Proficient in <span data-name="React">React</span>, <span
-                data-name="NextJS">NextJS</span
-              >, <span data-name="Astro">Astro</span>, and <span
-                data-name="Tailwind CSS">TailwindCSS</span
-              >, I bring transferable skills in project management,
-              problem-solving, and more.
-            </p>
-            <p>
-              In addition, I also share my thoughts and learnings on web
-              development, tech, and productivity through my <a
-                href="https://ryanfurrer.beehiiv.com/subscribe"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label=`View my newsletter issues and subscribe if you'd like`
-                >newsletter</a
-              >.
-            </p>
-            <p class="text-lg font-semibold">
-              <a
-                class="flex flex-row place-items-center gap-4 text-amber-600 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8 hover:text-amber-700 dark:text-amber-400 dark:hover:text-amber-300"
-                href=`${resume}`
-                >View my resume <i class="fa-solid fa-arrow-right"></i></a
-              >
-            </p>
-            <p class="text-lg font-semibold">
-              <a
-                class="flex flex-row place-items-center gap-4 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8"
-                href="/now"
-                >Learn what I'm doing now <i class="fa-solid fa-arrow-right"
-                ></i></a
-              >
-            </p>
-            <p class="text-lg font-semibold">
-              <a
-                class="flex flex-row place-items-center gap-4 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8"
-                href="/about"
-                >Learn more about me <i class="fa-solid fa-arrow-right"></i></a
-              >
-            </p>
-            <SocialLinks />
-          </div>
+          <p>
+            My name is Ryan Furrer, and I am a software engineer, <a
+              href="https://www.twitch.tv/ryandotfurrer"
+              target="_blank"
+              rel="noopener noreferrer">streamer</a
+            >, and <a href="/blog">blogger</a> with a focus on UX development.
+          </p>
+          <p>
+            Proficient in <span data-name="React">React</span>, <span
+              data-name="NextJS">NextJS</span
+            >, <span data-name="Astro">Astro</span>, and <span
+              data-name="Tailwind CSS">TailwindCSS</span
+            >, I bring transferable skills in project management,
+            problem-solving, and more.
+          </p>
+          <p>
+            In addition, I also share my thoughts and learnings on web
+            development, tech, and productivity through my <a
+              href="https://ryanfurrer.beehiiv.com/subscribe"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label=`View my newsletter issues and subscribe if you'd like`
+              >newsletter</a
+            >.
+          </p>
+          <p class="text-lg font-semibold">
+            <a
+              class="flex flex-row place-items-center gap-4 text-amber-600 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8 hover:text-amber-700 dark:text-amber-400 dark:hover:text-amber-300"
+              href=`${resume}`
+              >View my resume <i class="fa-solid fa-arrow-right"></i></a
+            >
+          </p>
+          <p class="text-lg font-semibold">
+            <a
+              class="flex flex-row place-items-center gap-4 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8"
+              href="/now"
+              >Learn what I'm doing now <i class="fa-solid fa-arrow-right"
+              ></i></a
+            >
+          </p>
+          <p class="text-lg font-semibold">
+            <a
+              class="flex flex-row place-items-center gap-4 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8"
+              href="/about"
+              >Learn more about me <i class="fa-solid fa-arrow-right"></i></a
+            >
+          </p>
+          <SocialLinks />
         </div>
-      </section>
-      <Section2XLFeatured>
-        <h2>Featured Projects</h2>
-        <p>
-          Looking for more? Check out my <a href="/projects">projects page</a>.
-        </p>
-        <div class="flow lg:noflow grid gap-4 lg:grid-cols-2 lg:gap-8">
-          <ProjectCardFeatured
-            projectName="Astro Tailwind Starter"
-            projectDescription="A small and slightly opinionated template using Astro and Tailwind CSS."
-            projectLiveLink="https://rf-astro-tailwind-starter.vercel.app/"
-            projectGithubLink="https://github.com/ryandotfurrer/astro-tailwind-starter"
-          >
-            <ProjectTechTag technologyName="Astro" />
-            <ProjectTechTag technologyName="Tailwind CSS" />
-            <Image
-              slot="project-image"
-              class="aspect-video rounded-b-none transition-transform duration-300 hover:scale-105"
-              src={AstroStarterImage}
-              alt="asdf"
-            />
-          </ProjectCardFeatured>
-          <ProjectCardFeatured
-            projectName="Next Tailwind Starter"
-            projectDescription="A small and slightly opinionated template using Next and Tailwind CSS."
-            projectLiveLink="https://rf-next-tailwind-starter.vercel.app/"
-            projectGithubLink="https://github.com/ryandotfurrer/next-tailwind-starter"
-          >
-            <ProjectTechTag technologyName="NextJS" />
-            <ProjectTechTag technologyName="Tailwind CSS" />
-            <Image
-              slot="project-image"
-              class="aspect-video rounded-b-none transition-transform duration-300 hover:scale-105"
-              src={NextStarterImage}
-              alt="asdf"
-            />
-          </ProjectCardFeatured>
-        </div>
-      </Section2XLFeatured>
-      <!-- <section>
-        <h2>Blogs</h2>
-        <p>
-          I publish two articles and two newsletter issues monthly. Newsletters
-          go out on weeks one and three, blogs go out on weeks two and four.
-        </p>
-        <p>
-          I enjoy writing articles on things I've learned, project updates, and
-          more. Below you can find my four most recent posts and if you'd like
-          you can <a
-            href="https://ryanfurrer.beehiiv.com/subscribe"
-            target="_blank"
-            rel="noopener noreferrer">subscribe to my Newsletter</a
-          > to be notified when I publish new ones.
-        </p>
-        <BlogPostListFeatured />
-        <p class="text-lg font-semibold">
-          <a
-            class="flex flex-row place-items-center gap-4 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8"
-            href="/blog"
-            >View all articles <i class="fa-solid fa-arrow-right"></i></a
-          >
-        </p>
-      </section> -->
-    </main>
-    <Footer />
-  </body>
-</html>
+      </div>
+    </section>
+    <Section2XLFeatured>
+      <h2>Featured Projects</h2>
+      <p>
+        Looking for more? Check out my <a href="/projects">projects page</a>.
+      </p>
+      <div class="flow lg:noflow grid gap-4 lg:grid-cols-2 lg:gap-8">
+        <ProjectCardFeatured
+          imageSource={AstroStarterImage}
+          imageAlt="Screenshot of Astro & Tailwind Starter"
+          projectName="Astro & Tailwind Starter"
+          projectDescription="A basic yet slightly opinionated starter boilerplate I created to get started with Astro and Tailwind projects faster."
+          projectGithubLink="https://github.com/ryandotfurrer/astro-tailwind-starter"
+          projectLiveLink="https://rf-astro-tailwind-starter.vercel.app/"
+        >
+          <ProjectTechTag technologyName="Astro" />
+          <ProjectTechTag technologyName="Tailwind" />
+        </ProjectCardFeatured>
+        <ProjectCardFeatured
+          imageSource={NextStarterImage}
+          imageAlt="Screenshot of Astro & Tailwind Starter"
+          projectName="Next & Tailwind Starter"
+          projectDescription="A basic yet slightly opinionated starter boilerplate I created to get started with Next and Tailwind projects faster."
+          projectGithubLink="https://github.com/ryandotfurrer/next-tailwind-starter"
+          projectLiveLink="https://rf-next-tailwind-starter.vercel.app/"
+        >
+          <ProjectTechTag technologyName="NextJS" />
+          <ProjectTechTag technologyName="Tailwind" />
+        </ProjectCardFeatured>
+      </div>
+    </Section2XLFeatured>
+  </main>
+</LayoutHome>

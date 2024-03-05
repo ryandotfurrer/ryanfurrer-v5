@@ -142,14 +142,9 @@ pre {
 
 /* Semantic HTML Styles */
 
-/* Ensures header is at least equal to 65% of the devices dynamic viewport height. */
-header {
-  @apply h-[75vh] xl:h-[85vh];
-}
-
-nav:is(#header-nav) {
+/* nav:is(#header-nav) {
   @apply container mx-auto flex items-center px-8 py-8 lg:py-12;
-}
+} */
 
 #hero-link-container > p:hover > :last-child {
   @apply opacity-100;
@@ -169,9 +164,9 @@ main a {
 }
 
 /* Centers element on the page. Adds "flow" to elements nested inside the section element using the space-y-[] rule. Also adds horizontal padding so elements are not butting up on the extreme edges of the window on smaller screen sizes. */
-section {
+/* section {
   @apply mx-auto max-w-full space-y-[1em] md:space-y-[1.5em];
-}
+} */
 
 /* Centers element on the page. Adds "flow" to elements nested inside the section element using the space-y-[] rule. */
 article {

@@ -1,15 +1,19 @@
 ---
-import LinkButtonPrimary from "../components/LinkButtonPrimary.astro";
-import LinkButtonSecondary from "../components/LinkButtonSecondary.astro";
+import ProjectCardLinks from "../components/ProjectCardLinks.astro";
+import { Image } from "astro:assets";
 
 export interface Props {
+  imageSource: string;
+  imageAlt: string;
   projectName: string;
-  projectDescription?: string;
+  projectDescription: string;
   projectLiveLink: string;
   projectGithubLink: string;
 }
 
 const {
+  imageSource,
+  imageAlt,
   projectDescription,
   projectName,
   projectLiveLink,
@@ -17,30 +21,24 @@ const {
 }: Props = Astro.props;
 ---
 
-<article
-  class="overflow-hidden rounded-md bg-zinc-200 outline outline-zinc-300 dark:bg-zinc-800 dark:outline-none"
->
-  <slot name="project-image" />
-  <div class="flow px-6 py-8">
-    <h3 class="text-xl">{projectName}</h3>
-    <p class="text-base">{projectDescription}</p>
-    <div>
-      <ul class="flex flex-wrap gap-2">
+<article>
+  <div
+    id="project-card"
+    class="flow overflow-hidden rounded-md bg-zinc-200 outline outline-zinc-300 dark:bg-zinc-800 dark:outline-none"
+  >
+    <Image src={imageSource} alt={imageAlt} />
+    <div class="flow p-4 lg:p-8">
+      <ul class="flex gap-2">
         <slot />
       </ul>
-    </div>
-    <div class="flow pt-6">
-      <ul class="grid gap-2 lg:max-w-fit lg:grid-cols-2 lg:gap-4">
-        <li class="text-base lg:max-w-fit">
-          <LinkButtonPrimary
-            linkURL={projectGithubLink}
-            linkText="GitHub Repo"
-          />
-        </li>
-        <li class="text-base lg:max-w-fit">
-          <LinkButtonSecondary linkURL={projectLiveLink} linkText="Live Site" />
-        </li>
-      </ul>
+      <h3 class="text-xl">{projectName}</h3>
+      <p>{projectDescription}</p>
+      <div class="flex flex-col gap-4 md:flex-row">
+        <ProjectCardLinks
+          projectLiveLink={projectLiveLink}
+          projectGithubLink={projectGithubLink}
+        />
+      </div>
     </div>
   </div>
 </article>

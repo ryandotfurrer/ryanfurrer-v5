@@ -6,13 +6,15 @@ export interface Props {
 const { title, description }: Props = Astro.props;
 ---
 
-<header
-  class="flow mx-auto grid min-h-[65vh] max-w-screen-lg place-content-center px-8 lg:px-0"
->
-  <h1>{title}</h1>
-  <p
-    class="text-pretty text-2xl font-semibold leading-none text-emerald-600 dark:text-emerald-400"
+<section class="py-24 md:py-44 lg:py-72 xl:py-96">
+  <div
+    class="flow mx-auto grid h-auto max-w-screen-lg place-content-center px-8 lg:px-0"
   >
-    {description}
-  </p>
-</header>
+    <h1>{title}</h1>
+    <p
+      class="text-pretty text-2xl font-semibold leading-none text-emerald-600 dark:text-emerald-400"
+    >
+      {description}
+    </p>
+  </div>
+</section>
