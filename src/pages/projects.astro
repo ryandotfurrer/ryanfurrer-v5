@@ -1,250 +1,206 @@
 ---
-import "../styles/global.css";
-import HeaderNavBar from "../components/HeaderNavBar.astro";
-import Hero from "../layouts/Hero.astro";
-import Footer from "../components/Footer.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import ProjectTechTag from "../components/ProjectTechTag.astro";
+import Layout from "../layouts/Layout.astro";
 import Section2XL from "../layouts/Section2XL.astro";
 import SectionXL from "../layouts/SectionXL.astro";
-const pageTitle = "Projects";
-const heroHeader = "Projects";
-const heroDescription = "What I've created and worked on.";
+const title = "Projects";
+const description = "What I've created and worked on.";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Ryan Furrer" />
-    <meta
-      name="description"
-      content="Ryan Furrer, a software engineer, streamer, and blogger with a focus on UX development. Proficient in React, NextJS, Astro, and Tailwind CSS, I bring transferable skills in project management, problem-solving, and more."
-    />
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={heroHeader} />
-    <meta
-      property="og:image"
-      content="https://a-us.storyblok.com/f/1016568/1200x630/f5c66c3b30/og-image.png"
-    />
-    <meta
-      property="og:image:alt"
-      content="Ryan Furrer, a software engineer, streamer, and blogger"
-    />
-    <meta property="og:site_name" content="Ryan Furrer" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:image:alt"
-      content="Ryan Furrer, a software engineer, streamer, and blogger"
-    />
-    <meta name="generator" content={Astro.generator} />
-    <script
-      is:inline
-      src="https://kit.fontawesome.com/dec2579292.js"
-      crossorigin="anonymous"></script>
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <header>
-      <HeaderNavBar />
-      <Hero heroHeader={heroHeader} heroDescription={heroDescription} />
-    </header>
-    <main id="main-fade-in" class="px-4">
-      <Section2XL>
-        <SectionXL>
-          <h2>Current Focus</h2>
-          <p>I am currently focusing on the following projects:</p>
-          <ol class="ml-12 list-decimal">
-            <li>Portfolio updates and refinement</li>
-            <li>Deals for Devs</li>
-            <li>Gridiron Survivor</li>
-            <li>Personal Project TBA</li>
-          </ol>
-          <p>Learn more about what I'm doing <a href="/now">now</a>.</p>
-          <p>
-            You can also catch me building in public on <a
-              href="https://www.twitch.tv/ryandotfurrer"
+<Layout title={title} description={description}>
+  <main id="main-fade-in" class="flow">
+    <SectionXL>
+      <h2>Open-Source Contributions</h2>
+      <div
+        id="project-grid-container"
+        class="grid gap-[2em] py-[2em] md:grid-cols-2 xl:grid-cols-3"
+      >
+        <ProjectCard
+          projectName="fullstack.chat"
+          projectDescription="fullstack.chat is a community for developers and builders. The person in charge, Brian Morrison, also hosts Spaces on X, formerly Twitter. It is a fantastic community that I am happy to contribute to."
+          projectLiveLink="https://fullstack.chat/"
+          projectGithubLink="https://github.com/fullstack-chat/fsc-core"
+        >
+          <ProjectTechTag technologyName="Gatsby" />
+          <ProjectTechTag technologyName="React" />
+          <ProjectTechTag technologyName="TypeScript" />
+        </ProjectCard>
+      </div>
+    </SectionXL>
+    <SectionXL>
+      <h2>Collaborative Projects</h2>
+      <div
+        id="project-grid-container"
+        class="grid gap-[2em] py-[2em] md:grid-cols-2 xl:grid-cols-3"
+      >
+        <ProjectCard
+          projectName="AIMS League - work in progress"
+          projectDescription="This site will be the home for AIMS League; Apex Intercontinental Motorsport League. A racing league hosted on Gran Turismo 7 that I help lead, moderate, and commentate on."
+          projectLiveLink="https://aimsleague.com/"
+          projectGithubLink="https://github.com/aimsleague/website"
+        >
+          <ProjectTechTag technologyName="Astro" />
+          <ProjectTechTag technologyName="React" />
+          <ProjectTechTag technologyName="Tailwind CSS" />
+          <ProjectTechTag technologyName="Storyblok" />
+          <ProjectTechTag technologyName="SEO" />
+          <li class="mt-[1em]">
+            Check out our VODs on <a
+              href="https://www.youtube.com/@AIMSLeague"
               target="_blank"
-              rel="noopener noreferrer">Twitch</a
-            > every Monday, Tuesday, Wednesday, and Saturday!
-          </p>
-        </SectionXL>
-      </Section2XL>
-      <section>
-        <h2>Personal Projects</h2>
-        <p>
-          All projects are in chronological order aside from my previous
-          portfolio revisions.
-        </p>
-        <div
-          id="project-grid-container"
-          class="grid gap-[2em] py-[2em] md:grid-cols-2 xl:grid-cols-3"
+              rel="noopener noreferrer"
+              class="text-red-700 decoration-red-700 hover:text-red-700 dark:text-red-500 dark:decoration-red-500 dark:hover:text-red-500"
+              >YouTube</a
+            > or Live Streams on <a
+              href="https://www.twitch.tv/aimsleague"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover-text-violet-600 text-violet-600 hover:text-violet-600 dark:text-violet-400 dark:hover:text-violet-400"
+              >Twitch</a
+            >!
+          </li>
+        </ProjectCard>
+      </div>
+    </SectionXL>
+    <SectionXL>
+      <h2>Personal Projects</h2>
+      <p>
+        All projects are in chronological order aside from my previous portfolio
+        revisions.
+      </p>
+      <div
+        id="project-grid-container"
+        class="grid gap-[2em] py-[2em] md:grid-cols-2 xl:grid-cols-3"
+      >
+        <ProjectCard
+          projectName="Astro Tailwind Starter"
+          projectDescription="A small and slightly opinionated template using Astro and Tailwind CSS."
+          projectLiveLink="https://rf-astro-tailwind-starter.vercel.app/"
+          projectGithubLink="https://github.com/ryandotfurrer/astro-tailwind-starter"
         >
-          <ProjectCard
-            projectName="Astro Tailwind Starter"
-            projectDescription="A small and slightly opinionated template using Astro and Tailwind CSS."
-            projectLiveLink="https://rf-astro-tailwind-starter.vercel.app/"
-            projectGithubLink="https://github.com/ryandotfurrer/astro-tailwind-starter"
-          >
-            <ProjectTechTag technologyName="Astro" />
-            <ProjectTechTag technologyName="Tailwind CSS" />
-          </ProjectCard>
-          <ProjectCard
-            projectName="Next Tailwind Starter"
-            projectDescription="A small and slightly opinionated template using Next and Tailwind CSS."
-            projectLiveLink="https://rf-next-tailwind-starter.vercel.app/"
-            projectGithubLink="https://github.com/ryandotfurrer/next-tailwind-starter"
-          >
-            <ProjectTechTag technologyName="NextJS" />
-            <ProjectTechTag technologyName="Tailwind CSS" />
-          </ProjectCard>
-          <ProjectCard
-            projectName="ryanfurrer-v5"
-            projectDescription="The very site you are on right now! This was my first endeavor with Astro, Tailwind, and Storyblok and I absolutely loved learning and using these new tools to build it. It serves as a home for my projects, blogs, and more."
-            projectLiveLink="https://ryanfurrer-v5.netlify.app/"
-            projectGithubLink="https://github.com/ryandotfurrer/ryanfurrer-v5"
-          >
-            <ProjectTechTag technologyName="Astro" />
-            <ProjectTechTag technologyName="React" />
-            <ProjectTechTag technologyName="Tailwind CSS" />
-            <ProjectTechTag technologyName="Storyblok" />
-            <ProjectTechTag technologyName="SEO" />
-          </ProjectCard>
-
-          <ProjectCard
-            projectName="Minimal Portfolio Template"
-            projectDescription="This was going to be the basis for version 5 of my portfolio until I decided it's time to try some new technologies. Now this is available on GitHub as a template for anyone to use."
-            projectLiveLink="https://rf-minimal-portfolio.netlify.app/"
-            projectGithubLink="https://github.com/ryandotfurrer/rf-minimal-portfolio"
-          >
-            <ProjectTechTag technologyName="HTML" />
-            <ProjectTechTag technologyName="Open Props CSS" />
-            <ProjectTechTag technologyName="JavaScript" />
-          </ProjectCard>
-
-          <ProjectCard
-            projectName="Grid Drawing"
-            projectDescription="A project I thought of to practice  vanilla JavaScript. Fill in the squares and draw whatever you'd like!"
-            projectLiveLink="https://rf-grid-drawing.netlify.app/"
-            projectGithubLink="https://github.com/ryandotfurrer/rf-grid-drawing"
-          >
-            <ProjectTechTag technologyName="HTML" />
-            <ProjectTechTag technologyName="SCSS" />
-            <ProjectTechTag technologyName="JavaScript" />
-          </ProjectCard>
-
-          <ProjectCard
-            projectName="Basic Blackjack"
-            projectDescription="A very basic version of Blackjack I built to practice vanilla JavaScript."
-            projectLiveLink="https://rf-blackjack.netlify.app/"
-            projectGithubLink="https://github.com/ryandotfurrer/rf-blackjack"
-          >
-            <ProjectTechTag technologyName="HTML" />
-            <ProjectTechTag technologyName="CSS" />
-            <ProjectTechTag technologyName="JavaScript" />
-          </ProjectCard>
-
-          <ProjectCard
-            projectName="furrever.wedding"
-            projectDescription="My personal wedding website! This was clearly a passion project and I was thrilled to make it so. I wanted an easy way to manage photos on the site, and Cloudinary was my choice. While I feel it was a bit clunky to use, it served it's purpose."
-            projectLiveLink="https://furrever.netlify.app/"
-            projectGithubLink="https://github.com/ryandotfurrer/furrever"
-          >
-            <ProjectTechTag technologyName="HTML" />
-            <ProjectTechTag technologyName="SCSS" />
-            <ProjectTechTag technologyName="JavaScript" />
-            <ProjectTechTag technologyName="Cloudinary" />
-          </ProjectCard>
-
-          <ProjectCard
-            projectName="ryanfurrer-v4"
-            projectDescription="Version 4 of my portfolio, and the one I am most proud of next to the current iteration. I learned a lot building this and kicked my design skills up a notch with it. It's not perfect, but that's why I started v5 from scratch! It was also the first time my portfolio was not a single-page site."
-            projectLiveLink="https://ryanfurrer-v4.netlify.app/"
-            projectGithubLink="https://github.com/ryandotfurrer/ryanfurrer-v4"
-          >
-            <ProjectTechTag technologyName="HTML" />
-            <ProjectTechTag technologyName="SCSS" />
-            <ProjectTechTag technologyName="JavaScript" />
-            <ProjectTechTag technologyName="SEO" />
-          </ProjectCard>
-
-          <ProjectCard
-            projectName="Portfolio v3"
-            projectDescription="I remember building this after learning some new CSS tricks and still really like it. It's simple, sure, but I think it's got character. I'd like to revisit this design langauge one day."
-            projectLiveLink="https://ryanfurrer-v3.netlify.app/"
-            projectGithubLink="https://github.com/ryandotfurrer/ryanfurrer-v3"
-          >
-            <ProjectTechTag technologyName="HTML" />
-            <ProjectTechTag technologyName="SCSS" />
-            <ProjectTechTag technologyName="JavaScript" />
-          </ProjectCard>
-
-          <ProjectCard
-            projectName="Portfolio v2"
-            projectDescription="Looking back at this I cringe a bit; but I am sure we all do that with projects. At the time, I was incredibly proud of this one! The design was a big leap for me and I quickly learned about using more whitespace after this project. It was a lot of fun to build and iterate at the time and I'm still proud of it."
-            projectLiveLink="https://ryanfurrer-v2.netlify.app/"
-            projectGithubLink="https://github.com/ryandotfurrer/ryanfurrer-v2"
-          >
-            <ProjectTechTag technologyName="HTML" />
-            <ProjectTechTag technologyName="Open Props CSS" />
-            <ProjectTechTag technologyName="JavaScript" />
-          </ProjectCard>
-        </div>
-      </section>
-      <section>
-        <h2>Open-Source Contributions</h2>
-        <div
-          id="project-grid-container"
-          class="grid gap-[2em] py-[2em] md:grid-cols-2 xl:grid-cols-3"
+          <ProjectTechTag technologyName="Astro" />
+          <ProjectTechTag technologyName="Tailwind CSS" />
+        </ProjectCard>
+        <ProjectCard
+          projectName="Next Tailwind Starter"
+          projectDescription="A small and slightly opinionated template using Next and Tailwind CSS."
+          projectLiveLink="https://rf-next-tailwind-starter.vercel.app/"
+          projectGithubLink="https://github.com/ryandotfurrer/next-tailwind-starter"
         >
-          <ProjectCard
-            projectName="fullstack.chat"
-            projectDescription="fullstack.chat is a community for developers and builders. The person in charge, Brian Morrison, also hosts Spaces on X, formerly Twitter. It is a fantastic community that I am happy to contribute to."
-            projectLiveLink="https://fullstack.chat/"
-            projectGithubLink="https://github.com/fullstack-chat/fsc-core"
-          >
-            <ProjectTechTag technologyName="Gatsby" />
-            <ProjectTechTag technologyName="React" />
-            <ProjectTechTag technologyName="TypeScript" />
-          </ProjectCard>
-        </div>
-      </section>
-      <section>
-        <h2>Collaborative Projects</h2>
-        <div
-          id="project-grid-container"
-          class="grid gap-[2em] py-[2em] md:grid-cols-2 xl:grid-cols-3"
+          <ProjectTechTag technologyName="NextJS" />
+          <ProjectTechTag technologyName="Tailwind CSS" />
+        </ProjectCard>
+        <ProjectCard
+          projectName="ryanfurrer-v5"
+          projectDescription="The very site you are on right now! This was my first endeavor with Astro, Tailwind, and Storyblok and I absolutely loved learning and using these new tools to build it. It serves as a home for my projects, blogs, and more."
+          projectLiveLink="https://ryanfurrer-v5.netlify.app/"
+          projectGithubLink="https://github.com/ryandotfurrer/ryanfurrer-v5"
         >
-          <ProjectCard
-            projectName="AIMS League - work in progress"
-            projectDescription="This site will be the home for AIMS League; Apex Intercontinental Motorsport League. A racing league hosted on Gran Turismo 7 that I help lead, moderate, and commentate on."
-            projectLiveLink="https://aimsleague.com/"
-            projectGithubLink="https://github.com/aimsleague/website"
-          >
-            <ProjectTechTag technologyName="Astro" />
-            <ProjectTechTag technologyName="React" />
-            <ProjectTechTag technologyName="Tailwind CSS" />
-            <ProjectTechTag technologyName="Storyblok" />
-            <ProjectTechTag technologyName="SEO" />
-            <li class="mt-[1em]">
-              Check out our VODs on <a
-                href="https://www.youtube.com/@AIMSLeague"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-red-700 decoration-red-700 hover:text-red-700 dark:text-red-500 dark:decoration-red-500 dark:hover:text-red-500"
-                >YouTube</a
-              > or Live Streams on <a
-                href="https://www.twitch.tv/aimsleague"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="hover-text-violet-600 text-violet-600 hover:text-violet-600 dark:text-violet-400 dark:hover:text-violet-400"
-                >Twitch</a
-              >!
-            </li>
-          </ProjectCard>
-        </div>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+          <ProjectTechTag technologyName="Astro" />
+          <ProjectTechTag technologyName="React" />
+          <ProjectTechTag technologyName="Tailwind CSS" />
+          <ProjectTechTag technologyName="Storyblok" />
+          <ProjectTechTag technologyName="SEO" />
+        </ProjectCard>
+
+        <ProjectCard
+          projectName="Minimal Portfolio Template"
+          projectDescription="This was going to be the basis for version 5 of my portfolio until I decided it's time to try some new technologies. Now this is available on GitHub as a template for anyone to use."
+          projectLiveLink="https://rf-minimal-portfolio.netlify.app/"
+          projectGithubLink="https://github.com/ryandotfurrer/rf-minimal-portfolio"
+        >
+          <ProjectTechTag technologyName="HTML" />
+          <ProjectTechTag technologyName="Open Props CSS" />
+          <ProjectTechTag technologyName="JavaScript" />
+        </ProjectCard>
+
+        <ProjectCard
+          projectName="Grid Drawing"
+          projectDescription="A project I thought of to practice  vanilla JavaScript. Fill in the squares and draw whatever you'd like!"
+          projectLiveLink="https://rf-grid-drawing.netlify.app/"
+          projectGithubLink="https://github.com/ryandotfurrer/rf-grid-drawing"
+        >
+          <ProjectTechTag technologyName="HTML" />
+          <ProjectTechTag technologyName="SCSS" />
+          <ProjectTechTag technologyName="JavaScript" />
+        </ProjectCard>
+
+        <ProjectCard
+          projectName="Basic Blackjack"
+          projectDescription="A very basic version of Blackjack I built to practice vanilla JavaScript."
+          projectLiveLink="https://rf-blackjack.netlify.app/"
+          projectGithubLink="https://github.com/ryandotfurrer/rf-blackjack"
+        >
+          <ProjectTechTag technologyName="HTML" />
+          <ProjectTechTag technologyName="CSS" />
+          <ProjectTechTag technologyName="JavaScript" />
+        </ProjectCard>
+
+        <ProjectCard
+          projectName="furrever.wedding"
+          projectDescription="My personal wedding website! This was clearly a passion project and I was thrilled to make it so. I wanted an easy way to manage photos on the site, and Cloudinary was my choice. While I feel it was a bit clunky to use, it served it's purpose."
+          projectLiveLink="https://furrever.netlify.app/"
+          projectGithubLink="https://github.com/ryandotfurrer/furrever"
+        >
+          <ProjectTechTag technologyName="HTML" />
+          <ProjectTechTag technologyName="SCSS" />
+          <ProjectTechTag technologyName="JavaScript" />
+          <ProjectTechTag technologyName="Cloudinary" />
+        </ProjectCard>
+
+        <ProjectCard
+          projectName="ryanfurrer-v4"
+          projectDescription="Version 4 of my portfolio, and the one I am most proud of next to the current iteration. I learned a lot building this and kicked my design skills up a notch with it. It's not perfect, but that's why I started v5 from scratch! It was also the first time my portfolio was not a single-page site."
+          projectLiveLink="https://ryanfurrer-v4.netlify.app/"
+          projectGithubLink="https://github.com/ryandotfurrer/ryanfurrer-v4"
+        >
+          <ProjectTechTag technologyName="HTML" />
+          <ProjectTechTag technologyName="SCSS" />
+          <ProjectTechTag technologyName="JavaScript" />
+          <ProjectTechTag technologyName="SEO" />
+        </ProjectCard>
+
+        <ProjectCard
+          projectName="Portfolio v3"
+          projectDescription="I remember building this after learning some new CSS tricks and still really like it. It's simple, sure, but I think it's got character. I'd like to revisit this design langauge one day."
+          projectLiveLink="https://ryanfurrer-v3.netlify.app/"
+          projectGithubLink="https://github.com/ryandotfurrer/ryanfurrer-v3"
+        >
+          <ProjectTechTag technologyName="HTML" />
+          <ProjectTechTag technologyName="SCSS" />
+          <ProjectTechTag technologyName="JavaScript" />
+        </ProjectCard>
+
+        <ProjectCard
+          projectName="Portfolio v2"
+          projectDescription="Looking back at this I cringe a bit; but I am sure we all do that with projects. At the time, I was incredibly proud of this one! The design was a big leap for me and I quickly learned about using more whitespace after this project. It was a lot of fun to build and iterate at the time and I'm still proud of it."
+          projectLiveLink="https://ryanfurrer-v2.netlify.app/"
+          projectGithubLink="https://github.com/ryandotfurrer/ryanfurrer-v2"
+        >
+          <ProjectTechTag technologyName="HTML" />
+          <ProjectTechTag technologyName="Open Props CSS" />
+          <ProjectTechTag technologyName="JavaScript" />
+        </ProjectCard>
+      </div>
+    </SectionXL>
+    <Section2XL>
+      <h2>Current Focus</h2>
+      <p>I am currently focusing on the following projects:</p>
+      <ol class="ml-12 list-decimal">
+        <li>Portfolio updates and refinement</li>
+        <li>Deals for Devs</li>
+        <li>Gridiron Survivor</li>
+        <li>Personal Project TBA</li>
+      </ol>
+      <p>Learn more about what I'm doing <a href="/now">now</a>.</p>
+      <p>
+        You can also catch me building in public on <a
+          href="https://www.twitch.tv/ryandotfurrer"
+          target="_blank"
+          rel="noopener noreferrer">Twitch</a
+        > every Monday, Tuesday, Wednesday, and Saturday!
+      </p>
+    </Section2XL>
+  </main>
+</Layout>
