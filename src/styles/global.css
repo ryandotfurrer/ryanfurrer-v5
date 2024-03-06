@@ -142,10 +142,6 @@ pre {
 
 /* Semantic HTML Styles */
 
-/* nav:is(#header-nav) {
-  @apply container mx-auto flex items-center px-8 py-8 lg:py-12;
-} */
-
 #hero-link-container > p:hover > :last-child {
   @apply opacity-100;
 }

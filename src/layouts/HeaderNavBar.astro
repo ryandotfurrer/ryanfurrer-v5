@@ -4,7 +4,7 @@ import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
 
 <style>
   #navlist {
-    @apply fixed -right-full top-24 z-50 flex h-screen w-full flex-col gap-6 bg-white px-4 pt-8 text-right transition-[right] duration-300 ease-in-out lg:static lg:top-0 lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:py-0 dark:bg-black;
+    @apply fixed -right-full top-24 z-50 flex h-screen w-full flex-col gap-4 bg-white px-4 pt-8 text-right transition-[right] duration-300 ease-in-out lg:static lg:top-0 lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:py-0 dark:bg-black;
   }
   #navlist.active {
     @apply right-0;
@@ -36,8 +36,7 @@ import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
 </style>
 
 <nav
-  id="header-nav"
-  class="container mx-auto flex max-w-screen-xl items-center px-4 py-8 lg:py-12"
+  class="container mx-auto flex max-w-screen-xl items-center py-8 lg:py-12 xl:px-4"
   aria-label="main navigation bar"
 >
   <a
@@ -46,7 +45,7 @@ import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
     class="mr-auto text-2xl font-semibold lowercase text-zinc-900 hover:text-emerald-600 xl:text-3xl dark:text-zinc-50 dark:hover:text-emerald-400"
     >Ryan Furrer</a
   >
-  <ul id="navlist" class="flex gap-[1em]">
+  <ul id="navlist" class="flex gap-4">
     <li>
       <a
         href=`${resume}`
