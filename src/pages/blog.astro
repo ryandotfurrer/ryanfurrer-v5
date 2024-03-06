@@ -15,8 +15,10 @@ const description = "Learn what I'm up to with articles";
 
 <Layout title={title} description={description}>
   <main id="main-fade-in" class="flow">
-    <SectionXL>
+    <section
+      class="flow md:pt-22 mx-auto max-w-screen-xl pt-12 lg:pt-36 xl:pt-48"
+    >
       <StoryblokComponent blok={content} />
-    </SectionXL>
+    </section>
   </main>
 </Layout>

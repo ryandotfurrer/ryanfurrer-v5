@@ -1,9 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import SectionXL from "../layouts/SectionXL.astro";
 import Section2XL from "../layouts/Section2XL.astro";
 import { Image } from "astro:assets";
-// import { Icon } from "astro-icon/components";
 import SoftwareCard from "../components/SoftwareCard.astro";
 import onepassword from "../assets/logos/onepassword.svg";
 import affinity from "../assets/logos/affinity.svg";
@@ -28,9 +26,9 @@ const description =
 ---
 
 <Layout title={title} description={description}>
-  <main class="flow container mx-auto px-4">
+  <main class="flow container mx-auto">
     <Section2XL>
-      <SectionXL>
+      <section class="flow">
         <h2>Hardware</h2>
         <h3>Development Computer</h3>
         <p>MacBook Pro 16"</p>
@@ -74,8 +72,8 @@ const description =
         <p>Rode PodMic</p>
         <h5>Audio Interface</h5>
         <p>Elgato Wave XLR</p>
-      </SectionXL>
-      <SectionXL>
+      </section>
+      <section class="flow">
         <h2>Software</h2>
         <p>
           Here is the software and tools I use most commonly both in Web
@@ -221,7 +219,7 @@ const description =
             />
           </SoftwareCard>
         </div>
-      </SectionXL>
+      </section>
     </Section2XL>
   </main>
 </Layout>
