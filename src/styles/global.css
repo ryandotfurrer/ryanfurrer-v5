@@ -147,16 +147,9 @@ pre {
 }
 
 /* Constrains elements inside the main element to a certain width (container class), centers them, and adds padding to the top and bottom of the main element. */
-main {
-  @apply container mx-auto animate-fade space-y-[3em] pb-[3em] animate-delay-300 animate-duration-300;
-}
 
 main a {
   @apply underline decoration-emerald-600 dark:decoration-emerald-400;
-}
-
-#main-fade-in {
-  @apply animate-fade animate-delay-[1400ms] animate-duration-300 animate-once animate-ease-in;
 }
 
 /* Centers element on the page. Adds "flow" to elements nested inside the section element using the space-y-[] rule. Also adds horizontal padding so elements are not butting up on the extreme edges of the window on smaller screen sizes. */

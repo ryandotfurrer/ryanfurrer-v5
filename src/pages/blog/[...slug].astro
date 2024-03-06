@@ -4,7 +4,7 @@ import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import HeaderNavBar from "../../components/HeaderNavBar.astro";
 import Footer from "../../components/Footer.astro";
 import "../../styles/global.css";
-import "../../styles/highlightjs-styles/nord.min.css";
+import "../../styles/highlightjs-styles/github-dark-dimmed.min.css";
 
 export const prerender = true;
 export async function getStaticPaths() {
@@ -57,10 +57,6 @@ const story = data.story;
     />
 
     <meta name="generator" content={Astro.generator} />
-    <link
-      rel="stylesheet"
-      href="/src/styles/highlightjs-styles/dracula.min.css"
-    />
     <link rel="canonical" href={`https://ryanfurrer.com/blog`} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -75,10 +71,16 @@ const story = data.story;
       crossorigin="anonymous"></script>
     <script is:inline src="/highlight.min.js"></script>
   </head>
-  <body>
-    <HeaderNavBar />
+  <body class="flow container mx-auto px-4 2xl:px-0">
+    <div class="flow container mx-auto max-w-screen-2xl">
+      <header>
+        <HeaderNavBar />
+      </header>
+    </div>
 
-    <main>
+    <main
+      class="flow xl:py-15 animate-fade-down py-4 animate-delay-0 animate-duration-300 animate-once animate-ease-in-out md:py-8 lg:py-12"
+    >
       <StoryblokComponent blok={story.content} />
     </main>
     <Footer />
