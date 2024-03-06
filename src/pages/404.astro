@@ -1,79 +1,29 @@
 ---
-import "../styles/global.css";
-import HeaderNavBar from "../components/HeaderNavBar.astro";
-import Hero from "../layouts/Hero.astro";
+import Layout from "../layouts/Layout.astro";
 import SocialLinks from "../components/SocialLinks.astro";
-import Footer from "../components/Footer.astro";
-const pageTitle = "404: Page Not Found";
-const heroHeader = "Error 404: Page not found.";
-const heroDescription =
-  "Uh oh, a 404 Error?! Shoot, you're not supposed to see this.";
-const heroParagraph =
+import SectionXL from "../layouts/SectionXL.astro";
+
+const title = "404: Page Not Found";
+const description =
   "It seems the page you tried visiting does not exist, or you've found a broken link. But while you're here...";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Ryan Furrer" />
-    <meta
-      name="description"
-      content="Ryan Furrer, a software engineer, streamer, and blogger with a focus on UX development. Proficient in React, NextJS, Astro, and Tailwind CSS, I bring transferable skills in project management, problem-solving, and more."
-    />
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={heroHeader} />
-    <meta
-      property="og:image"
-      content="https://a-us.storyblok.com/f/1016568/1200x630/f5c66c3b30/og-image.png"
-    />
-    <meta
-      property="og:image:alt"
-      content="Ryan Furrer, a software engineer, streamer, and blogger"
-    />
-    <meta property="og:site_name" content="Ryan Furrer" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:image:alt"
-      content="Ryan Furrer, a software engineer, streamer, and blogger"
-    />
-    <meta name="generator" content={Astro.generator} />
-    <script
-      is:inline
-      src="https://kit.fontawesome.com/dec2579292.js"
-      crossorigin="anonymous"></script>
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <header>
-      <HeaderNavBar />
-      <Hero
-        heroHeader={heroHeader}
-        heroDescription={heroDescription}
-        heroParagraph={heroParagraph}
-      />
-    </header>
-    <main id="main-fade-in" class="px-4">
-      <section class="flow grid place-items-center">
-        <article class="flow">
-          <div id="read-more-blogs" class="flow">
-            <p>Can I interest you in some of my blogs?</p>
-            <p>
-              <div id="link-container" class="flex flex-col">
-                <p>
-                  ✅ <a href="/blog">Yes I'd love to read some</a>
-                </p>
-                <p>❌ <a href="/">No, take me home</a></p>
-              </div>
-            </p>
-          </div>
-          <div id="social-icons" class="flow grid grid-cols-1">
-            <p>Or maybe you'd like to follow me elsewhere?</p>
-            <SocialLinks />
-          </div>
-        </article>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+<Layout title={title} description={description}>
+  <main id="main-fade-in" class="flow">
+    <section class="flow mx-auto max-w-screen-lg">
+      <p>Can I interest you in some of my blogs?</p>
+      <p>
+        <div class="flex flex-col">
+          <p>
+            ✅ <a href="/blog">Yes I'd love to read some</a>
+          </p>
+          <p>❌ <a href="/">No, take me home</a></p>
+        </div>
+      </p>
+      <div class="flow">
+        <p>Or maybe you'd like to follow me elsewhere?</p>
+        <SocialLinks />
+      </div>
+    </section>
+  </main>
+</Layout>

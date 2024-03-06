@@ -8,16 +8,18 @@ import NextStarterImage from "../assets/photos/nextjs-starter-dark.png";
 import ProjectCardFeatured from "../components/ProjectCardFeatured.astro";
 import ProjectTechTag from "../components/ProjectTechTag.astro";
 import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
-import Section2XLFeatured from "../layouts/Section2XLFeatured.astro";
+import Section2XL from "../layouts/Section2XL.astro";
+import SectionXL from "../layouts/SectionXL.astro";
 import SocialLinks from "../components/SocialLinks.astro";
+
+const title = "Ryan Furrer | Software Engineer";
+const description =
+  "Building the web presence you deserve through quality code.";
 ---
 
-<LayoutHome
-  title="Ryan Furrer | Software Engineer"
-  description="Building the web presence you deserve through quality code."
->
+<LayoutHome title={title} description={description}>
   <main id="main-fade-in" class="flow">
-    <section class="flow">
+    <SectionXL class="flow">
       <h2 class="text-center">Hello There</h2>
       <div
         class="flow lg:noflow mx-auto grid max-w-screen-lg grid-cols-1 md:place-items-center lg:grid-cols-2 lg:gap-8"
@@ -80,8 +82,8 @@ import SocialLinks from "../components/SocialLinks.astro";
           <SocialLinks />
         </div>
       </div>
-    </section>
-    <Section2XLFeatured>
+    </SectionXL>
+    <Section2XL>
       <h2>Featured Projects</h2>
       <p>
         Looking for more? Check out my <a href="/projects">projects page</a>.
@@ -110,6 +112,6 @@ import SocialLinks from "../components/SocialLinks.astro";
           <ProjectTechTag technologyName="Tailwind" />
         </ProjectCardFeatured>
       </div>
-    </Section2XLFeatured>
+    </Section2XL>
   </main>
 </LayoutHome>
