@@ -4,130 +4,94 @@ import HeaderNavBar from "../components/HeaderNavBar.astro";
 import Footer from "../components/Footer.astro";
 import SocialLinks from "../components/SocialLinks.astro";
 import Section2XL from "../layouts/Section2XL.astro";
-const pageTitle = "Contact Ryan";
-const heroHeader = "Want to chat, email, or connect?";
-import LinkButtonSecondary from "../components/LinkButtonSecondary.astro";
+const title = "Contact Ryan";
+const description = "Want to chat, email, or connect?";
 import LinkButtonPrimary from "../components/LinkButtonPrimary.astro";
+import LayoutNoHero from "../layouts/LayoutNoHero.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Ryan Furrer" />
-    <meta
-      name="description"
-      content="Ryan Furrer, a software engineer, streamer, and blogger with a focus on UX development. Proficient in React, NextJS, Astro, and Tailwind CSS, I bring transferable skills in project management, problem-solving, and more."
-    />
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={heroHeader} />
-    <meta
-      property="og:image"
-      content="https://a-us.storyblok.com/f/1016568/1200x630/f5c66c3b30/og-image.png"
-    />
-    <meta
-      property="og:image:alt"
-      content="Ryan Furrer, a software engineer, streamer, and blogger"
-    />
-    <meta property="og:site_name" content="Ryan Furrer" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:image:alt"
-      content="Ryan Furrer, a software engineer, streamer, and blogger"
-    />
-    <meta name="generator" content={Astro.generator} />
-    <script
-      is:inline
-      src="https://kit.fontawesome.com/dec2579292.js"
-      crossorigin="anonymous"></script>
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <header class="h-auto">
-      <HeaderNavBar />
-      <!-- <Hero heroHeader={heroHeader} heroDescription={heroDescription} /> -->
-    </header>
-    <main id="main-fade-in" class="px-4">
-      <Section2XL>
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          <div class="flow">
-            <h1>Contact Me</h1>
-            <p>
-              I'd love to hear from you no matter what. I am open to employment
-              opportunities, mentorships (being both a mentor and mentee),
-              collaborative projects, and more! I am exicited to meet new people
-              in the space and grow as a developer.
-            </p>
-            <h2>Chat with me</h2>
-            <p>
-              I'd love to hear from you, so please set up a time to chat on via <a
-                href="https://cal.com/ryandotfurrer"
-                target="_blank"
-                rel="noopener noreferrer">Cal.com</a
-              > where we can have a call or video chat; there's nothing like
-              putting a face to the name!
-            </p>
-            <LinkButtonPrimary
-              linkText="Chat with Ryan"
-              linkURL="https://cal.com/ryandotfurrer"
-            />
-            <h2>Connect with me</h2>
-            <p>Feel free to connect with me on any of the platforms below!</p>
-            <SocialLinks />
-          </div>
-          <div class="flow grid gap-4">
-            <h2>Send me an email</h2>
-            <p>
-              Email more your thing? Don't worry, that's good for me too. Just
-              fill out the form below, click send, and your digital letter will
-              be sent to my inbox in no time.
-            </p>
-            <div id="contact-form-container">
-              <form
-                data-netlify="true"
-                name="contact-form"
-                class="grid grid-cols-1 space-y-[1em]"
-              >
-                <div id="name-input-container" class="input-container">
-                  <label for="name"
-                    >Name<input
-                      type="text"
-                      name="name"
-                      id="name"
-                      required
-                      autocomplete="name"
-                    /></label
-                  >
-                </div>
-                <div id="email-input-container" class="input-container">
-                  <label for="email"
-                    >Email<input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      autocomplete="email"
-                    /></label
-                  >
-                </div>
-                <div id="message-input-container" class="input-container">
-                  <label for="message"
-                    >Message<textarea
-                      name="message"
-                      id="message"
-                      required
-                      autocorrect="on"></textarea></label
-                  >
-                </div>
-                <button type="submit" class="btn-primary lg:w-max"
-                  >Send Email</button
+<LayoutNoHero title={title} description={description}>
+  <main id="main-fade-in">
+    <Section2XL>
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div class="flow">
+          <h1>Contact Me</h1>
+          <p>
+            I'd love to hear from you no matter what. I am open to employment
+            opportunities, mentorships (being both a mentor and mentee),
+            collaborative projects, and more! I am exicited to meet new people
+            in the space and grow as a developer.
+          </p>
+          <h2>Chat with me</h2>
+          <p>
+            I'd love to hear from you, so please set up a time to chat on via <a
+              href="https://cal.com/ryandotfurrer"
+              target="_blank"
+              rel="noopener noreferrer">Cal.com</a
+            > where we can have a call or video chat; there's nothing like
+            putting a face to the name!
+          </p>
+          <LinkButtonPrimary
+            linkText="Chat with Ryan"
+            linkURL="https://cal.com/ryandotfurrer"
+          />
+          <h2>Connect with me</h2>
+          <p>Feel free to connect with me on any of the platforms below!</p>
+          <SocialLinks />
+        </div>
+        <div class="flow grid gap-4">
+          <h2>Send me an email</h2>
+          <p>
+            Email more your thing? Don't worry, that's good for me too. Just
+            fill out the form below, click send, and your digital letter will be
+            sent to my inbox in no time.
+          </p>
+          <div id="contact-form-container">
+            <form
+              data-netlify="true"
+              name="contact-form"
+              class="grid grid-cols-1 space-y-[1em]"
+            >
+              <div id="name-input-container" class="input-container">
+                <label for="name"
+                  >Name<input
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                    autocomplete="name"
+                  /></label
                 >
-              </form>
-            </div>
+              </div>
+              <div id="email-input-container" class="input-container">
+                <label for="email"
+                  >Email<input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                  /></label
+                >
+              </div>
+              <div id="message-input-container" class="input-container">
+                <label for="message"
+                  >Message<textarea
+                    name="message"
+                    id="message"
+                    required
+                    autocorrect="on"></textarea></label
+                >
+              </div>
+              <button
+                type="submit"
+                class="dark:hover-text-zinc-900 group flex w-full items-center justify-center gap-4 rounded bg-emerald-600 px-6 py-3 text-zinc-50 no-underline transition-transform duration-300 ease-in-out hover:text-zinc-50 md:hover:scale-105 lg:max-w-fit dark:bg-emerald-400 dark:text-zinc-900 hover:dark:text-zinc-900"
+                >Send Email</button
+              >
+            </form>
           </div>
         </div>
-      </Section2XL>
-    </main>
-  </body>
-</html>
-<Footer />
+      </div>
+    </Section2XL>
+  </main>
+</LayoutNoHero>
