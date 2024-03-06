@@ -5,68 +5,24 @@ import musicPicture from "../assets/photos/about-music.webp";
 import procurementPicture from "../assets/photos/about-procurement.webp";
 import webdevPicture from "../assets/photos/about-web-dev.webp";
 import "../styles/global.css";
-import HeaderNavBar from "../components/HeaderNavBar.astro";
-import Hero from "../layouts/Hero.astro";
-import Footer from "../components/Footer.astro";
 import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
-const pageTitle = "About Me";
-const heroHeader =
-  "My goal is to make the world a better place one website at a time";
-const heroDescription = "Here is where you can learn a bit more about me.";
+import Layout from "../layouts/Layout.astro";
+const title = "About Me";
+const description = "Here is where you can learn a bit more about me.";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Ryan Furrer" />
-    <meta
-      name="description"
-      content="Ryan Furrer, a software engineer, streamer, and blogger with a focus on UX development. Proficient in React, NextJS, Astro, and Tailwind CSS, I bring transferable skills in project management, problem-solving, and more."
-    />
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={heroHeader} />
-    <meta
-      property="og:image"
-      content="https://a-us.storyblok.com/f/1016568/1200x630/f5c66c3b30/og-image.png"
-    />
-    <meta
-      property="og:image:alt"
-      content="Ryan Furrer, a software engineer, streamer, and blogger"
-    />
-    <meta property="og:site_name" content="Ryan Furrer" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:image:alt"
-      content="Ryan Furrer, a software engineer, streamer, and blogger"
-    />
-    <meta name="generator" content={Astro.generator} />
-    <script
-      is:inline
-      src="https://kit.fontawesome.com/dec2579292.js"
-      crossorigin="anonymous"></script>
-    <title>{pageTitle}</title>
-  </head>
-</html>
-<body>
-  <header>
-    <HeaderNavBar />
-    <Hero heroHeader={heroHeader} heroDescription={heroDescription} />
-  </header>
-  <main id="main-fade-in" class="flow px-4">
-    <article class="mx-auto max-w-prose space-y-[3em] border-0">
+<Layout title={title} description={description}>
+  <main id="main-fade-in" class="flow">
+    <article class="flow mx-auto max-w-prose">
       <section
-        class="mx-auto grid grid-cols-1 space-y-[1em] md:place-items-center lg:grid-cols-2 lg:gap-8"
+        class="flow mx-auto grid grid-cols-1 md:place-items-center lg:grid-cols-2 lg:gap-8"
       >
         <Image
           src={profilePicture}
           alt=`Image of Ryan Furrer on a dark teal to light teal gradient background.`
         />
 
-        <div
-          id="greeting-container-verbiage-container"
-          class="space-y-4 lg:leading-relaxed"
-        >
+        <div id="greeting-container-verbiage-container" class="flow">
           <p>
             My name is Ryan Furrer, and I am a software engineer, <a
               href="https://www.twitch.tv/ryandotfurrer"
@@ -91,7 +47,7 @@ const heroDescription = "Here is where you can learn a bit more about me.";
           </p>
         </div>
       </section>
-      <section>
+      <section class="flow">
         <h2>Personal Background</h2>
         <p>
           First, thank you for visiting my site; I appreciate your interest in
@@ -121,7 +77,7 @@ const heroDescription = "Here is where you can learn a bit more about me.";
           musician.
         </p>
       </section>
-      <section>
+      <section class="flow py-6 md:py-11">
         <h2>My Journey</h2>
         <h3>Music</h3>
         <Image src={musicPicture} alt="Row of string instruments." />
@@ -202,7 +158,7 @@ const heroDescription = "Here is where you can learn a bit more about me.";
           lack of passion or interest, but just being overwhelmed at times.
         </p>
       </section>
-      <section>
+      <section class="flow py-6 md:py-11">
         <h2>My Goals, Mission, and Values</h2>
         <h3>My Current Goal</h3>
         <p>
@@ -257,7 +213,7 @@ const heroDescription = "Here is where you can learn a bit more about me.";
           person's life, then I can rest easy.
         </p>
       </section>
-      <section>
+      <section class="flow py-6 md:py-11">
         <h2>Conclusion</h2>
         <div
           class="mx-auto grid grid-cols-1 md:grid-cols-2 md:place-items-center md:gap-8"
@@ -290,5 +246,4 @@ const heroDescription = "Here is where you can learn a bit more about me.";
       </section>
     </article>
   </main>
-  <Footer />
-</body>
+</Layout>
