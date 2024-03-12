@@ -4,7 +4,7 @@ import AstroStarterImage from "../assets/images/projects-astro_starter.png";
 import LayoutHome from "../layouts/LayoutHome.astro";
 import memojiProfilePicture from "../assets/images/avatar-2x.webp";
 import NextStarterImage from "../assets/images/projects-nextjs_starter.png";
-import ProjectCardFeatured from "../components/ProjectCardFeatured.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 import ProjectTechTag from "../components/ProjectTechTag.astro";
 import resume from "../assets/files/ryan-furrer-resume_webdev.pdf";
 import Section2XL from "../layouts/Section2XL.astro";
@@ -90,8 +90,8 @@ const description =
         Looking for more? Check out my <a href="/projects">projects page</a>.
       </p>
       <div class="flow lg:noflow grid gap-4 lg:grid-cols-2 lg:gap-8">
-        <ProjectCardFeatured
-          imageSource={AstroStarterImage}
+        <ProjectCard
+          imagePath={AstroStarterImage}
           imageAlt="Screenshot of Astro & Tailwind Starter"
           projectName="Astro & Tailwind Starter"
           projectDescription="A basic yet slightly opinionated starter boilerplate I created to get started with Astro and Tailwind projects faster."
@@ -100,9 +100,9 @@ const description =
         >
           <ProjectTechTag technologyName="Astro" />
           <ProjectTechTag technologyName="Tailwind" />
-        </ProjectCardFeatured>
-        <ProjectCardFeatured
-          imageSource={NextStarterImage}
+        </ProjectCard>
+        <ProjectCard
+          imagePath={NextStarterImage}
           imageAlt="Screenshot of Astro & Tailwind Starter"
           projectName="Next & Tailwind Starter"
           projectDescription="A basic yet slightly opinionated starter boilerplate I created to get started with Next and Tailwind projects faster."
@@ -111,7 +111,7 @@ const description =
         >
           <ProjectTechTag technologyName="NextJS" />
           <ProjectTechTag technologyName="Tailwind" />
-        </ProjectCardFeatured>
+        </ProjectCard>
       </div>
     </Section2XL>
   </main>
