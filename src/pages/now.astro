@@ -2,8 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Section2XL from "../layouts/Section2XL.astro";
 import { Image } from "astro:assets";
-import dealsForDevs from "../assets/photos/dealsfordevs.png";
-import comingSoon from "../assets/photos/coming-soon.jpg";
+import DealsForDevsImage from "../assets/images/projects-dealsfordevs.png";
+import ComingSoonImage from "../assets/images/projects-coming_soon.jpg";
 
 const title = "Now";
 const description = "What I'm up to in the current moment.";
@@ -44,7 +44,7 @@ const description = "What I'm up to in the current moment.";
               aria-label=`Read more about `
             >
               <Image
-                src={dealsForDevs}
+                src={DealsForDevsImage}
                 class="aspect-video rounded-b-none transition-transform duration-300 hover:scale-110"
                 alt="Deals for Devs landing pages"
               />
@@ -116,7 +116,7 @@ const description = "What I'm up to in the current moment.";
               aria-label=`Disabled link`
             >
               <Image
-                src={comingSoon}
+                src={ComingSoonImage}
                 class="block aspect-video overflow-hidden rounded-b-none transition-transform duration-300 hover:scale-110"
                 alt="asdfgasfd"
               />
