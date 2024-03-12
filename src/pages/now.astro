@@ -4,6 +4,9 @@ import Section2XL from "../layouts/Section2XL.astro";
 import { Image } from "astro:assets";
 import DealsForDevsImage from "../assets/images/projects-dealsfordevs.png";
 import ComingSoonImage from "../assets/images/projects-coming_soon.jpg";
+import GridIronImage from "../assets/images/projects-gridiron.png";
+import ProjectTechTag from "../components/ProjectTechTag.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 
 const title = "Now";
 const description = "What I'm up to in the current moment.";
@@ -22,19 +25,49 @@ const description = "What I'm up to in the current moment.";
           I am excited to announce that I am working on a couple of projects
           with some incredible people I met at <a href="/blog/that-conference"
             >THAT Conference</a
-          >, <a
-            href="https://twitter.com/jamesqquick"
-            target="_blank"
-            rel="noopener noreferrer">James Q. Quick</a
-          > and <a
+          > - <a
             href="https://twitter.com/shashiwhocodes"
             target="_blank"
             rel="noopener noreferrer">Shashi Lo</a
+          > and <a
+            href="https://twitter.com/jamesqquick"
+            target="_blank"
+            rel="noopener noreferrer">James Q. Quick</a
           >!
         </p>
 
-        <div class="mx-auto grid gap-12">
-          <div
+        <div
+          class="flow lg:noflow grid gap-4 pb-12 pt-4 md:gap-8 lg:grid-cols-2 2xl:gap-12"
+        >
+          <ProjectCard
+            imagePath={GridIronImage}
+            imageAlt="Coming soon"
+            projectName="Gridiron Survivor"
+            projectDescription="This is a Football survivor app that I am building as part of a team being led by Shashi Lo. As a UX Engineer, I am responsible for briding design and code, creating the components that will make up the site."
+            projectGithubLink="https://github.com/LetsGetTechnical/gridiron-survivor"
+          >
+            <ProjectTechTag technologyName="NextJS" />
+            <ProjectTechTag technologyName="Appwrite" />
+            <ProjectTechTag technologyName="Tailwind" />
+            <ProjectTechTag technologyName="shadcn/ui" />
+            <ProjectTechTag technologyName="Storybook" />
+            <p slot="extra-description">Live link coming soon!</p>
+          </ProjectCard>
+          <ProjectCard
+            imagePath={DealsForDevsImage}
+            imageAlt="Screenshot of https://www.dealsfordevs.com/"
+            projectName="Deals for Devs"
+            projectDescription="This is an open source project owned by James Q. Quick that is aiming to send deals and giveaways for developers straight to their inbox monthly."
+            projectLiveLink="https://www.dealsfordevs.com/"
+            projectGithubLink="https://github.com/Learn-Build-Teach/deals-for-devs"
+          >
+            <ProjectTechTag technologyName="NextJS" />
+            <ProjectTechTag technologyName="Xata" />
+            <ProjectTechTag technologyName="Sentry" />
+            <ProjectTechTag technologyName="Clerk" />
+            <ProjectTechTag technologyName="Tailwind" />
+          </ProjectCard>
+          <!-- <div
             id="deals-for-devs"
             class="flow rounded-md bg-amber-400 text-zinc-900 dark:bg-amber-400"
           >
@@ -104,8 +137,8 @@ const description = "What I'm up to in the current moment.";
                 </li>
               </ul>
             </div>
-          </div>
-          <div
+          </div> -->
+          <!-- <div
             id="Gridiron Survivor"
             class="flow rounded-md bg-amber-400 text-zinc-900 dark:bg-amber-400"
           >
@@ -178,84 +211,84 @@ const description = "What I'm up to in the current moment.";
                 </li>
               </ul>
             </div>
-          </div>
+          </div> -->
         </div>
-      </section>
-      <h3>What I do for work</h3>
-      <p>
-        I'm transitioning careers from Procurement in Supply Chain to Web
-        Development and have been studying web development with a focus on
-        front-end work since late 2019. Currently I am learning React/NextJS and
-        mySQL via <a
-          href="https://github.com/ryandotfurrer"
-          target="_blank"
-          rel="noopener noreferrer">several projects</a
-        > as well as focusing on building my community on <a
-          href="https://twitter.com/ryandotfurrer"
-          target="_blank"
-          rel="noopener noreferrer"
-          >X,
-        </a><a
-          href="https://www.linkedin.com/in/ryanfurrer/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >LinkedIn,
-        </a> and <a
-          href="https://www.twitch.tv/ryandotfurrer"
-          target="_blank"
-          rel="noopener noreferrer">Twitch</a
-        >.
-      </p>
-      <h3>What I do for fun</h3>
-      <p>
-        Outisde of the work office, you'll often find me at my home office
-        coding or playing video games. My current backlog includes but is
-        certainly <i>not</i> limited to:
-      </p>
-      <ul class="ml-8 list-disc">
-        <li>
-          <a
-            href="https://na.finalfantasyxvi.com/"
+        <h3>What I do for work</h3>
+        <p>
+          I'm transitioning careers from Procurement in Supply Chain to Web
+          Development and have been studying web development with a focus on
+          front-end work since late 2019. Currently I am learning React/NextJS
+          and mySQL via <a
+            href="https://github.com/ryandotfurrer"
             target="_blank"
-            rel="noopener noreferrer">Final Fantasy XVI</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://seaofstarsgame.co/"
+            rel="noopener noreferrer">several projects</a
+          > as well as focusing on building my community on <a
+            href="https://twitter.com/ryandotfurrer"
             target="_blank"
-            rel="noopener noreferrer">Sea of Stars</a
-          >
-        </li>
-        <li>
-          <a
-            href="http://www.owlboygame.com/"
+            rel="noopener noreferrer"
+            >X,
+          </a><a
+            href="https://www.linkedin.com/in/ryanfurrer/"
             target="_blank"
-            rel="noopener noreferrer">Owl Boy</a
-          >
-        </li>
-      </ul>
-      <p>
-        I'm also an avid motorsport fan in general, especially Formula 1; This
-        year I'm rooting for McLaren and Williams! I also co-host a <a
-          href="https://www.twitch.tv/aimsleague/about"
-          target="_blank"
-          rel="noopener noreferrer">Gran Turimo 7 stream</a
-        > with my brother where we commentate on races most Sundays.
-      </p>
-      <p>
-        <h3>Conferences I've attended</h3>
+            rel="noopener noreferrer"
+            >LinkedIn,
+          </a> and <a
+            href="https://www.twitch.tv/ryandotfurrer"
+            target="_blank"
+            rel="noopener noreferrer">Twitch</a
+          >.
+        </p>
+        <h3>What I do for fun</h3>
+        <p>
+          Outisde of the work office, you'll often find me at my home office
+          coding or playing video games. My current backlog includes but is
+          certainly <i>not</i> limited to:
+        </p>
         <ul class="ml-8 list-disc">
-          <li>THAT Conference, Austin, TX 2024</li>
+          <li>
+            <a
+              href="https://na.finalfantasyxvi.com/"
+              target="_blank"
+              rel="noopener noreferrer">Final Fantasy XVI</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://seaofstarsgame.co/"
+              target="_blank"
+              rel="noopener noreferrer">Sea of Stars</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://www.owlboygame.com/"
+              target="_blank"
+              rel="noopener noreferrer">Owl Boy</a
+            >
+          </li>
         </ul>
-      </p>
-      <p class="text-sm">
-        <a
-          href="https://nownownow.com/about"
-          target="_blank"
-          rel="noopener noreferrer">Unsure what a "Now" page is?</a
-        >
-      </p>
+        <p>
+          I'm also an avid motorsport fan in general, especially Formula 1; This
+          year I'm rooting for McLaren and Williams! I also co-host a <a
+            href="https://www.twitch.tv/aimsleague/about"
+            target="_blank"
+            rel="noopener noreferrer">Gran Turimo 7 stream</a
+          > with my brother where we commentate on races most Sundays.
+        </p>
+        <p>
+          <h3>Conferences I've attended</h3>
+          <ul class="ml-8 list-disc">
+            <li>THAT Conference, Austin, TX 2024</li>
+          </ul>
+        </p>
+        <p class="text-sm">
+          <a
+            href="https://nownownow.com/about"
+            target="_blank"
+            rel="noopener noreferrer">Unsure what a "Now" page is?</a
+          >
+        </p>
+      </section>
     </Section2XL>
   </main>
 </Layout>
