@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { storyblokEditable, renderRichText } from "@storyblok/astro";
+import GoToTopBtn from "../components/GoToTopBtn.astro";
 const { blok } = Astro.props;
 const content = renderRichText(blok.content);
 
@@ -21,6 +22,7 @@ const date = new Date(blok.publishedDate).toLocaleDateString("en-US", {
       width={1536}
       height={1536}
     />
+    <GoToTopBtn />
     <Fragment set:html={content} />
   </article>
 </section>
