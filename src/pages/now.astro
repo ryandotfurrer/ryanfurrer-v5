@@ -1,12 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Section2XL from "../layouts/Section2XL.astro";
-import { Image } from "astro:assets";
 import DealsForDevsImage from "../assets/images/projects-dealsfordevs.png";
-import ComingSoonImage from "../assets/images/projects-coming_soon.jpg";
 import GridIronImage from "../assets/images/projects-gridiron.png";
 import ProjectTechTag from "../components/ProjectTechTag.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import GoToTopBtn from "../components/GoToTopBtn.astro";
 
 const title = "Now";
 const description = "What I'm up to in the current moment.";
@@ -67,153 +66,9 @@ const description = "What I'm up to in the current moment.";
             <ProjectTechTag technologyName="Clerk" />
             <ProjectTechTag technologyName="Tailwind" />
           </ProjectCard>
-          <!-- <div
-            id="deals-for-devs"
-            class="flow rounded-md bg-amber-400 text-zinc-900 dark:bg-amber-400"
-          >
-            <a
-              href="https://www.dealsfordevs.com/"
-              class="block overflow-hidden"
-              aria-label=`Read more about `
-            >
-              <Image
-                src={DealsForDevsImage}
-                class="aspect-video rounded-b-none transition-transform duration-300 hover:scale-110"
-                alt="Deals for Devs landing pages"
-              />
-            </a>
-            <div class="flow p-4">
-              <a href="#" class="decoration-zinc-900">
-                <h4
-                  class="text-lg leading-tight text-zinc-900 hover:text-zinc-900 dark:hover:text-zinc-900"
-                >
-                  Deals for Devs
-                </h4>
-              </a>
-              <p>
-                Deal for Devs is a project that James started and launched
-                around Thanksgiving 2023. Since then, the demand for it has
-                increased and James wants to take it to the next level.
-              </p>
-              <p class="noflow font-bold">Tech Stack:</p>
-              <ul class="ml-8 list-disc">
-                <li>
-                  <a
-                    href="https://nextjs.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
-                    >NextJS</a
-                  > | The React Framework for the Web
-                </li>
-                <li>
-                  <a
-                    href="https://xata.io/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
-                    >Xata</a
-                  >
-                   | Serverless database platform powered by PostgreSQL
-                </li>
-                <li>
-                  <a
-                    href="https://sentry.io/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
-                    >Sentry</a
-                  > | App monitoring platform built for to get to the root cause
-                  for every issue
-                </li>
-                <li>
-                  <a
-                    href="https://clerk.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
-                    >Clerk</a
-                  > | The most comprehensive User Management Platform
-                </li>
-              </ul>
-            </div>
-          </div> -->
-          <!-- <div
-            id="Gridiron Survivor"
-            class="flow rounded-md bg-amber-400 text-zinc-900 dark:bg-amber-400"
-          >
-            <a
-              aria-disabled="true"
-              href="#"
-              class="block overflow-hidden"
-              aria-label=`Disabled link`
-            >
-              <Image
-                src={ComingSoonImage}
-                class="block aspect-video overflow-hidden rounded-b-none transition-transform duration-300 hover:scale-110"
-                alt="asdfgasfd"
-              />
-            </a>
-            <div class="flow p-4">
-              <a href="#" class="decoration-zinc-900">
-                <h4
-                  class="text-lg leading-tight text-zinc-900 hover:text-zinc-900 dark:hover:text-zinc-900"
-                >
-                  Gridiron Survivor
-                </h4>
-              </a>
-              <p>
-                A football survivor, also known as a Survivor Pool, is a
-                competition where participants pick one winning team per week to
-                stay in the game. The goal is to survive by making correct picks
-                each week without repeating teams.
-              </p>
-              <p class="noflow font-bold">Tech Stack:</p>
-              <ul class="ml-8 list-disc">
-                <li>
-                  <a
-                    href="https://nextjs.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
-                    >NextJS</a
-                  > | The React Framework for the Web
-                </li>
-                <li>
-                  <a
-                    href="https://tailwindcss.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
-                    >Tailwind</a
-                  >
-                   | Rapidly build modern websites without ever leaving your
-                  HTML.
-                </li>
-                <li>
-                  <a
-                    href="https://ui.shadcn.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
-                    >Shadcn</a
-                  > | Beautifully designed components that you can copy and
-                  paste into your apps
-                </li>
-                <li>
-                  <a
-                    href="https://storybook.js.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-zinc-900 decoration-zinc-900 hover:text-zinc-900"
-                    >Storybook</a
-                  > | Build UIs without the grunt work
-                </li>
-              </ul>
-            </div>
-          </div> -->
         </div>
         <h3>What I do for work</h3>
+        <GoToTopBtn />
         <p>
           I'm transitioning careers from Procurement in Supply Chain to Web
           Development and have been studying web development with a focus on

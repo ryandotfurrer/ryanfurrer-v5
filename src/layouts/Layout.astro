@@ -3,7 +3,6 @@ import "../styles/newglobal.css";
 import HeaderNavBar from "../components/HeaderNavBar.astro";
 import Footer from "../components/Footer.astro";
 import NewHero from "./NewHero.astro";
-import GoToTopBtn from "../components/GoToTopBtn.astro";
 
 interface Props {
   title: string;
@@ -60,8 +59,6 @@ const { title, description } = Astro.props;
         <HeaderNavBar />
         <NewHero title={title} description={description} />
       </header>
-
-      <GoToTopBtn />
       <slot />
     </div>
     <Footer />

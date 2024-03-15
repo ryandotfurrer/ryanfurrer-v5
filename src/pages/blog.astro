@@ -2,6 +2,7 @@
 import { useStoryblokApi } from "@storyblok/astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import Layout from "../layouts/Layout.astro";
+import GoToTopBtn from "../components/GoToTopBtn.astro";
 
 const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get("cdn/stories/blog", {
@@ -17,6 +18,7 @@ const description = "Learn what I'm up to with articles";
     class="flow animate-fade-down animate-delay-[400ms] animate-duration-700 animate-once animate-ease-in-out"
   >
     <section class="flow mx-auto max-w-screen-xl">
+      <GoToTopBtn />
       <StoryblokComponent blok={content} />
     </section>
   </main>
