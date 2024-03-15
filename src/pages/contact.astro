@@ -1,13 +1,10 @@
 ---
-import "../styles/global.css";
-import HeaderNavBar from "../components/HeaderNavBar.astro";
-import Footer from "../components/Footer.astro";
-import SocialLinks from "../components/SocialLinks.astro";
-import Section2XL from "../layouts/Section2XL.astro";
-const title = "Contact Ryan";
-const description = "Want to chat, email, or connect?";
-import LinkButtonPrimary from "../components/LinkButtonPrimary.astro";
 import LayoutNoHero from "../layouts/LayoutNoHero.astro";
+import LinkButtonPrimary from "../components/LinkButtonPrimary.astro";
+import Section2XL from "../layouts/Section2XL.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+const description = "Want to chat, email, or connect?";
+const title = "Contact Ryan";
 ---
 
 <LayoutNoHero title={title} description={description}>
@@ -19,19 +16,22 @@ import LayoutNoHero from "../layouts/LayoutNoHero.astro";
         <div class="flow">
           <h1>Contact Me</h1>
           <p>
-            I'd love to hear from you no matter what. I am open to employment
-            opportunities, mentorships (being both a mentor and mentee),
-            collaborative projects, and more! I am exicited to meet new people
-            in the space and grow as a developer.
+            I'd love to hear from you no matter what. <span
+              class="rounded bg-amber-400 p-1 text-zinc-900"
+              >I am open to employment opportunities</span
+            >, collaborative projects, and more! I am exicited to meet new
+            people in the space and grow as a developer.
           </p>
           <h2>Chat with me</h2>
           <p>
-            I'd love to hear from you, so please set up a time to chat on via <a
+            If you want to chat "face to face," please set up a time to chat via
+
+
+            <a
               href="https://cal.com/ryandotfurrer"
               target="_blank"
               rel="noopener noreferrer">Cal.com</a
-            > where we can have a call or video chat; there's nothing like
-            putting a face to the name!
+            >.
           </p>
           <LinkButtonPrimary
             linkText="Chat with Ryan"
@@ -42,11 +42,11 @@ import LayoutNoHero from "../layouts/LayoutNoHero.astro";
           <SocialLinks />
         </div>
         <div class="flow grid gap-4">
-          <h2>Send me an email</h2>
+          <h2>Email me</h2>
           <p>
             Email more your thing? Don't worry, that's good for me too. Just
             fill out the form below, click send, and your digital letter will be
-            sent to my inbox in no time.
+            sent in no time.
           </p>
           <div id="contact-form-container">
             <form
