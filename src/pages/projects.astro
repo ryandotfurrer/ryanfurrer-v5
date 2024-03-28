@@ -18,7 +18,8 @@ import PortfolioV5Image from "../assets/images/projects-portfolio_v5.png";
 import ProjectCard from "../components/ProjectCard.astro";
 import ProjectTechTag from "../components/ProjectTechTag.astro";
 import Section2XL from "../layouts/Section2XL.astro";
-import GoToTopBtn from "../components/GoToTopBtn.astro";
+// import GoToTopBtn from "../components/GoToTopBtn.astro";
+import DSDImage from "../assets/images/projects-dsd_grocery_app.png";
 
 const title = "Projects";
 const description = "What I've created and worked on.";
@@ -29,7 +30,7 @@ const description = "What I've created and worked on.";
     class="flow animate-fade-down animate-delay-[400ms] animate-duration-700 animate-once animate-ease-in-out"
   >
     <section class="flow mx-auto">
-      <h2>Open-Source Contributions</h2>
+      <h2>Cohort Projects</h2>
       <div
         class="flow lg:noflow grid gap-4 pb-12 pt-4 md:gap-8 lg:grid-cols-2 2xl:grid-cols-3 2xl:gap-12"
       >
@@ -37,7 +38,7 @@ const description = "What I've created and worked on.";
           imagePath={GridIronImage}
           imageAlt="Coming soon"
           projectName="Gridiron Survivor"
-          projectDescription="This is a Football survivor app that I am building as part of a team being led by Shashi Lo. As a UX Engineer, I am responsible for briding design and code, creating the components that will make up the site."
+          projectDescription="Gridiron Survivor is an American Football survivor app that I am building as part of a cohort being led by Shashi Lo. As a UX Engineer, I am responsible for bridging design and code; creating the components and layout that will make up the site."
           projectGithubLink="https://github.com/LetsGetTechnical/gridiron-survivor"
         >
           <ProjectTechTag technologyName="NextJS" />
@@ -47,6 +48,27 @@ const description = "What I've created and worked on.";
           <ProjectTechTag technologyName="Storybook" />
           <p slot="extra-description">Live link coming soon!</p>
         </ProjectCard>
+        <ProjectCard
+          imagePath={DSDImage}
+          imageAlt="Coming Soon"
+          projectName="DSD Grocery App"
+          projectDescription="DSD Grocery App (name TBD) is a project I am building as part of a cohort in the Dallas Software Developers community, led by Danny Thompson. In this project I am contributing to everyting; design, frontend, backend, and more."
+          projectGithubLink="https://github.com/CloudyBae/dsd-grocery"
+        >
+          <ProjectTechTag technologyName="React Native" />
+          <ProjectTechTag technologyName="Styled Components" />
+          <ProjectTechTag technologyName="Supabase" />
+          <ProjectTechTag technologyName="SQL" />
+          <ProjectTechTag technologyName="API" />
+          <p slot="extra-description">Live link coming soon!</p>
+        </ProjectCard>
+      </div>
+    </section>
+    <section class="flow mx-auto">
+      <h2>Open-Source Contributions</h2>
+      <div
+        class="flow lg:noflow grid gap-4 pb-12 pt-4 md:gap-8 lg:grid-cols-2 2xl:grid-cols-3 2xl:gap-12"
+      >
         <ProjectCard
           imagePath={DealsForDevsImage}
           imageAlt="Screenshot of https://www.dealsfordevs.com/"
@@ -75,7 +97,7 @@ const description = "What I've created and worked on.";
         </ProjectCard>
       </div>
     </section>
-    <section class="flow mx-auto pt-12">
+    <!-- <section class="flow mx-auto pt-12">
       <h2>Collaborative Projects</h2>
       <div
         class="flow lg:noflow grid gap-4 pb-12 pt-4 md:gap-8 lg:grid-cols-2 2xl:grid-cols-3 2xl:gap-12"
@@ -106,14 +128,10 @@ const description = "What I've created and worked on.";
           </p>
         </ProjectCard>
       </div>
-    </section>
+    </section> -->
     <section class="flow mx-auto pt-12">
+      <!-- <GoToTopBtn /> -->
       <h2>Personal Projects</h2>
-      <GoToTopBtn />
-      <p>
-        All projects are in chronological order aside from my previous portfolio
-        revisions.
-      </p>
       <div
         class="flow lg:noflow grid gap-4 pb-12 pt-4 md:gap-8 lg:grid-cols-2 2xl:grid-cols-3 2xl:gap-12"
       >
