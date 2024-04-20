@@ -18,7 +18,7 @@ import PortfolioV5Image from "../assets/images/projects-portfolio_v5.png";
 import ProjectCard from "../components/ProjectCard.astro";
 import ProjectTechTag from "../components/ProjectTechTag.astro";
 import Section2XL from "../layouts/Section2XL.astro";
-// import GoToTopBtn from "../components/GoToTopBtn.astro";
+import GoToTopBtn from "../components/GoToTopBtn.astro";
 import DSDImage from "../assets/images/projects-dsd_grocery_app.png";
 
 const title = "Projects";
@@ -40,27 +40,30 @@ const description = "What I've created and worked on.";
           projectName="Gridiron Survivor"
           projectDescription="Gridiron Survivor is an American Football survivor app that I am building as part of a cohort being led by Shashi Lo. As a UX Engineer, I am responsible for bridging design and code; creating the components and layout that will make up the site."
           projectGithubLink="https://github.com/LetsGetTechnical/gridiron-survivor"
+          projectLiveLink="https://gridiron-survivor-letsgettechnical.vercel.app/"
         >
           <ProjectTechTag technologyName="NextJS" />
           <ProjectTechTag technologyName="Appwrite" />
           <ProjectTechTag technologyName="Tailwind" />
           <ProjectTechTag technologyName="shadcn/ui" />
           <ProjectTechTag technologyName="Storybook" />
-          <p slot="extra-description">Live link coming soon!</p>
+          <p slot="extra-description">MVP coming soon!</p>
         </ProjectCard>
         <ProjectCard
           imagePath={DSDImage}
           imageAlt="Coming Soon"
-          projectName="DSD Grocery App"
-          projectDescription="DSD Grocery App (name TBD) is a project I am building as part of a cohort in the Dallas Software Developers community, led by Danny Thompson. In this project I am contributing to everyting; design, frontend, backend, and more."
-          projectGithubLink="https://github.com/CloudyBae/dsd-grocery"
+          projectName="Zest"
+          projectDescription="Zest is a project I am building as part of a cohort in the Dallas Software Developers community, led by Danny Thompson. In this project I am contributing to everything; design, frontend, backend, and more."
         >
           <ProjectTechTag technologyName="React Native" />
-          <ProjectTechTag technologyName="Styled Components" />
-          <ProjectTechTag technologyName="Supabase" />
-          <ProjectTechTag technologyName="SQL" />
-          <ProjectTechTag technologyName="API" />
-          <p slot="extra-description">Live link coming soon!</p>
+          <ProjectTechTag technologyName="Expo" />
+          <ProjectTechTag technologyName="Jest" />
+          <ProjectTechTag technologyName="Django" />
+          <ProjectTechTag technologyName="Python" />
+          <ProjectTechTag technologyName="PostgreSQL" />
+          <ProjectTechTag technologyName="APIs" />
+          <ProjectTechTag technologyName="Design" />
+          <p slot="extra-description">GitHub Repo and Live Site link coming soon!</p>
         </ProjectCard>
       </div>
     </section>
@@ -132,6 +135,7 @@ const description = "What I've created and worked on.";
     <section class="flow mx-auto pt-12">
       <!-- <GoToTopBtn /> -->
       <h2>Personal Projects</h2>
+      <GoToTopBtn />
       <div
         class="flow lg:noflow grid gap-4 pb-12 pt-4 md:gap-8 lg:grid-cols-2 2xl:grid-cols-3 2xl:gap-12"
       >
