@@ -1,11 +1,11 @@
 import { defineConfig } from "astro/config";
-import storyblok from "@storyblok/astro";
 import { loadEnv } from "vite";
-import basicSsl from "@vitejs/plugin-basic-ssl";
-import react from "@astrojs/react";
-import tailwind from "@astrojs/tailwind";
-import icon from "astro-icon";
 import astroBreakpoints from "astro-devtool-breakpoints";
+import basicSsl from "@vitejs/plugin-basic-ssl";
+import icon from "astro-icon";
+import react from "@astrojs/react";
+import storyblok from "@storyblok/astro";
+import tailwind from "@astrojs/tailwind";
 
 const env = loadEnv("", process.cwd(), "STORYBLOK");
 
@@ -75,6 +75,7 @@ export default defineConfig({
   },
   integrations: [
     astroBreakpoints(),
+    icon(),
     react(),
     tailwind({
       applyBaseStyles: false,
@@ -93,6 +94,5 @@ export default defineConfig({
         region: "us", // optional,  or 'eu' (default)
       },
     }),
-    icon(),
   ],
 });

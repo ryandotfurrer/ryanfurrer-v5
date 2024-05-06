@@ -1,5 +1,6 @@
 ---
 import resume from "../assets/files/ryan-furrer_resume.pdf";
+import { Icon } from "astro-icon/components";
 ---
 
 <style>
@@ -49,11 +50,12 @@ import resume from "../assets/files/ryan-furrer_resume.pdf";
   <ul id="navlist" class="flex gap-4">
     <li>
       <a
+        class="flex items-center justify-end gap-1"
         href=`${resume}`
         target="_blank"
         rel="noopener noreferrer"
         aria-label="resume"
-        >Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a
+        >Resume<Icon class="m-0 p-0 text-xl" name="newtab" /></a
       >
     </li>
     <li>
