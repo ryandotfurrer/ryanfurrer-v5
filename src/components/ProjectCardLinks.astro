@@ -17,5 +17,9 @@ const {
 }: Props = Astro.props;
 ---
 
-<LinkButtonPrimary linkURL={projectLiveLink} label={labelPrimary} />
-<LinkButtonSecondary linkURL={projectGithubLink} label={labelSecondary} />
+<LinkButtonPrimary target linkURL={projectLiveLink} label={labelPrimary} />
+<LinkButtonSecondary
+  target
+  linkURL={projectGithubLink}
+  label={labelSecondary}
+/>
