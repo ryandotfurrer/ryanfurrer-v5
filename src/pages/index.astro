@@ -1,9 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import AstroStarterImage from "../assets/images/projects-astro_starter.png";
+import GridIronImage from "../assets/images/projects-gridiron.png";
 import LayoutHome from "../layouts/LayoutHome.astro";
 import memojiProfilePicture from "../assets/images/avatar-2x.webp";
-import NextStarterImage from "../assets/images/projects-nextjs_starter.png";
+import profilePictureMay2024 from "../assets/images/pfp-may-2024.webp";
+import ZestImage from "../assets/images/projects-zest.svg";
+import ZestVideo from "../assets/videos/projects-zest.mp4";
 import ProjectCard from "../components/ProjectCard.astro";
 import ProjectTechTag from "../components/ProjectTechTag.astro";
 import resume from "../assets/files/ryan-furrer_resume.pdf";
@@ -26,8 +28,9 @@ const description =
         class="flow lg:noflow mx-auto grid max-w-screen-lg grid-cols-1 pb-24 md:place-items-center lg:grid-cols-2 lg:gap-8 lg:pb-36 2xl:pb-48"
       >
         <Image
-          src={memojiProfilePicture}
+          src={profilePictureMay2024}
           alt=`Memoji representing Ryan Furrer where his head is poking our from behind a laptop.`
+          class={"aspect-square object-cover object-top"}
         />
         <div
           id="greeting-container-verbiage-container"
@@ -91,26 +94,41 @@ const description =
       </p>
       <div class="flow lg:noflow grid gap-4 lg:grid-cols-2 lg:gap-8">
         <ProjectCard
-          imagePath={AstroStarterImage}
-          imageAlt="Screenshot of Astro & Tailwind Starter"
-          projectName="Astro & Tailwind Starter"
-          projectDescription="A basic yet slightly opinionated starter boilerplate I created to get started with Astro and Tailwind projects faster."
-          projectGithubLink="https://github.com/ryandotfurrer/astro-tailwind-starter"
-          projectLiveLink="https://rf-astro-tailwind-starter.vercel.app/"
-        >
-          <ProjectTechTag technologyName="Astro" />
-          <ProjectTechTag technologyName="Tailwind" />
-        </ProjectCard>
-        <ProjectCard
-          imagePath={NextStarterImage}
-          imageAlt="Screenshot of Astro & Tailwind Starter"
-          projectName="Next & Tailwind Starter"
-          projectDescription="A basic yet slightly opinionated starter boilerplate I created to get started with Next and Tailwind projects faster."
-          projectGithubLink="https://github.com/ryandotfurrer/next-tailwind-starter"
-          projectLiveLink="https://rf-next-tailwind-starter.vercel.app/"
+          imagePath={GridIronImage}
+          imageAlt="Gridiron Survivor Badge Logo"
+          projectName="Gridiron Survivor"
+          projectDescription="Gridiron Survivor is an app that allows users to compete in an NFL Survivor pool by picking one winning team each week without repeating a team, with the last remaining participant declared the winner."
+          labelPrimary="View Project"
+          labelSecondary="View GitHub"
+          projectGithubLink="https://github.com/LetsGetTechnical/gridiron-survivor"
+          projectLiveLink="https://www.gridironsurvivor.com/"
         >
           <ProjectTechTag technologyName="NextJS" />
+          <ProjectTechTag technologyName="Appwrite" />
           <ProjectTechTag technologyName="Tailwind" />
+          <ProjectTechTag technologyName="shadcn/ui" />
+          <ProjectTechTag technologyName="Storybook" />
+          <ProjectTechTag technologyName="React Testing Library" />
+          <ProjectTechTag technologyName="Jest" />
+        </ProjectCard>
+        <ProjectCard
+          imagePath={ZestImage}
+          imageAlt="Zest logo"
+          projectName="Zest"
+          projectDescription="Zest is an app that provides recipes and prioritizes meals you can cook with ingredients on hand, meals that are within your capacity and skill level to prepare, and gives you the macros for each of those meals."
+          labelPrimary="View Video"
+          labelSecondary="View GitHub"
+          projectLiveLink={ZestVideo}
+          projectGithubLink="https://github.com/CloudyBae/dsd-grocery"
+        >
+          <ProjectTechTag technologyName="React Native" />
+          <ProjectTechTag technologyName="Expo" />
+          <ProjectTechTag technologyName="Jest" />
+          <ProjectTechTag technologyName="Django" />
+          <ProjectTechTag technologyName="Python" />
+          <ProjectTechTag technologyName="PostgreSQL" />
+          <ProjectTechTag technologyName="APIs" />
+          <ProjectTechTag technologyName="Design" />
         </ProjectCard>
       </div>
     </Section2XL>

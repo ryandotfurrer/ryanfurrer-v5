@@ -1,5 +1,6 @@
 ---
 import resume from "../assets/files/ryan-furrer_resume.pdf";
+import { Icon } from "astro-icon/components";
 ---
 
 <style>
@@ -13,11 +14,12 @@ import resume from "../assets/files/ryan-furrer_resume.pdf";
   <ul class="grid">
     <li>
       <a
+        class="flex items-center gap-1"
         href=`${resume}`
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="newsletter"
-        >Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a
+        aria-label="resume"
+        >Resume<Icon class="m-0 p-0 text-xl" name="newtab" /></a
       >
     </li>
     <li>
@@ -43,22 +45,23 @@ import resume from "../assets/files/ryan-furrer_resume.pdf";
     </li>
     <li>
       <a
+        class="flex items-center gap-1"
         href="https://cal.com/ryandotfurrer"
         target="_blank"
         rel="noopener noreferrer"
         class="navlink text-zinc-500 hover:text-emerald-600 dark:hover:text-emerald-400"
         aria-label="chat with ryan"
-        >Chat with Ryan <i class="fa-solid fa-arrow-up-right-from-square"
-        ></i></a
+        >Chat with Ryan<Icon class="m-0 p-0 text-xl" name="newtab" /></a
       >
     </li>
     <li>
       <a
+        class="flex items-center gap-1"
         href="https://ryanfurrer.beehiiv.com/subscribe"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="newsletter"
-        >Newsletter <i class="fa-solid fa-arrow-up-right-from-square"></i></a
+        >Newsletter<Icon class="m-0 p-0 text-xl" name="newtab" /></a
       >
     </li>
   </ul>

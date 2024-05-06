@@ -4,8 +4,9 @@ import SectionXL from "../layouts/SectionXL.astro";
 import Section2XL from "../layouts/Section2XL.astro";
 
 import { Image } from "astro:assets";
-import profilePicture from "../assets/images/rf-real-teal-bg.webp";
+import profilePicture from "../assets/images/pfp-may-2024.webp";
 import SocialLinks from "../components/SocialLinks.astro";
+import LinkButtonPrimary from "../components/LinkButtonPrimary.astro";
 
 const title = "It was nice to meet you!";
 const description =
@@ -23,7 +24,11 @@ const description =
           class="flow lg:noflow grid lg:grid-cols-2 lg:place-items-center lg:gap-8"
         >
           <div id="greeting-container" class="flow col-span-1">
-            <Image src={profilePicture} alt=`Ryan Furrer` class="rounded-md" />
+            <Image
+              src={profilePicture}
+              alt=`Ryan Furrer`
+              class="aspect-square rounded-md object-cover object-top"
+            />
             <SocialLinks />
           </div>
           <div
@@ -54,7 +59,7 @@ const description =
               > as well.
             </p>
             <p
-              class="text-balance rounded-md bg-emerald-600 p-4 text-center text-xl font-semibold text-emerald-50 dark:bg-emerald-400 dark:text-zinc-900"
+              class="mx-auto text-balance rounded bg-amber-400 p-1 text-center text-xl font-semibold text-zinc-900"
             >
               I'm also looking for my first job in the industry!
             </p>
@@ -63,15 +68,7 @@ const description =
               love to show what I can bring to the team.
             </p>
             <div class="flow mt-12">
-              <button
-                class="mb-4 text-lg font-semibold transition-transform duration-300 ease-in-out hover:scale-110"
-              >
-                <a
-                  href="/contact"
-                  class="rounded-md bg-amber-600 px-4 py-3 text-zinc-50 no-underline transition-colors hover:bg-amber-700 hover:text-zinc-50 dark:bg-amber-400 dark:text-zinc-900 dark:hover:bg-amber-300 dark:hover:text-zinc-900"
-                  ><i class="fa-solid fa-inbox pr-4"></i>Contact Me</a
-                ></button
-              >
+              <LinkButtonPrimary label="Contact Me" linkURL="/contact" />
               <p class="sm:text-md font-semibold md:text-lg">
                 <a
                   class="flex flex-row place-items-center gap-4 no-underline transition-[gap] duration-300 ease-in-out hover:gap-8"

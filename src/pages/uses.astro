@@ -1,25 +1,25 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Section2XL from "../layouts/Section2XL.astro";
 import { Image } from "astro:assets";
-import UsesCard from "../components/UsesCard.astro";
-import onepassword from "../assets/logos/onepassword.svg";
-import affinity from "../assets/logos/affinity.svg";
 import arc from "../assets/logos/arc.svg";
 import brainfm from "../assets/logos/brainfm.svg";
+import calendar from "../assets/logos/calendar.svg";
 import cleanshotx from "../assets/logos/cleanshotx.svg";
 import discord from "../assets/logos/discord.svg";
-import iterm2 from "../assets/logos/iterm2.svg";
-import notion from "../assets/logos/notion.svg";
-import notionCalendar from "../assets/logos/notion-calendar.svg";
-import raycast from "../assets/logos/raycast-logo.svg";
-import simplenote from "../assets/logos/simplenote.svg";
-import spark from "../assets/logos/spark.svg";
-import spotify from "../assets/logos/spotify.svg";
-import streamlabs from "../assets/logos/streamlabs.svg";
-import todoist from "../assets/logos/todoist.svg";
-import vscode from "../assets/logos/vscode.svg";
+import figma from "../assets/logos/figma.svg";
 import GoToTopBtn from "../components/GoToTopBtn.astro";
+import Layout from "../layouts/Layout.astro";
+import mail from "../assets/logos/mail.svg";
+import notion from "../assets/logos/notion.svg";
+import obs from "../assets/logos/obs.svg";
+import onepassword from "../assets/logos/onepassword.svg";
+import raycast from "../assets/logos/raycast-logo.svg";
+import Section2XL from "../layouts/Section2XL.astro";
+import simplenote from "../assets/logos/simplenote.svg";
+import spotify from "../assets/logos/spotify.svg";
+import todoist from "../assets/logos/todoist.svg";
+import UsesCard from "../components/UsesCard.astro";
+import vscode from "../assets/logos/vscode.svg";
+import warp from "../assets/logos/warp.svg";
 
 const title = "Uses";
 const description =
@@ -262,14 +262,6 @@ const description =
             />
           </UsesCard>
 
-          <UsesCard name="Affinity" href="https://affinity.serif.com/en-us/">
-            <Image
-              src={affinity}
-              alt=`Affinity Suite logo`
-              class="mx-auto aspect-square h-auto w-2/3 transition-transform duration-300 group-hover:rotate-12"
-            />
-          </UsesCard>
-
           <UsesCard name="Arc" href="https://arc.net/">
             <Image
               src={arc}
@@ -289,6 +281,17 @@ const description =
             />
           </UsesCard>
 
+          <UsesCard
+            name="Calendar"
+            href="https://apps.apple.com/us/app/calendar/id1108185179"
+          >
+            <Image
+              src={calendar}
+              alt=`Apple Calendar`
+              class="mx-auto aspect-square h-auto w-2/3 transition-transform duration-300 group-hover:-rotate-12"
+            />
+          </UsesCard>
+
           <UsesCard name="CleanshotX" href="https://cleanshot.com/">
             <Image
               src={cleanshotx}
@@ -305,11 +308,22 @@ const description =
             />
           </UsesCard>
 
-          <UsesCard name="iTerm" href="https://iterm2.com/">
+          <UsesCard name="Figma" href="https://www.figma.com/">
             <Image
-              src={iterm2}
-              alt=`iTerm2 logo`
-              class="mx-auto aspect-square h-auto w-2/3 transition-transform duration-300 group-hover:-rotate-12"
+              src={figma}
+              alt=`Figma logo`
+              class="mx-auto aspect-square h-auto w-2/3 transition-transform duration-300 group-hover:rotate-12"
+            />
+          </UsesCard>
+
+          <UsesCard
+            name="Mail"
+            href="https://apps.apple.com/us/app/mail/id1108187098"
+          >
+            <Image
+              src={mail}
+              alt=`Apple Mail logo`
+              class="mx-auto aspect-square h-auto w-2/3 transition-transform duration-300 group-hover:rotate-12"
             />
           </UsesCard>
 
@@ -318,17 +332,6 @@ const description =
               src={notion}
               alt=`Notion logo`
               class="mx-auto aspect-square h-auto w-2/3 transition-transform duration-300 group-hover:rotate-12"
-            />
-          </UsesCard>
-
-          <UsesCard
-            name="Notion Calendar"
-            href="https://www.notion.so/product/calendar"
-          >
-            <Image
-              src={notionCalendar}
-              alt=`Notion Calendar logo`
-              class="mx-auto aspect-square h-auto w-2/3 transition-transform duration-300 group-hover:-rotate-12"
             />
           </UsesCard>
 
@@ -348,14 +351,6 @@ const description =
             />
           </UsesCard>
 
-          <UsesCard name="Spark" href="https://sparkmailapp.com/">
-            <Image
-              src={spark}
-              alt=`Spark logo`
-              class="mx-auto aspect-square h-auto w-2/3 transition-transform duration-300 group-hover:rotate-12"
-            />
-          </UsesCard>
-
           <UsesCard name="Spotify" href="https://spotify.com/">
             <Image
               src={spotify}
@@ -364,10 +359,10 @@ const description =
             />
           </UsesCard>
 
-          <UsesCard name="Streamlabs" href="https://streamlabs.com/">
+          <UsesCard name="OBS" href="https://obsproject.com/">
             <Image
-              src={streamlabs}
-              alt=`Streamlabs logo`
+              src={obs}
+              alt=`OBS logo`
               class="mx-auto aspect-square h-auto w-2/3 transition-transform duration-300 group-hover:rotate-12"
             />
           </UsesCard>
@@ -385,6 +380,17 @@ const description =
               src={vscode}
               alt=`VSCode logo`
               class="mx-auto aspect-square h-auto w-2/3 duration-300 group-hover:-rotate-12"
+            />
+          </UsesCard>
+
+          <UsesCard
+            name="Warp"
+            href="x-webdoc://12A3F6AD-DF4E-45ED-8D10-A08E712EE344/app.warp.dev/referral/WZ98V4"
+          >
+            <Image
+              src={warp}
+              alt=`Warp logo`
+              class="mx-auto aspect-square h-auto w-2/3 transition-transform duration-300 group-hover:-rotate-12"
             />
           </UsesCard>
         </div>
