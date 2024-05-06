@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import GridIronImage from "../assets/images/projects-gridiron.png";
 import LayoutHome from "../layouts/LayoutHome.astro";
 import memojiProfilePicture from "../assets/images/avatar-2x.webp";
+import profilePictureMay2024 from "../assets/images/pfp-may-2024.webp";
 import ZestImage from "../assets/images/projects-zest.svg";
 import ZestVideo from "../assets/videos/projects-zest.mp4";
 import ProjectCard from "../components/ProjectCard.astro";
@@ -27,8 +28,9 @@ const description =
         class="flow lg:noflow mx-auto grid max-w-screen-lg grid-cols-1 pb-24 md:place-items-center lg:grid-cols-2 lg:gap-8 lg:pb-36 2xl:pb-48"
       >
         <Image
-          src={memojiProfilePicture}
+          src={profilePictureMay2024}
           alt=`Memoji representing Ryan Furrer where his head is poking our from behind a laptop.`
+          class={"aspect-square object-cover object-top"}
         />
         <div
           id="greeting-container-verbiage-container"

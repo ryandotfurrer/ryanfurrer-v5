@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import profilePicture from "../assets/images/rf-real-teal-bg.webp";
+import profilePictureMay2024 from "../assets/images/pfp-may-2024.webp";
+import profilePictureMemoji from "../assets/images/avatar-1x.webp";
 import musicPicture from "../assets/images/about-music.webp";
 import procurementPicture from "../assets/images/about-procurement.webp";
 import webdevPicture from "../assets/images/about-web-dev.webp";
@@ -20,8 +21,9 @@ const description = "Here is where you can learn a bit more about me.";
         class="flow mx-auto grid grid-cols-1 md:place-items-center lg:grid-cols-2 lg:gap-8"
       >
         <Image
-          src={profilePicture}
+          src={profilePictureMay2024}
           alt=`Image of Ryan Furrer on a dark teal to light teal gradient background.`
+          class={"aspect-square object-top object-cover"}
         />
 
         <div id="greeting-container-verbiage-container" class="flow">
@@ -222,7 +224,7 @@ const description = "Here is where you can learn a bit more about me.";
         >
           <Image
             class="mb-[1em] md:mb-0"
-            src={profilePicture}
+            src={profilePictureMemoji}
             alt="Ryan Furrer"
           />
           <div>
