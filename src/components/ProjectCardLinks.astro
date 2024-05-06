@@ -5,11 +5,17 @@ import LinkButtonSecondary from "../components/LinkButtonSecondary.astro";
 export interface Props {
   projectLiveLink: string;
   projectGithubLink: string;
+  labelPrimary: string;
+  labelSecondary: string;
 }
 
-const { projectLiveLink, projectGithubLink }: Props = Astro.props;
+const {
+  projectLiveLink,
+  projectGithubLink,
+  labelPrimary,
+  labelSecondary,
+}: Props = Astro.props;
 ---
 
-
-<LinkButtonPrimary linkURL={projectLiveLink} linkText="Live Site" />
-<LinkButtonSecondary linkURL={projectGithubLink} linkText="GitHub Repo" />
+<LinkButtonPrimary linkURL={projectLiveLink} label={labelPrimary} />
+<LinkButtonSecondary linkURL={projectGithubLink} label={labelSecondary} />

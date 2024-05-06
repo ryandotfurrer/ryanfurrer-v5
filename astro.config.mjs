@@ -5,6 +5,7 @@ import basicSsl from "@vitejs/plugin-basic-ssl";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
+import astroBreakpoints from "astro-devtool-breakpoints";
 
 const env = loadEnv("", process.cwd(), "STORYBLOK");
 
@@ -73,6 +74,7 @@ export default defineConfig({
     },
   },
   integrations: [
+    astroBreakpoints(),
     react(),
     tailwind({
       applyBaseStyles: false,

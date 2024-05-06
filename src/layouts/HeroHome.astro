@@ -19,10 +19,10 @@ const { heroHeader }: Props = Astro.props;
     <div
       class="grid animate-fade-down gap-4 pt-12 text-base font-semibold animate-delay-200 animate-duration-500 animate-once animate-ease-in-out md:max-w-fit md:grid-cols-2 md:gap-8 lg:text-lg"
     >
-      <LinkButtonPrimary linkURL="/projects" linkText="View my projects">
+      <LinkButtonPrimary linkURL="/projects" label="View my projects">
         <i slot="pre-icon" class="fa-solid fa-code-branch"></i>
       </LinkButtonPrimary>
-      <LinkButtonSecondary linkURL="/blog" linkText="Read my articles">
+      <LinkButtonSecondary linkURL="/blog" label="Read my articles">
         <i slot="pre-icon" class="fa-solid fa-newspaper"></i>
       </LinkButtonSecondary>
     </div>
