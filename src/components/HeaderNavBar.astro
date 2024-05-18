@@ -1,9 +1,6 @@
 ---
 import resume from "../assets/files/ryan-furrer_resume.pdf";
 import { Icon } from "astro-icon/components";
-import logoDark from "./public/logo-dark-theme.svg";
-import logoLight from "./public/logo-light-theme.svg";
-import Image from "astro/components/Image.astro";
 ---
 
 <style>
@@ -49,7 +46,14 @@ import Image from "astro/components/Image.astro";
     href="/"
     class="mr-auto text-2xl font-semibold lowercase text-zinc-900 hover:text-emerald-600 xl:text-3xl dark:text-zinc-50 dark:hover:text-emerald-400"
   >
-    <Image class="aspect-square h-12 w-12" src={logoDark} alt="logo" />
+    <picture>
+      <source
+        class="aspect-square h-12 w-12"
+        srcset="logo-dark-theme.svg"
+        media="(prefers-color-scheme: dark)"
+      />
+      <img class="aspect-square h-12 w-12" src="logo-light-theme.svg" />
+    </picture>
   </a>
   <ul id="navlist" class="flex gap-4">
     <li>
