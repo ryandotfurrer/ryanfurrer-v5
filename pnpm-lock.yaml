@@ -10,16 +10,16 @@ importers:
     dependencies:
       '@astrojs/netlify':
         specifier: ^5.1.2
-        version: 5.2.1(@opentelemetry/api@1.8.0)(astro@4.8.6(@types/node@20.12.12))
+        version: 5.2.1(@opentelemetry/api@1.8.0)(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))
       '@astrojs/react':
         specifier: ^3.0.10
         version: 3.3.4(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@4.5.3(@types/node@20.12.12))
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.8.6(@types/node@20.12.12))(tailwindcss@3.4.3)
+        version: 5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3)
       '@storyblok/astro':
         specifier: ^4.0.2
-        version: 4.0.5(astro@4.8.6(@types/node@20.12.12))
+        version: 4.0.5(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))
       '@types/react':
         specifier: ^18.2.21
         version: 18.3.2
@@ -28,10 +28,10 @@ importers:
         version: 18.3.0
       astro:
         specifier: ^4.4.0
-        version: 4.8.6(@types/node@20.12.12)
+        version: 4.8.6(@types/node@20.12.12)(typescript@5.4.5)
       astro-devtool-breakpoints:
         specifier: ^0.3.0
-        version: 0.3.0(astro@4.8.6(@types/node@20.12.12))
+        version: 0.3.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))
       astro-icon:
         specifier: ^1.1.0
         version: 1.1.0
@@ -41,6 +41,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
       vite:
         specifier: ^4.5.2
         version: 4.5.3(@types/node@20.12.12)
@@ -2687,6 +2690,11 @@ packages:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
 
+  typescript@5.4.5:
+    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   ufo@1.5.3:
     resolution: {integrity: sha512-Y7HYmWaFwPUmkoQCUIAYpKqkOf+SbVj/2fJJZ4RJMCfZp0rTGwRbzQD+HghfnhKOjL9E01okqz+ncJskGYfBNw==}
 
@@ -2952,11 +2960,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/netlify@5.2.1(@opentelemetry/api@1.8.0)(astro@4.8.6(@types/node@20.12.12))':
+  '@astrojs/netlify@5.2.1(@opentelemetry/api@1.8.0)(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))':
     dependencies:
       '@astrojs/underscore-redirects': 0.3.3
       '@netlify/functions': 2.7.0(@opentelemetry/api@1.8.0)
-      astro: 4.8.6(@types/node@20.12.12)
+      astro: 4.8.6(@types/node@20.12.12)(typescript@5.4.5)
       esbuild: 0.19.12
     transitivePeerDependencies:
       - '@opentelemetry/api'
@@ -2977,9 +2985,9 @@ snapshots:
       - supports-color
       - vite
 
-  '@astrojs/tailwind@5.1.0(astro@4.8.6(@types/node@20.12.12))(tailwindcss@3.4.3)':
+  '@astrojs/tailwind@5.1.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))(tailwindcss@3.4.3)':
     dependencies:
-      astro: 4.8.6(@types/node@20.12.12)
+      astro: 4.8.6(@types/node@20.12.12)(typescript@5.4.5)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -3720,10 +3728,10 @@ snapshots:
 
   '@shikijs/core@1.5.2': {}
 
-  '@storyblok/astro@4.0.5(astro@4.8.6(@types/node@20.12.12))':
+  '@storyblok/astro@4.0.5(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5))':
     dependencies:
       '@storyblok/js': 3.0.8
-      astro: 4.8.6(@types/node@20.12.12)
+      astro: 4.8.6(@types/node@20.12.12)(typescript@5.4.5)
       camelcase: 8.0.0
 
   '@storyblok/js@3.0.8':
@@ -3874,9 +3882,9 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-  astro-devtool-breakpoints@0.3.0(astro@4.8.6(@types/node@20.12.12)):
+  astro-devtool-breakpoints@0.3.0(astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5)):
     dependencies:
-      astro: 4.8.6(@types/node@20.12.12)
+      astro: 4.8.6(@types/node@20.12.12)(typescript@5.4.5)
 
   astro-icon@1.1.0:
     dependencies:
@@ -3886,7 +3894,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@4.8.6(@types/node@20.12.12):
+  astro@4.8.6(@types/node@20.12.12)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.8.0
       '@astrojs/internal-helpers': 0.4.0
@@ -3942,7 +3950,7 @@ snapshots:
       shiki: 1.5.2
       string-width: 7.1.0
       strip-ansi: 7.1.0
-      tsconfck: 3.0.3
+      tsconfck: 3.0.3(typescript@5.4.5)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
       vite: 5.2.11(@types/node@20.12.12)
@@ -5664,12 +5672,16 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  tsconfck@3.0.3: {}
+  tsconfck@3.0.3(typescript@5.4.5):
+    optionalDependencies:
+      typescript: 5.4.5
 
   tslib@2.6.2:
     optional: true
 
   type-fest@2.19.0: {}
+
+  typescript@5.4.5: {}
 
   ufo@1.5.3: {}
 
