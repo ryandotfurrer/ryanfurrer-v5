@@ -10,28 +10,31 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/netlify": "^5.1.2",
-    "@astrojs/react": "^3.0.10",
+    "@astrojs/netlify": "^5.2.1",
+    "@astrojs/react": "^3.3.4",
     "@astrojs/tailwind": "^5.1.0",
-    "@storyblok/astro": "^4.0.2",
-    "@types/react": "^18.2.21",
-    "@types/react-dom": "^18.2.7",
-    "astro": "^4.4.0",
+    "@storyblok/astro": "^4.0.5",
+    "@storyblok/js": "^3.0.8",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "astro": "^4.8.6",
     "astro-devtool-breakpoints": "^0.3.0",
     "astro-icon": "^1.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "vite": "^4.5.2"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sharp": "^0.33.4",
+    "typescript": "^5.4.5",
+    "vite": "^4.5.3"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.10",
-    "@vitejs/plugin-basic-ssl": "^1.0.1",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.33",
-    "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.0",
-    "prettier-plugin-tailwindcss": "^0.5.4",
-    "tailwindcss": "^3.4.1",
+    "@tailwindcss/typography": "^0.5.13",
+    "@vitejs/plugin-basic-ssl": "^1.1.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.12.3",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "tailwindcss": "^3.4.3",
     "tailwindcss-animated": "^1.0.1"
   }
 }

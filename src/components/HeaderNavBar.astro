@@ -1,40 +1,9 @@
 ---
 import resume from "../assets/files/ryan-furrer_resume.pdf";
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import logoDark from "../../public/logo-dark-theme.svg";
 ---
-
-<style>
-  #navlist {
-    @apply fixed -right-full top-24 z-50 flex h-screen w-full flex-col gap-4 bg-white px-4 pt-8 text-right transition-[right] duration-300 ease-in-out lg:static lg:top-0 lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:py-0 dark:bg-black;
-  }
-  #navlist.active {
-    @apply right-0;
-  }
-
-  #hamburger {
-    @apply flex flex-col flex-wrap gap-[.38rem] border-none p-0 text-base lg:hidden;
-  }
-
-  .bar {
-    @apply block h-[.125rem] w-[1.4rem] bg-zinc-500 lg:hidden dark:bg-zinc-400;
-  }
-
-  #hamburger.active .bar:nth-child(2) {
-    @apply opacity-0;
-  }
-
-  #hamburger.active .bar:nth-child(1) {
-    @apply translate-y-[.5rem] rotate-45 transition-transform ease-in-out;
-  }
-
-  #hamburger.active .bar:nth-child(3) {
-    @apply -translate-y-[.5rem] -rotate-45 transition-transform ease-in-out;
-  }
-
-  li > a {
-    @apply lowercase text-zinc-500 hover:text-emerald-600 dark:text-zinc-400 dark:hover:text-emerald-400;
-  }
-</style>
 
 <nav
   id="top"
@@ -45,8 +14,9 @@ import { Icon } from "astro-icon/components";
     aria-label="Go to website home"
     href="/"
     class="mr-auto text-2xl font-semibold lowercase text-zinc-900 hover:text-emerald-600 xl:text-3xl dark:text-zinc-50 dark:hover:text-emerald-400"
-    >Ryan Furrer</a
   >
+    <Image class="aspect-square h-12 w-12" src={logoDark} alt="Logo" />
+  </a>
   <ul id="navlist" class="flex gap-4">
     <li>
       <a
@@ -81,6 +51,39 @@ import { Icon } from "astro-icon/components";
     <span class="bar"></span>
   </button>
 </nav>
+
+<style>
+  #navlist {
+    @apply fixed -right-full top-24 z-50 flex h-screen w-full flex-col gap-4 bg-white px-4 pt-8 text-right transition-[right] duration-300 ease-in-out lg:static lg:top-0 lg:h-auto lg:w-auto lg:flex-row lg:px-0 lg:py-0 dark:bg-black;
+  }
+  #navlist.active {
+    @apply right-0;
+  }
+
+  #hamburger {
+    @apply flex flex-col flex-wrap gap-[.38rem] border-none p-0 text-base lg:hidden;
+  }
+
+  .bar {
+    @apply block h-[.125rem] w-[1.4rem] bg-zinc-500 lg:hidden dark:bg-zinc-400;
+  }
+
+  #hamburger.active .bar:nth-child(2) {
+    @apply opacity-0;
+  }
+
+  #hamburger.active .bar:nth-child(1) {
+    @apply translate-y-[.5rem] rotate-45 transition-transform ease-in-out;
+  }
+
+  #hamburger.active .bar:nth-child(3) {
+    @apply -translate-y-[.5rem] -rotate-45 transition-transform ease-in-out;
+  }
+
+  li > a {
+    @apply lowercase text-zinc-500 hover:text-emerald-600 dark:text-zinc-400 dark:hover:text-emerald-400;
+  }
+</style>
 
 <script>
   function mobileMenu() {
