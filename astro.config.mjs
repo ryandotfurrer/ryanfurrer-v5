@@ -81,7 +81,7 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     storyblok({
-      accessToken: "env.STORYBLOK_TOKEN",
+      accessToken: "OvG6RltzzmQpZ8WXKtSeEwtt",
       components: {
         // Add your components here
         blogPost: "storyblok/BlogPost",
