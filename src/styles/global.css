@@ -120,7 +120,7 @@ picture {
 }
 
 blockquote {
-  @apply rounded border-l-4 border-emerald-600 bg-zinc-100 p-6 leading-relaxed text-zinc-900 dark:border-emerald-400 dark:bg-zinc-900 dark:text-zinc-50;
+  @apply rounded-md border-l-4 border-emerald-600 bg-zinc-100 p-6 leading-relaxed text-zinc-900 dark:border-emerald-400 dark:bg-zinc-900 dark:text-zinc-50;
 }
 
 /* Apply styles to inline code elements that are not part of a codeblock */
@@ -131,7 +131,7 @@ code {
 
 code,
 pre > code {
-  @apply break-words rounded text-xs font-normal;
+  @apply break-words rounded-md text-xs font-normal;
 }
 
 /* Applies border to codeblock */
