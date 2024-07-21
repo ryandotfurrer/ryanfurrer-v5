@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "dev:network": "astro dev --network",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
