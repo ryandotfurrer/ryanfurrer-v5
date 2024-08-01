@@ -28,7 +28,7 @@ full font color = text-zinc-50
   }
 
   body {
-    @apply grid max-h-screen text-pretty text-base text-zinc-500 selection:bg-black selection:text-zinc-50 dark:bg-zinc-950 dark:text-zinc-400 dark:selection:bg-white dark:selection:text-zinc-900;
+    @apply grid max-h-screen text-pretty bg-zinc-50 font-sans text-base text-zinc-600 selection:bg-black selection:text-zinc-50 dark:bg-zinc-950 dark:text-zinc-300 dark:selection:bg-white dark:selection:text-zinc-900;
     grid-template-rows: auto 1fr auto;
   }
 
