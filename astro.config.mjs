@@ -11,6 +11,7 @@ const env = loadEnv("", process.cwd(), "STORYBLOK");
 
 // https://astro.build/config
 export default defineConfig({
+  output: "static",
   site: "https://www.ryanfurrer.com",
   prefetch: {
     prefetchAll: true,
